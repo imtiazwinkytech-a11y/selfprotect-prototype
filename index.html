@@ -1694,36 +1694,36 @@
 
         </section>
         </main>
-
-        <!-- Bottom Navigation -->
+ <!-- Bottom Navigation -->
         <nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/95 dark:bg-zinc-950/95 backdrop-blur-lg border-t border-zinc-100 dark:border-zinc-800 h-20 px-6 flex items-center justify-between z-50 rounded-t-[32px] shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
             <button onclick="switchView('home')" class="nav-btn flex flex-col items-center gap-1 active-nav-item">
                 <i class="fas fa-house text-xl"></i>
                 <span class="text-[9px] font-extrabold uppercase tracking-widest">Home</span>
             </button>
-            <button onclick="switchView('feed')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
+            <button onclick="switchView('explore')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
                 <i class="fas fa-rss text-xl"></i>
                 <span class="text-[9px] font-extrabold uppercase tracking-widest">Feed</span>
             </button>
             
             <!-- Central SOS Button -->
-            <div  class="relative -top-7">
+            <div class="relative -top-7">
                 <button onclick="openSOSModal()" class="w-16 h-16 bg-primary rounded-[22px] flex items-center justify-center text-white sos-glow border-[6px] border-[#F2F4F7] dark:border-black tap-active">
                     <i class="fas fa-bell text-2xl"></i>
                 </button>
             </div>
 
-            <button onclick="switchView('community')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
+            <button onclick="switchView('history')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
                 <i class="fa fa-handshake text-xl"></i>
-                <span class="text-[9px] font-extrabold uppercase tracking-widest">Community</span>
+                <span class="text-[9px] font-extrabold uppercase tracking-widest">Help</span>
             </button>
             <button onclick="switchView('profile')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
-                 <div class="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center overflow-hidden">
-                    <img width="1px" height="1px" src="img/icon/profile/nahid.jpg" alt="Avatar" class="w-full h-full object-cover" onclick="switchView('profile')" style="cursor:pointer">
+                 <div class="w-12 h-12 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Avatar" class="w-full h-full object-cover" onclick="switchView('profile')" style="cursor:pointer">
                 </div>
                 <span class="text-[9px] font-extrabold uppercase tracking-widest">Profile</span>
             </button>
         </nav>
+
 
         <!-- SOS MODAL -->
         <div id="sosOverlay" class="fixed inset-0 z-[100] hidden flex items-center justify-center px-8">
