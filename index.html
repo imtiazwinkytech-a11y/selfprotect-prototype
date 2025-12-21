@@ -95,6 +95,179 @@
         <!-- Dynamic Views Container -->
         <main class="flex-1 overflow-y-auto no-scrollbar pb-32 px-5">
             
+<!-- VIEW: EMERGENCY PROTOCOL -->
+<section id="view-emergency" class="view py-4">
+    <div class="flex items-center justify-between mb-8">
+        <div>
+            <h2 class="text-2xl font-black italic uppercase leading-none mb-1 text-red-600">Protocol</h2>
+            <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Emergency & SOS Hub</p>
+        </div>
+        <div class="flex gap-2">
+             <button class="w-10 h-10 bg-zinc-100 dark:bg-zinc-800 rounded-2xl flex items-center justify-center text-zinc-500 tap-active">
+                <i class="fas fa-plus text-xs"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Active Emergencies in Network -->
+    <div class="mb-8">
+        <p class="text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-4">Live Status (Network)</p>
+        <div class="bg-red-50 dark:bg-red-950/20 p-6 rounded-[32px] border border-red-100 dark:border-red-900/30 flex items-center gap-5">
+            <div class="w-16 h-16 rounded-full border-4 border-red-500 pulse-safety p-1">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus" class="w-full h-full rounded-full bg-zinc-200">
+            </div>
+            <div class="flex-1">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-md font-black italic uppercase text-red-600">Marcus V.</h3>
+                    <span class="text-[9px] font-black bg-red-600 text-white px-2 py-0.5 rounded-full animate-pulse">SOS ACTIVE</span>
+                </div>
+                <p class="text-[10px] font-bold text-zinc-500 mt-1">Location: Central Station Area</p>
+                <div class="flex gap-2 mt-3">
+                    <button class="flex-1 bg-red-600 text-white py-2 rounded-xl text-[9px] font-black uppercase italic">Navigate</button>
+                    <button class="flex-1 bg-zinc-900 text-white py-2 rounded-xl text-[9px] font-black uppercase italic">Call Unit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emergency Contacts Manager -->
+    <div class="mb-8">
+        <div class="flex items-center justify-between mb-4">
+            <p class="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Guardians (Managed)</p>
+            <span class="text-[9px] font-bold text-zinc-400">2/5 Slots Used</span>
+        </div>
+        <div class="space-y-3">
+            <div class="bg-white dark:bg-zinc-900 p-4 rounded-[28px] border border-zinc-100 dark:border-zinc-800 flex items-center justify-between group">
+                <div class="flex items-center gap-4">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" class="w-10 h-10 rounded-full bg-zinc-100">
+                    <div>
+                        <p class="text-sm font-black text-zinc-900 dark:text-white">John Jenkins</p>
+                        <p class="text-[9px] font-bold text-zinc-400 uppercase">Spouse • Medical POA</p>
+                    </div>
+                </div>
+                <button class="text-zinc-300 hover:text-red-500 transition-colors tap-active p-2">
+                    <i class="fas fa-trash-alt text-xs"></i>
+                </button>
+            </div>
+            <div class="bg-white dark:bg-zinc-900 p-4 rounded-[28px] border border-zinc-100 dark:border-zinc-800 flex items-center justify-between group">
+                <div class="flex items-center gap-4">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Elena" class="w-10 h-10 rounded-full bg-zinc-100">
+                    <div>
+                        <p class="text-sm font-black text-zinc-900 dark:text-white">Elena Rodriguez</p>
+                        <p class="text-[9px] font-bold text-zinc-400 uppercase">Family • Emergency Contact</p>
+                    </div>
+                </div>
+                <button class="text-zinc-300 hover:text-red-500 transition-colors tap-active p-2">
+                    <i class="fas fa-trash-alt text-xs"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Actions -->
+    <div class="grid grid-cols-2 gap-4">
+        <button class="bg-zinc-100 dark:bg-zinc-800 p-6 rounded-[32px] text-center tap-active group">
+            <div class="w-10 h-10 bg-zinc-200 dark:bg-zinc-700 rounded-full flex items-center justify-center mx-auto mb-3 text-zinc-600 group-hover:bg-emerald-500 group-hover:text-white transition-all">
+                <i class="fas fa-bullhorn text-sm"></i>
+            </div>
+            <p class="text-[9px] font-black uppercase tracking-widest text-zinc-500">Silent Report</p>
+        </button>
+        <button class="bg-red-600 p-6 rounded-[32px] text-center tap-active shadow-xl shadow-red-600/30">
+            <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 text-white">
+                <i class="fas fa-exclamation-triangle text-sm"></i>
+            </div>
+            <p class="text-[9px] font-black uppercase tracking-widest text-white">Trigger SOS</p>
+        </button>
+    </div>
+</section>
+
+
+
+<!-- VIEW: COMMUNITY HUB -->
+<section id="view-community" class="view py-4">
+    <div class="flex items-center justify-between mb-8">
+        <div>
+            <h2 class="text-2xl font-black italic uppercase leading-none mb-1 text-emerald-600">Community</h2>
+            <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Neighborhood Safety Network</p>
+        </div>
+        <button class="bg-emerald-500/10 text-emerald-600 px-4 py-2 rounded-2xl text-[9px] font-black uppercase italic border border-emerald-500/20">
+            Map View
+        </button>
+    </div>
+
+    <!-- Reporting Tool -->
+    <div class="bg-zinc-100 dark:bg-zinc-900 p-6 rounded-[32px] mb-8 border border-zinc-200 dark:border-zinc-800">
+        <h3 class="text-xs font-black uppercase tracking-widest mb-4">Report Hazard</h3>
+        <div class="grid grid-cols-4 gap-3">
+            <button class="flex flex-col items-center gap-2 tap-active group">
+                <div class="w-12 h-12 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center text-zinc-400 group-hover:text-amber-500 shadow-sm transition-all">
+                    <i class="fas fa-fire text-lg"></i>
+                </div>
+                <span class="text-[8px] font-bold uppercase text-zinc-500">Fire</span>
+            </button>
+            <button class="flex flex-col items-center gap-2 tap-active group">
+                <div class="w-12 h-12 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center text-zinc-400 group-hover:text-blue-500 shadow-sm transition-all">
+                    <i class="fas fa-car-crash text-lg"></i>
+                </div>
+                <span class="text-[8px] font-bold uppercase text-zinc-500">Crash</span>
+            </button>
+            <button class="flex flex-col items-center gap-2 tap-active group">
+                <div class="w-12 h-12 bg-white dark:bg-zinc-800 rounded-2xl flex items-center justify-center text-zinc-400 group-hover:text-purple-500 shadow-sm transition-all">
+                    <i class="fas fa-user-shield text-lg"></i>
+                </div>
+                <span class="text-[8px] font-bold uppercase text-zinc-500">Police</span>
+            </button>
+            <button class="flex flex-col items-center gap-2 tap-active group">
+                <div class="w-12 h-12 bg-white dark:bg-zinc-900 rounded-2xl flex items-center justify-center text-zinc-400 group-hover:text-red-500 shadow-sm transition-all">
+                    <i class="fas fa-skull text-lg"></i>
+                </div>
+                <span class="text-[8px] font-bold uppercase text-zinc-500">Threat</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Community Feed -->
+    <div class="space-y-4">
+        <p class="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Recent Activity (2km Radius)</p>
+        
+        <div class="bg-white dark:bg-zinc-900 p-5 rounded-[32px] border border-zinc-100 dark:border-zinc-800 shadow-sm tap-active">
+            <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-zinc-100 p-1 flex items-center justify-center text-amber-500">
+                        <i class="fas fa-exclamation-circle text-sm"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-black text-zinc-900 dark:text-white uppercase italic">Slippery Road</p>
+                        <p class="text-[9px] font-bold text-zinc-400">Main St. • 5 mins ago</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fas fa-arrow-up text-[8px] text-emerald-500"></i>
+                    <span class="text-[10px] font-black text-zinc-900 dark:text-white">12</span>
+                </div>
+            </div>
+            <p class="text-[11px] text-zinc-500 font-medium leading-relaxed">Oil spill near the intersection. Cleaning crew requested. Use alternate route if possible.</p>
+        </div>
+
+        <div class="bg-white dark:bg-zinc-900 p-5 rounded-[32px] border border-zinc-100 dark:border-zinc-800 shadow-sm tap-active">
+            <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-zinc-100 p-1 flex items-center justify-center text-blue-500">
+                        <i class="fas fa-lightbulb text-sm"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-black text-zinc-900 dark:text-white uppercase italic">Street Light Down</p>
+                        <p class="text-[9px] font-bold text-zinc-400">Block B • 1 hour ago</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fas fa-arrow-up text-[8px] text-zinc-300"></i>
+                    <span class="text-[10px] font-black text-zinc-900 dark:text-white">4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
             <!-- VIEW: HOME -->
             <section id="view-home" class="view active py-4">
                     <!-- Safety Points (mobile style) -->
@@ -129,44 +302,44 @@
                                     </div>
                                     <span class="text-[11px] font-bold text-zinc-600 dark:text-zinc-300">SOS</span>
                                 </button>
-                                <button onclick="triggerService('SafeWalk')" class="flex flex-col items-center gap-2 tap-active">
+                                <button onclick="switchView('emergency')" class="flex flex-col items-center gap-2 tap-active">
                                     <div class="w-14 h-14 bg-blue-50 dark:bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-600 border border-blue-100 dark:border-blue-500/20">
                                         <i class="fa fa-address-book text-2xl"></i>
                                     </div>
                                     <span class="text-[11px] font-bold text-zinc-600 dark:text-zinc-300 text-center">Emergency</span>
                                 </button>
-                                <button onclick="triggerService('Circle')" class="flex flex-col items-center gap-2 tap-active">
+                                <button onclick="switchView('circle')" class="flex flex-col items-center gap-2 tap-active">
                                     <div class="w-14 h-14 bg-emerald-50 dark:bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-600 border border-emerald-100 dark:border-emerald-500/20">
                                         <i class="fas fa-user-group text-2xl"></i>
                                     </div>
                                     <span class="text-[11px] font-bold text-zinc-600 dark:text-zinc-300">Circle</span>
                                 </button>
-                                <button onclick="triggerService('Guardian')" class="flex flex-col items-center gap-2 tap-active">
+                                <button onclick="switchView('tracking')" class="flex flex-col items-center gap-2 tap-active">
                                     <div class="w-14 h-14 bg-orange-50 dark:bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-600 border border-orange-100 dark:border-orange-500/20">
                                         <i class="fa fa-location text-2xl"></i>
                                     </div>
                                     <span class="text-[11px] font-bold text-zinc-600 dark:text-zinc-300">Track</span>
                                 </button>
-                                <button onclick="triggerService('Medical')" class="flex flex-col items-center gap-2 tap-active">
+                                <button onclick="switchView('Medical')" class="flex flex-col items-center gap-2 tap-active">
                                     <div class="w-14 h-14 bg-purple-50 dark:bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-600 border border-purple-100 dark:border-purple-500/20">
                                         <i class="fas fa-truck-medical text-2xl"></i>
                                     </div>
                                     <span class="text-[11px] font-bold text-zinc-600 dark:text-zinc-300">Medical</span>
                                 </button>
-                                <button onclick="switchView('explore')" class="flex flex-col items-center gap-2 tap-active">
+                                <button onclick="switchView('blood-bank')" class="flex flex-col items-center gap-2 tap-active">
                                     <div class="w-14 h-14 bg-amber-50 dark:bg-amber-500/10 rounded-2xl flex items-center justify-center text-amber-600 border border-amber-100 dark:border-amber-500/20">
                                         <i class="fas fa-droplet color-red text-2xl"></i>
                                     </div>
                                     <span class="text-[11px] font-bold text-zinc-600 dark:text-zinc-300">Blood Bank</span>
                                 </button>
-                                <button onclick="triggerService('999')" class="flex flex-col items-center gap-2 tap-active">
+                                <button onclick="switchView('help-me')" class="flex flex-col items-center gap-2 tap-active">
                                     <div class="w-14 h-14 bg-zinc-100 dark:bg-zinc-800 rounded-2xl flex items-center justify-center text-zinc-600 dark:text-zinc-400">
                                         <i class="fas fa-hand text-2xl"></i>
                                     </div>
                                     <span class="text-[11px] font-bold text-zinc-600 dark:text-zinc-300">Help Me</span>
                                 </button>
 
-      <button onclick="triggerService('999')" class="flex flex-col items-center gap-2 tap-active">
+      <button onclick="switchView('help-others')" class="flex flex-col items-center gap-2 tap-active">
                                     <div class="w-14 h-14 bg-zinc-100 dark:bg-zinc-800 rounded-2xl flex items-center justify-center text-zinc-600 dark:text-zinc-400">
                                         <i class="fas fa-headset text-2xl"></i>
                                     </div>
@@ -306,6 +479,90 @@
                 </div>
             </section>
 
+<!-- VIEW: CIRCLES -->
+<section id="view-circle" class="view py-4">
+    <div class="flex items-center justify-between mb-8">
+        <div>
+            <h2 class="text-2xl font-black italic uppercase leading-none mb-1 text-emerald-500">Circles</h2>
+            <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Private Security Groups</p>
+        </div>
+        <button class="w-10 h-10 bg-emerald-100 dark:bg-emerald-950/30 text-emerald-600 rounded-2xl flex items-center justify-center tap-active">
+            <i class="fas fa-users-cog text-xs"></i>
+        </button>
+    </div>
+
+    <!-- Circle Selection / Creation -->
+    <div class="flex gap-4 mb-8 overflow-x-auto pb-2 scrollbar-hide">
+        <button class="flex-shrink-0 w-16 h-16 rounded-[24px] border-2 border-dashed border-zinc-200 dark:border-zinc-800 flex items-center justify-center text-zinc-400 tap-active">
+            <i class="fas fa-plus text-xs"></i>
+        </button>
+        <div class="flex-shrink-0 w-16 h-16 rounded-[24px] bg-emerald-500 flex items-center justify-center text-white ring-4 ring-emerald-500/20 tap-active">
+            <span class="text-xs font-black">FAM</span>
+        </div>
+        <div class="flex-shrink-0 w-16 h-16 rounded-[24px] bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 tap-active">
+            <span class="text-xs font-black">WORK</span>
+        </div>
+    </div>
+
+    <!-- Active Circle Details -->
+    <div class="bg-white dark:bg-zinc-900 rounded-[40px] p-6 border border-zinc-100 dark:border-zinc-800 shadow-sm">
+        <div class="flex items-center justify-between mb-6">
+            <div>
+                <h3 class="text-lg font-black italic uppercase text-zinc-900 dark:text-white">Family Circle</h3>
+                <p class="text-[9px] font-bold text-emerald-500 uppercase tracking-widest">Active • 4 Members</p>
+            </div>
+            <div class="bg-zinc-50 dark:bg-zinc-800 px-3 py-1.5 rounded-full border border-zinc-100 dark:border-zinc-800">
+                <span class="text-[10px] font-black text-zinc-400 uppercase tracking-tighter">Code:</span>
+                <span class="text-[10px] font-black text-zinc-900 dark:text-white ml-1 tracking-widest">X9-P2L</span>
+            </div>
+        </div>
+
+        <!-- Circle Member List -->
+        <div class="space-y-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" class="w-10 h-10 rounded-full bg-zinc-100">
+                        <div class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white dark:border-zinc-900 rounded-full"></div>
+                    </div>
+                    <div>
+                        <p class="text-xs font-black text-zinc-900 dark:text-white">Sarah (Me)</p>
+                        <p class="text-[9px] font-bold text-zinc-400 uppercase italic">Admin • At Home</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" class="w-10 h-10 rounded-full bg-zinc-100">
+                        <div class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white dark:border-zinc-900 rounded-full"></div>
+                    </div>
+                    <div>
+                        <p class="text-xs font-black text-zinc-900 dark:text-white">John Jenkins</p>
+                        <p class="text-[9px] font-bold text-zinc-400 uppercase italic">On the move • 1.2km away</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-between opacity-50">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Tim" class="w-10 h-10 rounded-full bg-zinc-100">
+                        <div class="absolute bottom-0 right-0 w-3 h-3 bg-zinc-300 border-2 border-white dark:border-zinc-900 rounded-full"></div>
+                    </div>
+                    <div>
+                        <p class="text-xs font-black text-zinc-900 dark:text-white">Timmy</p>
+                        <p class="text-[9px] font-bold text-zinc-400 uppercase italic">Last seen: 40m ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="w-full mt-8 py-4 border-2 border-dashed border-zinc-200 dark:border-zinc-800 rounded-2xl text-[10px] font-black uppercase tracking-widest text-zinc-400 hover:text-emerald-500 hover:border-emerald-500/50 transition-all tap-active">
+            Invite New Member
+        </button>
+    </div>
+</section>
+
             <!-- VIEW: HISTORY -->
             <section id="view-history" class="view py-4">
                 <div class="flex items-center justify-between mb-4">
@@ -318,7 +575,426 @@
             </section>
 <!-- VIEW: NOTIFICATIONS -->
 
+<!-- VIEW: BLOOD BANK & CRISIS CENTER -->
+<section id="view-blood-bank" class="view py-4">
+    <div class="flex items-center justify-between mb-8">
+        <div>
+            <h2 class="text-2xl font-black italic uppercase leading-none mb-1 text-red-600">Crisis Hub</h2>
+            <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Blood Bank & Mutual Aid</p>
+        </div>
+        <div class="w-10 h-10 bg-red-100 dark:bg-red-950/30 text-red-600 rounded-2xl flex items-center justify-center">
+            <i class="fas fa-hand-holding-medical text-sm"></i>
+        </div>
+    </div>
 
+    <!-- Blood Bank Section -->
+    <div class="mb-10">
+        <div class="flex items-center justify-between mb-4 px-2">
+            <h3 class="text-[11px] font-black uppercase tracking-widest text-zinc-900 dark:text-white">Blood Bank Registry</h3>
+            <span class="text-[9px] font-bold text-red-500 bg-red-50 dark:bg-red-950/40 px-2 py-0.5 rounded-full">Urgent: O- Needed</span>
+        </div>
+        
+        <div class="grid grid-cols-4 gap-3 mb-6">
+            <button class="bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 p-4 rounded-[28px] text-center tap-active hover:border-red-500 transition-colors">
+                <p class="text-lg font-black text-zinc-900 dark:text-white">A+</p>
+                <p class="text-[8px] font-bold text-zinc-400 uppercase">12 Units</p>
+            </button>
+            <button class="bg-red-600 border border-red-600 p-4 rounded-[28px] text-center tap-active shadow-lg shadow-red-600/20">
+                <p class="text-lg font-black text-white">O-</p>
+                <p class="text-[8px] font-bold text-white/70 uppercase italic">Low</p>
+            </button>
+            <button class="bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 p-4 rounded-[28px] text-center tap-active">
+                <p class="text-lg font-black text-zinc-900 dark:text-white">B+</p>
+                <p class="text-[8px] font-bold text-zinc-400 uppercase">8 Units</p>
+            </button>
+            <button class="bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 p-4 rounded-[28px] text-center tap-active">
+                <p class="text-lg font-black text-zinc-900 dark:text-white">AB+</p>
+                <p class="text-[8px] font-bold text-zinc-400 uppercase">4 Units</p>
+            </button>
+        </div>
+
+        <div class="bg-zinc-900 dark:bg-emerald-900/20 p-5 rounded-[32px] flex items-center justify-between border border-emerald-500/30">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white">
+                    <i class="fas fa-tint drip"></i>
+                </div>
+                <div>
+                    <p class="text-xs font-black text-white uppercase italic">I want to Donate</p>
+                    <p class="text-[9px] text-emerald-400 font-bold uppercase">Register as Active Donor</p>
+                </div>
+            </div>
+            <i class="fas fa-chevron-right text-zinc-500 text-xs"></i>
+        </div>
+    </div>
+
+    <!-- Mutual Aid: Help Me / Help Other -->
+    <div class="space-y-4">
+        <h3 class="text-[11px] font-black uppercase tracking-widest text-zinc-900 dark:text-white px-2">Mutual Aid Portal</h3>
+        
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Help Me Request -->
+            <button class="bg-amber-500 p-6 rounded-[40px] text-left tap-active shadow-xl shadow-amber-500/20 group relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 w-20 h-20 bg-white/10 rounded-full blur-2xl group-hover:bg-white/20 transition-all"></div>
+                <div class="w-10 h-10 bg-white/20 rounded-2xl flex items-center justify-center text-white mb-4">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h4 class="text-sm font-black text-white uppercase italic leading-tight mb-1">Request<br>Support</h4>
+                <p class="text-[8px] font-bold text-white/80 uppercase tracking-widest">"Help Me"</p>
+            </button>
+
+            <!-- Help Other List -->
+            <button class="bg-zinc-100 dark:bg-zinc-800 p-6 rounded-[40px] text-left tap-active border border-zinc-200 dark:border-zinc-700 group">
+                <div class="w-10 h-10 bg-white dark:bg-zinc-900 rounded-2xl flex items-center justify-center text-zinc-500 group-hover:text-emerald-500 transition-all mb-4 shadow-sm">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <h4 class="text-sm font-black text-zinc-900 dark:text-white uppercase italic leading-tight mb-1">Browse<br>Requests</h4>
+                <p class="text-[8px] font-bold text-zinc-400 uppercase tracking-widest">"Help Other"</p>
+            </button>
+        </div>
+
+        <!-- Recent Community Requests -->
+        <div class="space-y-3 mt-6">
+            <p class="text-[9px] font-black text-zinc-400 uppercase tracking-widest px-2 mb-2">Live Crisis Feed</p>
+            
+            <div class="bg-white dark:bg-zinc-900 p-5 rounded-[32px] border border-zinc-100 dark:border-zinc-800 shadow-sm flex items-start gap-4">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Maria" class="w-10 h-10 rounded-full bg-zinc-100">
+                <div class="flex-1">
+                    <div class="flex items-center justify-between mb-1">
+                        <p class="text-xs font-black text-zinc-900 dark:text-white uppercase italic">Medicine Pickup</p>
+                        <span class="text-[8px] font-black text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full uppercase">Urgent</span>
+                    </div>
+                    <p class="text-[10px] text-zinc-500 font-medium leading-snug mb-3">Locked in due to flooding. Need Insulin pickup from 5th Ave Pharmacy.</p>
+                    <button class="w-full py-2 bg-zinc-900 dark:bg-zinc-800 text-white text-[9px] font-black uppercase tracking-widest rounded-xl tap-active">Accept Mission</button>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-zinc-900 p-5 rounded-[32px] border border-zinc-100 dark:border-zinc-800 shadow-sm flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
+                    <i class="fas fa-plug text-sm"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center justify-between mb-1">
+                        <p class="text-xs font-black text-zinc-900 dark:text-white uppercase italic">Power Bank Share</p>
+                        <span class="text-[8px] font-black text-zinc-400 bg-zinc-50 px-2 py-0.5 rounded-full uppercase">Stable</span>
+                    </div>
+                    <p class="text-[10px] text-zinc-500 font-medium leading-snug mb-3">Power is out in Block C. Looking for anyone with a portable generator or high-cap power banks.</p>
+                    <button class="w-full py-2 border border-zinc-100 dark:border-zinc-700 text-zinc-500 text-[9px] font-black uppercase tracking-widest rounded-xl tap-active">I can help</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VIEW: HELP ME (AI DIAGNOSTIC) -->
+<section id="view-help-me" class="view py-4">
+    <div class="flex items-center justify-between mb-8">
+        <div>
+            <h2 class="text-2xl font-black italic uppercase leading-none mb-1 text-amber-500">Guided SOS</h2>
+            <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Intelligent Situation Assessment</p>
+        </div>
+        <div class="w-12 h-12 bg-zinc-900 rounded-2xl flex items-center justify-center ai-pulse">
+            <i class="fas fa-microchip text-emerald-500"></i>
+        </div>
+    </div>
+
+    <!-- Diagnostic Stepper -->
+    <div class="bg-white dark:bg-zinc-900 rounded-[40px] p-8 border border-zinc-100 dark:border-zinc-800 shadow-xl mb-6">
+        <div class="mb-8">
+            <div class="flex justify-between items-end mb-4">
+                <span class="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Question 1 of 4</span>
+                <span class="text-[10px] font-bold text-zinc-400 uppercase">Analysis: Pending</span>
+            </div>
+            <h3 class="text-xl font-black text-zinc-900 dark:text-white leading-tight">Are you currently in immediate physical danger?</h3>
+        </div>
+
+        <div class="space-y-4">
+            <button class="option-card w-full p-5 rounded-[28px] bg-zinc-50 dark:bg-zinc-800/50 flex items-center gap-4 tap-active">
+                <div class="w-10 h-10 bg-red-500 text-white rounded-full flex items-center justify-center shadow-lg shadow-red-500/30">
+                    <i class="fas fa-bolt text-sm"></i>
+                </div>
+                <div class="text-left">
+                    <p class="text-sm font-black text-zinc-900 dark:text-white">Yes, High Risk</p>
+                    <p class="text-[10px] font-bold text-zinc-400">Triggers Immediate SOS</p>
+                </div>
+            </button>
+
+            <button class="option-card w-full p-5 rounded-[28px] bg-zinc-50 dark:bg-zinc-800/50 flex items-center gap-4 tap-active">
+                <div class="w-10 h-10 bg-amber-500 text-white rounded-full flex items-center justify-center shadow-lg shadow-amber-500/30">
+                    <i class="fas fa-shield-alt text-sm"></i>
+                </div>
+                <div class="text-left">
+                    <p class="text-sm font-black text-zinc-900 dark:text-white">Potential Danger</p>
+                    <p class="text-[10px] font-bold text-zinc-400">Escalate to Community Watch</p>
+                </div>
+            </button>
+
+            <button class="option-card w-full p-5 rounded-[28px] bg-zinc-50 dark:bg-zinc-800/50 flex items-center gap-4 tap-active">
+                <div class="w-10 h-10 bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300 rounded-full flex items-center justify-center">
+                    <i class="fas fa-times text-sm"></i>
+                </div>
+                <div class="text-left">
+                    <p class="text-sm font-black text-zinc-900 dark:text-white">No, Support Only</p>
+                    <p class="text-[10px] font-bold text-zinc-400">Resource Assistance Needed</p>
+                </div>
+            </button>
+        </div>
+
+        <!-- Risk Prediction Meter -->
+        <div class="mt-10 pt-8 border-t border-zinc-100 dark:border-zinc-800">
+            <p class="text-[9px] font-black text-zinc-400 uppercase tracking-widest text-center mb-4">Risk Level Prediction</p>
+            <div class="h-2 w-full bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden flex">
+                <div class="risk-gradient h-full" style="width: 35%"></div>
+            </div>
+            <div class="flex justify-between mt-2">
+                <span class="text-[8px] font-bold text-emerald-500 uppercase">Low</span>
+                <span class="text-[8px] font-bold text-red-500 uppercase">Critical</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-amber-50 dark:bg-amber-950/20 p-5 rounded-[32px] border border-amber-200 dark:border-amber-900/30 flex items-center gap-4">
+        <i class="fas fa-info-circle text-amber-600"></i>
+        <p class="text-[10px] text-amber-800 dark:text-amber-200 font-medium italic">Our system analyzes your responses to ensure the right level of response is dispatched—from local volunteers to emergency services.</p>
+    </div>
+</section>
+
+
+
+<!-- VIEW: HELP OTHERS (MISSION DISPATCH) -->
+<section id="view-help-others" class="view py-4">
+    <div class="flex items-center justify-between mb-8">
+        <div>
+            <h2 class="text-2xl font-black italic uppercase leading-none mb-1 text-emerald-500">Guardian Hub</h2>
+            <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Active Community Missions</p>
+        </div>
+        <div class="flex gap-2">
+            <button class="px-4 py-2 bg-zinc-100 dark:bg-zinc-800 rounded-2xl text-[9px] font-black uppercase italic text-zinc-600">Nearby</button>
+            <button class="px-4 py-2 bg-emerald-500 text-white rounded-2xl text-[9px] font-black uppercase italic">Skill Filter</button>
+        </div>
+    </div>
+
+    <!-- Active High Priority Mission -->
+    <div class="mb-8 relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-amber-600 rounded-[44px] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+        <div class="relative bg-white dark:bg-zinc-900 rounded-[40px] p-6 border border-zinc-100 dark:border-zinc-800 shadow-sm">
+            <div class="flex items-center justify-between mb-5">
+                <div class="flex items-center gap-3">
+                    <span class="w-3 h-3 bg-red-600 rounded-full animate-ping"></span>
+                    <h3 class="text-xs font-black uppercase tracking-[0.2em] text-red-600 italic">High Priority Dispatch</h3>
+                </div>
+                <span class="text-[9px] font-bold text-zinc-400">0.4 km Away</span>
+            </div>
+            
+            <div class="flex gap-4 mb-6">
+                <div class="w-16 h-16 rounded-[24px] bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-zinc-400 shrink-0">
+                    <i class="fas fa-first-aid text-2xl"></i>
+                </div>
+                <div>
+                    <h4 class="text-md font-black italic uppercase text-zinc-900 dark:text-white leading-tight">First Aid Required</h4>
+                    <p class="text-[10px] text-zinc-500 font-medium leading-relaxed mt-1">Minor fall reported in Sector G. Responder needed with basic medical kit.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+                <button class="py-4 bg-zinc-900 dark:bg-emerald-600 text-white rounded-[24px] text-[10px] font-black uppercase tracking-widest tap-active">Accept Mission</button>
+                <button class="py-4 bg-zinc-50 dark:bg-zinc-800 text-zinc-400 rounded-[24px] text-[10px] font-black uppercase tracking-widest tap-active">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Available Missions List -->
+    <div>
+        <div class="flex items-center justify-between mb-4 px-2">
+            <p class="text-[10px] font-black text-zinc-400 uppercase tracking-widest italic">Local Support Requests</p>
+            <i class="fas fa-sync-alt text-xs text-zinc-300"></i>
+        </div>
+        
+        <div class="space-y-3">
+            <!-- Mission 1 -->
+            <div class="bg-white dark:bg-zinc-900 p-5 rounded-[32px] border border-zinc-100 dark:border-zinc-800 flex items-center justify-between tap-active group">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-amber-50 dark:bg-amber-950/20 rounded-[20px] flex items-center justify-center text-amber-500 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-shopping-basket"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-black text-zinc-900 dark:text-white uppercase italic">Grocery Assist</p>
+                        <p class="text-[9px] font-bold text-zinc-400">Elderly Support • 1.1 km</p>
+                    </div>
+                </div>
+                <div class="bg-zinc-100 dark:bg-zinc-800 w-8 h-8 rounded-full flex items-center justify-center text-zinc-400">
+                    <i class="fas fa-plus text-[10px]"></i>
+                </div>
+            </div>
+
+            <!-- Mission 2 -->
+            <div class="bg-white dark:bg-zinc-900 p-5 rounded-[32px] border border-zinc-100 dark:border-zinc-800 flex items-center justify-between tap-active group">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-50 dark:bg-blue-950/20 rounded-[20px] flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-black text-zinc-900 dark:text-white uppercase italic">Escort Request</p>
+                        <p class="text-[9px] font-bold text-zinc-400">Safety Escort • 0.3 km</p>
+                    </div>
+                </div>
+                <div class="bg-zinc-100 dark:bg-zinc-800 w-8 h-8 rounded-full flex items-center justify-center text-zinc-400">
+                    <i class="fas fa-plus text-[10px]"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Guardian Statistics -->
+    <div class="mt-8 bg-zinc-900 rounded-[32px] p-6 text-white overflow-hidden relative">
+        <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl"></div>
+        <div class="flex justify-between items-center relative z-10">
+            <div>
+                <p class="text-[10px] font-black text-emerald-500 uppercase tracking-widest mb-1">Your Impact</p>
+                <p class="text-2xl font-black italic uppercase">Level 14 Guardian</p>
+            </div>
+            <div class="text-right">
+                <p class="text-xl font-black text-emerald-400">28</p>
+                <p class="text-[8px] font-bold text-zinc-400 uppercase">Missions</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- VIEW: MEDICAL INFO (NEW) -->
+<section id="view-Medical" class="view py-4">
+    <div class="flex items-center justify-between mb-8">
+        <div>
+            <h2 class="text-2xl font-black italic uppercase leading-none mb-1 text-red-600 dark:text-red-500">Medical ID</h2>
+            <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Critical Emergency Information</p>
+        </div>
+        <button class="w-10 h-10 bg-red-100 dark:bg-red-950/30 text-red-600 rounded-2xl flex items-center justify-center tap-active">
+            <i class="fas fa-edit text-xs"></i>
+        </button>
+    </div>
+
+    <!-- Critical Stats Row -->
+    <div class="grid grid-cols-3 gap-3 mb-6">
+        <div class="bg-red-50 dark:bg-red-950/20 p-4 rounded-[28px] border border-red-100 dark:border-red-900/30 text-center">
+            <p class="text-[9px] font-black text-red-600 dark:text-red-400 uppercase mb-1">Blood</p>
+            <p class="text-xl font-black text-zinc-900 dark:text-white">O+</p>
+        </div>
+        <div class="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-[28px] text-center">
+            <p class="text-[9px] font-black text-zinc-400 uppercase mb-1">Weight</p>
+            <p class="text-xl font-black text-zinc-900 dark:text-white">68<span class="text-[10px]">kg</span></p>
+        </div>
+        <div class="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-[28px] text-center">
+            <p class="text-[9px] font-black text-zinc-400 uppercase mb-1">Height</p>
+            <p class="text-xl font-black text-zinc-900 dark:text-white">174<span class="text-[10px]">cm</span></p>
+        </div>
+    </div>
+
+    <!-- Medical Details Sections -->
+    <div class="space-y-4 mb-8">
+        <!-- Allergies -->
+        <div class="bg-white dark:bg-zinc-900 rounded-[32px] p-6 border border-zinc-100 dark:border-zinc-800 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-8 h-8 bg-amber-100 dark:bg-amber-950/30 text-amber-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-allergies text-sm"></i>
+                </div>
+                <h3 class="text-[11px] font-black uppercase tracking-widest text-zinc-900 dark:text-white">Known Allergies</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-4 py-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full text-[10px] font-bold text-zinc-600 dark:text-zinc-300">Penicillin</span>
+                <span class="px-4 py-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full text-[10px] font-bold text-zinc-600 dark:text-zinc-300">Peanuts</span>
+                <span class="px-4 py-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full text-[10px] font-bold text-zinc-600 dark:text-zinc-300">Shellfish</span>
+            </div>
+        </div>
+
+        <!-- Medications -->
+        <div class="bg-white dark:bg-zinc-900 rounded-[32px] p-6 border border-zinc-100 dark:border-zinc-800 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-8 h-8 bg-blue-100 dark:bg-blue-950/30 text-blue-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-pills text-sm"></i>
+                </div>
+                <h3 class="text-[11px] font-black uppercase tracking-widest text-zinc-900 dark:text-white">Active Medications</h3>
+            </div>
+            <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-xs font-black text-zinc-900 dark:text-white">Lisinopril</p>
+                        <p class="text-[9px] font-bold text-zinc-400">10mg • Once daily (Morning)</p>
+                    </div>
+                    <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-xs font-black text-zinc-900 dark:text-white">Asthma Inhaler</p>
+                        <p class="text-[9px] font-bold text-zinc-400">As needed (PRN)</p>
+                    </div>
+                    <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Emergency Contacts -->
+        <div class="bg-zinc-900 rounded-[32px] p-6 border border-zinc-800">
+            <div class="flex items-center gap-3 mb-5">
+                <div class="w-8 h-8 bg-zinc-800 text-red-500 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-phone-alt text-xs"></i>
+                </div>
+                <h3 class="text-[11px] font-black uppercase tracking-widest text-white">Emergency Contacts</h3>
+            </div>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between group tap-active">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-zinc-800 overflow-hidden">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" alt="contact">
+                        </div>
+                        <div>
+                            <p class="text-xs font-black text-white">John Jenkins</p>
+                            <p class="text-[9px] font-bold text-zinc-500 uppercase italic">Spouse • Primary</p>
+                        </div>
+                    </div>
+                    <button class="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center text-white text-[10px]">
+                        <i class="fas fa-phone"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Action -->
+    <button class="w-full py-5 bg-red-600 text-white rounded-[28px] text-[10px] font-black uppercase tracking-[0.2em] shadow-xl shadow-red-600/20 tap-active">
+        <i class="fas fa-qrcode mr-2"></i> Show Medical QR Code
+    </button>
+</section>
+
+
+
+<!-- VIEW: NEWSFEED -->
+<section id="view-feed" class="view py-4">
+    <div class="flex items-center justify-between mb-8">
+        <div>
+            <h2 class="text-2xl font-black italic uppercase leading-none mb-1">Safety Feed</h2>
+            <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Localized Intelligence & Reports</p>
+        </div>
+    </div>
+
+    <div class="space-y-6">
+        <div class="bg-white dark:bg-zinc-900 rounded-[32px] overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-sm tap-active">
+            <div class="news-image h-40 w-full relative">
+                <div class="absolute inset-0 flex items-center justify-center text-zinc-700">
+                    <i class="fas fa-map-marked-alt text-4xl opacity-20"></i>
+                </div>
+                <div class="absolute top-4 left-4">
+                    <span class="bg-red-600 text-white text-[9px] font-black uppercase px-3 py-1 rounded-full italic tracking-widest">High Alert</span>
+                </div>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                    <i class="fas fa-clock text-zinc-400 text-[10px]"></i>
+                    <span class="text-[10px] font-bold text-zinc-400 uppercase">18 Minutes Ago • 0.8km Away</span>
+                </div>
+                <h3 class="text-lg font-black italic uppercase leading-tight mb-2">Power Grid Failure in Sector 4</h3>
+                <p class="text-sm text-zinc-500 font-medium mb-4 leading-relaxed">Local authorities report a major transformer explosion. Street lights are down in the northern residential block. Avoid travel to this area.</p>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- VIEW: TRACKING -->
 <section id="view-tracking" class="view py-4">
     <div class="flex items-end justify-between mb-8">
@@ -455,8 +1131,6 @@
     </div>
 </section>
 
-<hr class="border-zinc-100 dark:border-zinc-800 mb-8 max-w-[500px] mx-auto">
-
 <!-- VIEW: NOTIFICATIONS -->
 <section id="view-notifications" class="view py-4">
     <div class="flex items-center justify-between mb-8">
@@ -518,7 +1192,6 @@
     </div>
 </section>
 
-<hr class="border-zinc-100 dark:border-zinc-800 my-8 max-w-[500px] mx-auto">
 
 <!-- VIEW: SETTINGS -->
 <section id="view-settings" class="view py-4">
@@ -598,7 +1271,7 @@
         </div>
     </div>
 </section>
-<hr class="border-zinc-100 dark:border-zinc-800 mb-8 max-w-[500px] mx-auto">
+
 
 <!-- VIEW: NOTIFICATIONS -->
 <section id="view-notifications" class="view py-4">
@@ -667,7 +1340,7 @@
     </div>
 </section>
 
-<hr class="border-zinc-100 dark:border-zinc-800 my-8 max-w-[500px] mx-auto">
+
 
 <!-- VIEW: SETTINGS -->
 <section id="view-settings" class="view py-4">
@@ -787,7 +1460,7 @@
                 </button>
             </div>
             
-            <h2 class="text-2xl font-black tracking-tight mb-1">Anik Rahman</h2>
+            <h2 class="text-2xl font-black tracking-tight mb-1 " align="center">Anik Rahman</h2>
             <div class="flex items-center justify-center gap-2 mb-8">
                 <div class="flex items-center gap-1.5 bg-zinc-100 dark:bg-zinc-900 px-3 py-1.5 rounded-full">
                     <i class="fas fa-crown text-[10px] text-yellow-500"></i>
@@ -992,7 +1665,7 @@
                 <i class="fas fa-house text-xl"></i>
                 <span class="text-[9px] font-extrabold uppercase tracking-widest">Home</span>
             </button>
-            <button onclick="switchView('explore')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
+            <button onclick="switchView('feed')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
                 <i class="fas fa-rss text-xl"></i>
                 <span class="text-[9px] font-extrabold uppercase tracking-widest">Feed</span>
             </button>
@@ -1004,7 +1677,7 @@
                 </button>
             </div>
 
-            <button onclick="switchView('history')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
+            <button onclick="switchView('community')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
                 <i class="fa fa-handshake text-xl"></i>
                 <span class="text-[9px] font-extrabold uppercase tracking-widest">Community</span>
             </button>
