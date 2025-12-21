@@ -95,6 +95,217 @@
         <!-- Dynamic Views Container -->
         <main class="flex-1 overflow-y-auto no-scrollbar pb-32 px-5">
             
+            <!-- VIEW: PROFILE -->
+                  <section id="view-profile" class="view py-4">
+            
+            <!-- AVATAR DESIGN ( Style Highlight) -->
+            <div class="relative w-28 h-28 mx-auto mb-5">
+                <div class="absolute inset-0 bg-primary/20 rounded-[40px] blur-xl"></div>
+                <img src="img/icon/profile/nahid.jpg" 
+                     class="relative w-full h-full rounded-[38px] border-[3px] border-white dark:border-zinc-800 shadow-xl object-cover" 
+                     alt="Nahid">
+                <button class="absolute -bottom-1 -right-1 bg-primary text-white w-9 h-9 rounded-xl flex items-center justify-center border-[3px] border-white dark:border-[#0A0A0A] shadow-md tap-active">
+                    <i class="fas fa-camera text-[10px]"></i>
+                </button>
+            </div>
+            
+            <h2 class="text-2xl font-black tracking-tight mb-1 " align="center">Nahid</h2>
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <div class="flex items-center gap-1.5 bg-zinc-100 dark:bg-zinc-900 px-3 py-1.5 rounded-full">
+                    <i class="fas fa-crown text-[10px] text-yellow-500"></i>
+                    <span class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">Elite Badge</span>
+                </div>
+            </div>
+            
+            <!-- QUICK SERVICE STATS -->
+            <div class="grid grid-cols-4 gap-2 mb-8">
+                <div class="text-center">
+                    <p class="text-lg font-black tracking-tighter">128</p>
+                    <p class="text-[9px] font-bold text-zinc-400 uppercase">Alerts</p>
+                </div>
+                <div class="text-center border-l border-zinc-100 dark:border-zinc-800">
+                    <p class="text-lg font-black tracking-tighter">4.9</p>
+                    <p class="text-[9px] font-bold text-zinc-400 uppercase">Rating</p>
+                </div>
+                <div class="text-center border-l border-zinc-100 dark:border-zinc-800">
+                    <p class="text-lg font-black tracking-tighter">1.4s</p>
+                    <p class="text-[9px] font-bold text-zinc-400 uppercase">Latency</p>
+                </div>
+                <div class="text-center border-l border-zinc-100 dark:border-zinc-800">
+                    <p class="text-lg font-black tracking-tighter">#42</p>
+                    <p class="text-[9px] font-bold text-zinc-400 uppercase">Global</p>
+                </div>
+            </div>
+
+            <!-- PERFORMANCE ANALYTICS (Horizontal Scroll) -->
+            <div class="text-left mb-8">
+                <h3 class="text-[11px] font-extrabold uppercase tracking-[0.15em] text-zinc-400 px-1 mb-4">Activity Insights</h3>
+                <div class="flex gap-4 overflow-x-auto custom-scrollbar pb-4 -mx-1 px-1">
+                    <div class="flex-none w-64 p-5 bg-zinc-900 text-white rounded-[32px] shadow-lg relative overflow-hidden group">
+                        <div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+                        <p class="text-[10px] font-bold opacity-60 uppercase mb-2">Safety Score</p>
+                        <div class="flex items-end justify-between">
+                            <p class="text-4xl font-black">98.4<span class="text-sm font-bold opacity-40 ml-1">%</span></p>
+                            <div class="text-right">
+                                <p class="text-[10px] font-black text-emerald-400">+2.4%</p>
+                                <p class="text-[8px] font-medium opacity-40 uppercase">vs last week</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-none w-48 p-5 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 rounded-[32px] shadow-sm">
+                        <p class="text-[10px] font-bold text-zinc-400 uppercase mb-2">Response Time</p>
+                        <p class="text-2xl font-black">1.42s</p>
+                        <div class="w-full bg-zinc-100 dark:bg-zinc-800 h-1.5 rounded-full mt-3">
+                            <div class="bg-primary h-full w-[85%] rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SERVICE OPTIONS -->
+            <div class="text-left space-y-3 mb-8">
+                <h3 class="text-[11px] font-extrabold uppercase tracking-[0.15em] text-zinc-400 px-1 mb-4">Core Services</h3>
+                
+                <div class="grid grid-cols-1 gap-3">
+                    <button class="w-full p-4 bg-white dark:bg-zinc-900 rounded-[28px] border border-zinc-100 dark:border-zinc-800 flex items-center justify-between tap-active shadow-sm">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-orange-50 dark:bg-orange-950/30 text-orange-500 flex items-center justify-center service-icon">
+                                <i class="fas fa-file-shield text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold tracking-tight">Incident Logs</p>
+                                <p class="text-[10px] text-zinc-400 font-medium">History of all alerts & reports</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-right text-[10px] text-zinc-300"></i>
+                    </button>
+
+                    <button class="w-full p-4 bg-white dark:bg-zinc-900 rounded-[28px] border border-zinc-100 dark:border-zinc-800 flex items-center justify-between tap-active shadow-sm">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 text-emerald-500 flex items-center justify-center service-icon">
+                                <i class="fas fa-map-marked-alt text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold tracking-tight">Trusted Geozones</p>
+                                <p class="text-[10px] text-zinc-400 font-medium">Auto-safety in home/work zones</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-right text-[10px] text-zinc-300"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- PROFILE SETTINGS & EDIT (NEW SECTION) -->
+            <div class="text-left space-y-3 mb-8">
+                <div class="flex items-center justify-between px-1 mb-4">
+                    <h3 class="text-[11px] font-extrabold uppercase tracking-[0.15em] text-zinc-400">Profile Settings</h3>
+                    <button class="text-[10px] font-bold text-accent uppercase tracking-wider">Update All</button>
+                </div>
+                
+                <div class="grid grid-cols-1 gap-3">
+                    <!-- Edit Personal Info -->
+                    <button class="w-full p-4 bg-white dark:bg-zinc-900 rounded-[28px] border border-zinc-100 dark:border-zinc-800 flex items-center justify-between tap-active shadow-sm">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-zinc-50 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 flex items-center justify-center">
+                                <i class="fas fa-user-edit text-lg"></i>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-sm font-bold tracking-tight">Personal Information</p>
+                                <p class="text-[10px] text-zinc-400 font-medium">Edit name, phone, and email</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-right text-[10px] text-zinc-300"></i>
+                    </button>
+
+                    <!-- Account Security -->
+                    <button class="w-full p-4 bg-white dark:bg-zinc-900 rounded-[28px] border border-zinc-100 dark:border-zinc-800 flex items-center justify-between tap-active shadow-sm">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-zinc-50 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 flex items-center justify-center">
+                                <i class="fas fa-key text-lg"></i>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-sm font-bold tracking-tight">Security & Password</p>
+                                <p class="text-[10px] text-zinc-400 font-medium">Update password & 2FA</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-right text-[10px] text-zinc-300"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- PREMIUM PROMO -->
+            <div class="relative overflow-hidden p-6 bg-primary rounded-[35px] mb-8 tap-active shadow-xl shadow-primary/20 group">
+                <div class="absolute -right-4 -top-4 w-32 h-32 bg-white/20 rounded-full blur-2xl"></div>
+                <div class="relative z-10 flex items-center justify-between text-white">
+                    <div class="text-left">
+                        <p class="text-[10px] font-black uppercase tracking-widest opacity-80 mb-1">Protection Upgrade</p>
+                        <p class="text-xl font-black">SelfProtect Premium</p>
+                        <p class="text-[10px] font-bold opacity-70 mt-1">Unlock 24/7 Dedicated Monitoring</p>
+                    </div>
+                    <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-md">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BRANDING & PARTNER SECTION -->
+            <div class="mt-12 py-8 border-t border-zinc-100 dark:border-zinc-900">
+                <div class="flex flex-col items-center">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-6 h-6 bg-gray rounded flex items-center justify-center shadow-lg shadow-primary/20">
+                        <img width="20px" height="20px" src="https://selfprotectapp.com/resources/common/self-p.png
+                            " alt="SelfProtect logo">
+                        </div>
+                        <p class="text-sm font-black face-agra tracking-tighter uppercase "> Self Protect  </p>
+                    </div>
+                    
+                    <p class="text-[10px] text-zinc-400 font-medium max-w-[200px] leading-relaxed mb-6">
+                       Emergency Public Safety App
+                    </p>
+                    
+                    <!-- <div class="flex items-center gap-6 opacity-20 grayscale mb-6">
+                        <i class="fab fa-apple text-xl"></i>
+                        <i class="fab fa-google-play text-lg"></i>
+                        <i class="fas fa-shield-halved text-lg"></i>
+                    </div> -->
+<!--social media-->
+                    <div class="flex items-center gap-6 opacity-20 grayscale mb-6">
+                        <a href="https://www.facebook.com/SelfProtectApp" target="_blank">
+                          <i class="fab fa-facebook text-xl">   </i> 
+                        </a> 
+
+                        <a href="https://www.instagram.com/selfprotectapp" target="_blank">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="https://www.selfprotectapp.com" target="_blank">
+                            <i class="fas fa-globe text-lg"></i>
+                        </a>
+                    </div>
+                    <div class="bg-zinc-50 dark:bg-zinc-900/50 px-4 py-2 rounded-full border border-zinc-100 dark:border-zinc-800">
+                        <p class="text-[8px] font-bold text-zinc-400 tracking-[0.2em] uppercase">Trusted by 10k+ Users </p>
+                    </div>
+
+                    <br>
+
+                      <div class="bg-zinc-50 dark:bg-zinc-900/50 px-6 py-2 rounded-full border border-zinc-100 dark:border-zinc-800"> 
+              <a  href="https://www.winkytech.com" style="display:flex ;flex-direction: row;color: brown; align-items: center;">
+                <span class="font-bold text-zinc-400 tracking-[0.2em] uppercase">Developed By</span>     <img  width="24px" height="24px" src="img/icon/winkylogo.jpg" alt="winky Tech Limited">  
+              </a>
+                             
+                          
+                       
+                      
+                    </div>
+                </div>
+            </div>
+
+            <button class="w-full p-4 mt-8 text-zinc-300 font-bold uppercase text-[9px] tracking-[0.3em] hover:text-primary transition-colors">
+                Logout
+            </button>
+            
+            <p class="mt-6 text-[8px] font-medium text-zinc-300 uppercase tracking-widest opacity-40">Version 4.2.1 • Build 12212025-1202</p>
+
+        </section>
 <!-- VIEW: TACTICAL MESSENGER -->
 <section id="view-messenger" class="view py-4">
     <div class="flex items-center justify-between mb-8">
@@ -221,7 +432,7 @@
 <section id="view-emergency" class="view py-4">
     <div class="flex items-center justify-between mb-8">
         <div>
-            <h2 class="text-2xl font-black italic uppercase leading-none mb-1 text-red-600">Protocol</h2>
+            <h2 class="text-2xl font-black italic uppercase leading-none mb-1 text-red-600">Emergency Protocol</h2>
             <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Emergency & SOS Hub</p>
         </div>
         <div class="flex gap-2">
@@ -245,7 +456,7 @@
                 </div>
                 <p class="text-[10px] font-bold text-zinc-500 mt-1">Location: Central Station Area</p>
                 <div class="flex gap-2 mt-3">
-                    <button class="flex-1 bg-red-600 text-white py-2 rounded-xl text-[9px] font-black uppercase italic">Navigate</button>
+                    <button class="flex-1 bg-red-600 text-white py-2 rounded-xl text-[9px] font-black uppercase italic">Go</button>
                     <button class="flex-1 bg-zinc-900 text-white py-2 rounded-xl text-[9px] font-black uppercase italic">Call Unit</button>
                 </div>
             </div>
@@ -1477,222 +1688,6 @@
 </section>
 
 
-
-
-
-
-
-            <!-- VIEW: PROFILE -->
-                  <section id="view-profile" class="view py-4">
-            
-            <!-- AVATAR DESIGN ( Style Highlight) -->
-            <div class="relative w-28 h-28 mx-auto mb-5">
-                <div class="absolute inset-0 bg-primary/20 rounded-[40px] blur-xl"></div>
-                <img src="img/icon/profile/nahid.jpg" 
-                     class="relative w-full h-full rounded-[38px] border-[3px] border-white dark:border-zinc-800 shadow-xl object-cover" 
-                     alt="Nahid">
-                <button class="absolute -bottom-1 -right-1 bg-primary text-white w-9 h-9 rounded-xl flex items-center justify-center border-[3px] border-white dark:border-[#0A0A0A] shadow-md tap-active">
-                    <i class="fas fa-camera text-[10px]"></i>
-                </button>
-            </div>
-            
-            <h2 class="text-2xl font-black tracking-tight mb-1 " align="center">Nahid</h2>
-            <div class="flex items-center justify-center gap-2 mb-8">
-                <div class="flex items-center gap-1.5 bg-zinc-100 dark:bg-zinc-900 px-3 py-1.5 rounded-full">
-                    <i class="fas fa-crown text-[10px] text-yellow-500"></i>
-                    <span class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">Elite Badge</span>
-                </div>
-            </div>
-            
-            <!-- QUICK SERVICE STATS -->
-            <div class="grid grid-cols-4 gap-2 mb-8">
-                <div class="text-center">
-                    <p class="text-lg font-black tracking-tighter">128</p>
-                    <p class="text-[9px] font-bold text-zinc-400 uppercase">Alerts</p>
-                </div>
-                <div class="text-center border-l border-zinc-100 dark:border-zinc-800">
-                    <p class="text-lg font-black tracking-tighter">4.9</p>
-                    <p class="text-[9px] font-bold text-zinc-400 uppercase">Rating</p>
-                </div>
-                <div class="text-center border-l border-zinc-100 dark:border-zinc-800">
-                    <p class="text-lg font-black tracking-tighter">1.4s</p>
-                    <p class="text-[9px] font-bold text-zinc-400 uppercase">Latency</p>
-                </div>
-                <div class="text-center border-l border-zinc-100 dark:border-zinc-800">
-                    <p class="text-lg font-black tracking-tighter">#42</p>
-                    <p class="text-[9px] font-bold text-zinc-400 uppercase">Global</p>
-                </div>
-            </div>
-
-            <!-- PERFORMANCE ANALYTICS (Horizontal Scroll) -->
-            <div class="text-left mb-8">
-                <h3 class="text-[11px] font-extrabold uppercase tracking-[0.15em] text-zinc-400 px-1 mb-4">Activity Insights</h3>
-                <div class="flex gap-4 overflow-x-auto custom-scrollbar pb-4 -mx-1 px-1">
-                    <div class="flex-none w-64 p-5 bg-zinc-900 text-white rounded-[32px] shadow-lg relative overflow-hidden group">
-                        <div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
-                        <p class="text-[10px] font-bold opacity-60 uppercase mb-2">Safety Score</p>
-                        <div class="flex items-end justify-between">
-                            <p class="text-4xl font-black">98.4<span class="text-sm font-bold opacity-40 ml-1">%</span></p>
-                            <div class="text-right">
-                                <p class="text-[10px] font-black text-emerald-400">+2.4%</p>
-                                <p class="text-[8px] font-medium opacity-40 uppercase">vs last week</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-none w-48 p-5 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 rounded-[32px] shadow-sm">
-                        <p class="text-[10px] font-bold text-zinc-400 uppercase mb-2">Response Time</p>
-                        <p class="text-2xl font-black">1.42s</p>
-                        <div class="w-full bg-zinc-100 dark:bg-zinc-800 h-1.5 rounded-full mt-3">
-                            <div class="bg-primary h-full w-[85%] rounded-full"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SERVICE OPTIONS -->
-            <div class="text-left space-y-3 mb-8">
-                <h3 class="text-[11px] font-extrabold uppercase tracking-[0.15em] text-zinc-400 px-1 mb-4">Core Services</h3>
-                
-                <div class="grid grid-cols-1 gap-3">
-                    <button class="w-full p-4 bg-white dark:bg-zinc-900 rounded-[28px] border border-zinc-100 dark:border-zinc-800 flex items-center justify-between tap-active shadow-sm">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-orange-50 dark:bg-orange-950/30 text-orange-500 flex items-center justify-center service-icon">
-                                <i class="fas fa-file-shield text-lg"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm font-bold tracking-tight">Incident Logs</p>
-                                <p class="text-[10px] text-zinc-400 font-medium">History of all alerts & reports</p>
-                            </div>
-                        </div>
-                        <i class="fas fa-chevron-right text-[10px] text-zinc-300"></i>
-                    </button>
-
-                    <button class="w-full p-4 bg-white dark:bg-zinc-900 rounded-[28px] border border-zinc-100 dark:border-zinc-800 flex items-center justify-between tap-active shadow-sm">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 text-emerald-500 flex items-center justify-center service-icon">
-                                <i class="fas fa-map-marked-alt text-lg"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm font-bold tracking-tight">Trusted Geozones</p>
-                                <p class="text-[10px] text-zinc-400 font-medium">Auto-safety in home/work zones</p>
-                            </div>
-                        </div>
-                        <i class="fas fa-chevron-right text-[10px] text-zinc-300"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- PROFILE SETTINGS & EDIT (NEW SECTION) -->
-            <div class="text-left space-y-3 mb-8">
-                <div class="flex items-center justify-between px-1 mb-4">
-                    <h3 class="text-[11px] font-extrabold uppercase tracking-[0.15em] text-zinc-400">Profile Settings</h3>
-                    <button class="text-[10px] font-bold text-accent uppercase tracking-wider">Update All</button>
-                </div>
-                
-                <div class="grid grid-cols-1 gap-3">
-                    <!-- Edit Personal Info -->
-                    <button class="w-full p-4 bg-white dark:bg-zinc-900 rounded-[28px] border border-zinc-100 dark:border-zinc-800 flex items-center justify-between tap-active shadow-sm">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-zinc-50 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 flex items-center justify-center">
-                                <i class="fas fa-user-edit text-lg"></i>
-                            </div>
-                            <div class="text-left">
-                                <p class="text-sm font-bold tracking-tight">Personal Information</p>
-                                <p class="text-[10px] text-zinc-400 font-medium">Edit name, phone, and email</p>
-                            </div>
-                        </div>
-                        <i class="fas fa-chevron-right text-[10px] text-zinc-300"></i>
-                    </button>
-
-                    <!-- Account Security -->
-                    <button class="w-full p-4 bg-white dark:bg-zinc-900 rounded-[28px] border border-zinc-100 dark:border-zinc-800 flex items-center justify-between tap-active shadow-sm">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-zinc-50 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 flex items-center justify-center">
-                                <i class="fas fa-key text-lg"></i>
-                            </div>
-                            <div class="text-left">
-                                <p class="text-sm font-bold tracking-tight">Security & Password</p>
-                                <p class="text-[10px] text-zinc-400 font-medium">Update password & 2FA</p>
-                            </div>
-                        </div>
-                        <i class="fas fa-chevron-right text-[10px] text-zinc-300"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- PREMIUM PROMO -->
-            <div class="relative overflow-hidden p-6 bg-primary rounded-[35px] mb-8 tap-active shadow-xl shadow-primary/20 group">
-                <div class="absolute -right-4 -top-4 w-32 h-32 bg-white/20 rounded-full blur-2xl"></div>
-                <div class="relative z-10 flex items-center justify-between text-white">
-                    <div class="text-left">
-                        <p class="text-[10px] font-black uppercase tracking-widest opacity-80 mb-1">Protection Upgrade</p>
-                        <p class="text-xl font-black">SelfProtect Premium</p>
-                        <p class="text-[10px] font-bold opacity-70 mt-1">Unlock 24/7 Dedicated Monitoring</p>
-                    </div>
-                    <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-md">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-
-            <!-- BRANDING & PARTNER SECTION -->
-            <div class="mt-12 py-8 border-t border-zinc-100 dark:border-zinc-900">
-                <div class="flex flex-col items-center">
-                    <div class="flex items-center gap-2 mb-4">
-                        <div class="w-6 h-6 bg-gray rounded flex items-center justify-center shadow-lg shadow-primary/20">
-                        <img width="20px" height="20px" src="https://selfprotectapp.com/resources/common/self-p.png
-                            " alt="SelfProtect logo">
-                        </div>
-                        <p class="text-sm font-black face-agra tracking-tighter uppercase "> Self Protect  </p>
-                    </div>
-                    
-                    <p class="text-[10px] text-zinc-400 font-medium max-w-[200px] leading-relaxed mb-6">
-                       Emergency Public Safety App
-                    </p>
-                    
-                    <!-- <div class="flex items-center gap-6 opacity-20 grayscale mb-6">
-                        <i class="fab fa-apple text-xl"></i>
-                        <i class="fab fa-google-play text-lg"></i>
-                        <i class="fas fa-shield-halved text-lg"></i>
-                    </div> -->
-<!--social media-->
-                    <div class="flex items-center gap-6 opacity-20 grayscale mb-6">
-                        <a href="https://www.facebook.com/SelfProtectApp" target="_blank">
-                          <i class="fab fa-facebook text-xl">   </i> 
-                        </a> 
-
-                        <a href="https://www.instagram.com/selfprotectapp" target="_blank">
-                            <i class="fab fa-instagram text-lg"></i>
-                        </a>
-                        <a href="https://www.selfprotectapp.com" target="_blank">
-                            <i class="fas fa-globe text-lg"></i>
-                        </a>
-                    </div>
-                    <div class="bg-zinc-50 dark:bg-zinc-900/50 px-4 py-2 rounded-full border border-zinc-100 dark:border-zinc-800">
-                        <p class="text-[8px] font-bold text-zinc-400 tracking-[0.2em] uppercase">Trusted by 10k+ Users </p>
-                    </div>
-
-                    <br>
-
-                      <div class="bg-zinc-50 dark:bg-zinc-900/50 px-6 py-2 rounded-full border border-zinc-100 dark:border-zinc-800"> 
-              <a  href="https://www.winkytech.com" style="display:flex ;flex-direction: row;color: brown; align-items: center;">
-                <span class="font-bold text-zinc-400 tracking-[0.2em] uppercase">Developed By</span>     <img  width="24px" height="24px" src="img/icon/winkylogo.jpg" alt="winky Tech Limited">  
-              </a>
-                             
-                          
-                       
-                      
-                    </div>
-                </div>
-            </div>
-
-            <button class="w-full p-4 mt-8 text-zinc-300 font-bold uppercase text-[9px] tracking-[0.3em] hover:text-primary transition-colors">
-                Logout
-            </button>
-            
-            <p class="mt-6 text-[8px] font-medium text-zinc-300 uppercase tracking-widest opacity-40">Version 4.2.1 • Build 12212025-1202</p>
-
-        </section>
         </main>
  <!-- Bottom Navigation -->
         <nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white/95 dark:bg-zinc-950/95 backdrop-blur-lg border-t border-zinc-100 dark:border-zinc-800 h-20 px-6 flex items-center justify-between z-50 rounded-t-[32px] shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
@@ -1700,9 +1695,9 @@
                 <i class="fas fa-house text-xl"></i>
                 <span class="text-[9px] font-extrabold uppercase tracking-widest">Home</span>
             </button>
-            <button onclick="switchView('explore')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
+            <button onclick="switchView('feed')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
                 <i class="fas fa-rss text-xl"></i>
-                <span class="text-[9px] font-extrabold uppercase tracking-widest">Feed</span>
+                <span class="text-[9px] font-extrabold uppercase tracking-widest">News Feed</span>
             </button>
             
             <!-- Central SOS Button -->
@@ -1712,13 +1707,13 @@
                 </button>
             </div>
 
-            <button onclick="switchView('history')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
+            <button onclick="switchView('community')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
                 <i class="fa fa-handshake text-xl"></i>
-                <span class="text-[9px] font-extrabold uppercase tracking-widest">Help</span>
+                <span class="text-[9px] font-extrabold uppercase tracking-widest">Community</span>
             </button>
             <button onclick="switchView('profile')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
                  <div class="w-12 h-12 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Avatar" class="w-full h-full object-cover" onclick="switchView('profile')" style="cursor:pointer">
+                    <img width="10" height="10" src="img/icon/profile/nahid.jpg" alt="Avatar" class="w-full h-full object-cover"  style="cursor:pointer">
                 </div>
                 <span class="text-[9px] font-extrabold uppercase tracking-widest">Profile</span>
             </button>
