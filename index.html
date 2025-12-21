@@ -7,8 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
     <script src="js/app.js" defer></script>
     <script src="js/data.js"></script>  
+    <script src="js/sidebar.js"></script>
     <!--Config For Tailwind -->
   <script>
         tailwind.config = {
@@ -37,9 +39,28 @@
         <header class="bg-white dark:bg-zinc-950 px-5 pt-4 pb-3 flex items-center justify-between sticky top-0 z-40">
             <div class="flex items-center gap-3">
               <!--navside-->
-<div id="side" onclick="sideBar()" role="button">
-    <i class="fas fa-bars"></i>
-</div>
+
+    <!-- Toggle Button -->
+    <div id="side" onclick="sideBar()" role="button" aria-label="Toggle Navigation">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <nav class="sidebar" id="sidebar">
+        <ul class="sidebar-links">
+            <li><i class="fas fa-home"></i> Dashboard</li>
+            <li><i class="fas fa-user"></i> Profile</li>
+            <li><i class="fas fa-envelope"></i> Messages</li>
+            <li><i class="fas fa-cog"></i> Settings</li>
+            <li><i class="fas fa-sign-out-alt"></i> Logout</li>
+        </ul>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="sideBar()"></div>
+
+    <!-- Page Content -->
+ 
 
               
                 <div onclick="switchView('explore')" role="button" tabindex="0" style="cursor:pointer">

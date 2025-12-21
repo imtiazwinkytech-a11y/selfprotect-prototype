@@ -1,10 +1,110 @@
- /* Sidebar Specific Styles Integration */
-        #spSidebar {
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+ /* The Toggle Button from your snippet */
+  :root {
+            --sidebar-width: 280px;
+            --primary-bg: #1a1a1a;
+            --accent-color: #3498db;
+            --text-color: #ffffff;
+            --transition-speed: 0.3s;
         }
-        .sp-nav-link:hover {
-            background-color: rgba(0,0,0,0.05);
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+            overflow-x: hidden;
+        }      
+ #side {
+        
+            background-color: rgb(83, 81, 81);
+            color: var(--text-color);
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, background-color 0.2s;
         }
-        .dark .sp-nav-link:hover {
-            background-color: rgba(255,255,255,0.05);
+
+        #side:hover {
+            background-color: red;
+            transform: scale(1.05);
+        }
+
+        #side:active {
+            transform: scale(0.95);
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: calc(-1 * var(--sidebar-width));
+            width: var(--sidebar-width);
+            height: 100vh;
+            background-color: var(--primary-bg);
+            color: white;
+            transition: left var(--transition-speed) ease-in-out;
+            z-index: 999;
+            padding-top: 80px;
+            box-sizing: border-box;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-links li {
+            padding: 15px 25px;
+            border-bottom: 1px solid #333;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+
+        .sidebar-links li:hover {
+            background-color: #333;
+            color: var(--accent-color);
+        }
+
+        .sidebar-links i {
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Overlay to dim background when sidebar is open */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 998;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            padding: 100px 40px;
+            transition: margin-left var(--transition-speed);
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --sidebar-width: 80%;
+            }
         }

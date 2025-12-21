@@ -1,24 +1,30 @@
-function toggleSidebar() {
-            const sidebar = document.getElementById('sideBar');
-            const overlay = document.getElementById('spOverlay');
-            
-            if (sidebar.classList.contains('-translate-x-full')) {
-                // Open
-                sidebar.classList.remove('-translate-x-full');
-                overlay.classList.remove('hidden');
-                setTimeout(() => overlay.classList.add('opacity-100'), 10);
+ /**
+         * Toggles the 'active' class on the sidebar and overlay.
+         * This function is triggered by the onclick attribute on #side.
+         */
+        function sideBar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const icon = document.querySelector('#side i');
+
+            // Toggle visibility classes
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+
+            // Optional: Toggle icon between bars and 'X'
+            if (sidebar.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
             } else {
-                // Close
-                sidebar.classList.add('-translate-x-full');
-                overlay.classList.remove('opacity-100');
-                setTimeout(() => overlay.classList.add('hidden'), 300);
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
             }
         }
 
-        // Handle Escape Key
+        // Close sidebar if 'Esc' key is pressed
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                const sidebar = document.getElementById('spSidebar');
-                if (!sidebar.classList.contains('-translate-x-full')) toggleSidebar();
+            const sidebar = document.getElementById('sidebar');
+            if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+                sideBar();
             }
         });
