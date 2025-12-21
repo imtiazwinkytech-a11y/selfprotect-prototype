@@ -18,6 +18,7 @@
         };
 
         // --- NAVIGATION SYSTEM ---
+        
         function switchView(viewId) {
             // UI Update
             document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
