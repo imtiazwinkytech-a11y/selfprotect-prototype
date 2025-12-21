@@ -1,9 +1,9 @@
  /* The Toggle Button from your snippet */
   :root {
             --sidebar-width: 280px;
-            --primary-bg: #1a1a1a;
-            --accent-color: #3498db;
-            --text-color: #ffffff;
+            --primary-bg: #5353531a;
+            --accent-color: #ce0c0c;
+            --text-color: #d4c7c7;
             --transition-speed: 0.3s;
         }
 
