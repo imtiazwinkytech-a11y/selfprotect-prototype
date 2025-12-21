@@ -1,7 +1,7 @@
  /* The Toggle Button from your snippet */
   :root {
             --sidebar-width: 280px;
-            --primary-bg: #5353531a;
+            --primary-bg: #5353535d;
             --accent-color: #ce0c0c;
             --text-color: #d4c7c7;
             --transition-speed: 0.3s;
@@ -15,7 +15,7 @@
         }      
  #side {
         
-            background-color: rgb(83, 81, 81);
+            background-color: rgb(83, 79, 79);
             color: var(--text-color);
             width: 45px;
             height: 45px;
