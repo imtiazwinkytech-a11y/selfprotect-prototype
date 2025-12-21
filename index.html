@@ -75,8 +75,8 @@
          
             <!-- Toast container (kept separate) -->
             <div class="flex gap-2">
-<button onclick="switchView('tracking')" class="w-10 h-10 rounded-full bg-zinc-50 dark:bg-zinc-900 flex items-center justify-center relative tap-active" aria-label="Notifications">
-                    <i class="fas fa-location text-zinc-600 dark:text-zinc-400"></i>
+<button onclick="switchView('messenger')" class="w-10 h-10 rounded-full bg-zinc-50 dark:bg-zinc-900 flex items-center justify-center relative tap-active" aria-label="Notifications">
+                    <i class="fas fa-message text-zinc-600 dark:text-zinc-400"></i>
                     <span id="notifBadge" class="absolute top-3 right-3 w-2 h-2 bg-primary rounded-full border-2 border-white dark:border-zinc-950"></span>
                 </button>
 
@@ -95,6 +95,128 @@
         <!-- Dynamic Views Container -->
         <main class="flex-1 overflow-y-auto no-scrollbar pb-32 px-5">
             
+<!-- VIEW: TACTICAL MESSENGER -->
+<section id="view-messenger" class="view py-4">
+    <div class="flex items-center justify-between mb-8">
+        <div>
+            <h2 class="text-2xl font-black italic uppercase leading-none mb-1 text-zinc-900 dark:text-white">Messenger</h2>
+            <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">End-to-End Encrypted Comms</p>
+        </div>
+        <div class="flex gap-2">
+            <button class="w-10 h-10 bg-zinc-100 dark:bg-zinc-800 rounded-2xl flex items-center justify-center text-zinc-500 tap-active">
+                <i class="fas fa-search text-xs"></i>
+            </button>
+            <button class="w-10 h-10 bg-emerald-500 text-white rounded-2xl flex items-center justify-center tap-active shadow-lg shadow-emerald-500/20">
+                <i class="fas fa-edit text-xs"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Active Conversations List -->
+    <div class="space-y-1 mb-8">
+        <p class="text-[10px] font-black text-zinc-400 uppercase tracking-widest px-4 mb-3">Priority Channels</p>
+        
+        <!-- Group Chat -->
+        <div class="bg-emerald-50 dark:bg-emerald-900/10 p-4 rounded-[32px] border border-emerald-100 dark:border-emerald-800/50 flex items-center gap-4 tap-active">
+            <div class="relative">
+                <div class="w-12 h-12 bg-emerald-500 rounded-[20px] flex items-center justify-center text-white text-lg">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="absolute -top-1 -right-1 w-5 h-5 bg-red-600 border-2 border-white dark:border-zinc-900 rounded-full flex items-center justify-center text-[8px] font-black text-white">3</div>
+            </div>
+            <div class="flex-1 overflow-hidden">
+                <div class="flex justify-between items-center mb-1">
+                    <h3 class="text-sm font-black text-zinc-900 dark:text-white truncate">Family Circle</h3>
+                    <span class="text-[9px] font-bold text-emerald-600 uppercase">Live</span>
+                </div>
+                <p class="text-[11px] text-zinc-500 truncate font-medium">John: Just checked the perimeter, all clear.</p>
+            </div>
+        </div>
+
+        <!-- Direct Contact -->
+        <div class="p-4 rounded-[32px] flex items-center gap-4 tap-active hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors">
+            <div class="relative">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus" class="w-12 h-12 rounded-[20px] bg-zinc-100">
+                <div class="absolute bottom-0 right-0 w-3 h-3 bg-red-500 border-2 border-white dark:border-zinc-900 rounded-full"></div>
+            </div>
+            <div class="flex-1 overflow-hidden">
+                <div class="flex justify-between items-center mb-1">
+                    <h3 class="text-sm font-black text-zinc-900 dark:text-white truncate">Marcus V.</h3>
+                    <span class="text-[9px] font-bold text-zinc-400">14:02</span>
+                </div>
+                <p class="text-[11px] text-red-500 font-bold italic truncate">SOS: I need backup at Sector 4!</p>
+            </div>
+        </div>
+
+        <!-- Direct Contact -->
+        <div class="p-4 rounded-[32px] flex items-center gap-4 tap-active hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors">
+            <div class="relative">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Elena" class="w-12 h-12 rounded-[20px] bg-zinc-100">
+                <div class="absolute bottom-0 right-0 w-3 h-3 bg-zinc-300 border-2 border-white dark:border-zinc-900 rounded-full"></div>
+            </div>
+            <div class="flex-1 overflow-hidden">
+                <div class="flex justify-between items-center mb-1">
+                    <h3 class="text-sm font-black text-zinc-900 dark:text-white truncate">Elena Rodriguez</h3>
+                    <span class="text-[9px] font-bold text-zinc-400">09:15</span>
+                </div>
+                <p class="text-[11px] text-zinc-400 truncate font-medium">Thanks for the supplies earlier.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Active Chat Preview (Simulated Window) -->
+    <div class="bg-white dark:bg-zinc-900 rounded-[40px] border border-zinc-100 dark:border-zinc-800 shadow-2xl overflow-hidden flex flex-col h-[400px]">
+        <!-- Chat Header -->
+        <div class="p-4 border-b border-zinc-100 dark:border-zinc-800 flex items-center gap-3">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" class="w-8 h-8 rounded-full bg-zinc-100">
+            <div>
+                <p class="text-xs font-black text-zinc-900 dark:text-white uppercase italic">Sarah Jenkins</p>
+                <p class="text-[8px] font-bold text-emerald-500 uppercase tracking-widest">Online • Encrypted</p>
+            </div>
+        </div>
+
+        <!-- Chat History -->
+        <div class="flex-1 p-6 space-y-4 overflow-y-auto scrollbar-hide">
+            <div class="flex flex-col items-start gap-1">
+                <div class="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-[20px] chat-bubble-received max-w-[80%]">
+                    <p class="text-xs font-medium text-zinc-700 dark:text-zinc-300">Are you safely back at the shelter? The storm is picking up.</p>
+                </div>
+                <span class="text-[8px] font-bold text-zinc-400 px-2">14:20</span>
+            </div>
+
+            <div class="flex flex-col items-end gap-1">
+                <div class="bg-zinc-900 dark:bg-emerald-600 p-4 rounded-[20px] chat-bubble-sent max-w-[80%]">
+                    <p class="text-xs font-medium text-white">Yes, just arrived. I have enough supplies for 48 hours.</p>
+                </div>
+                <div class="flex items-center gap-1 px-2">
+                    <span class="text-[8px] font-bold text-zinc-400">14:21</span>
+                    <i class="fas fa-check-double text-[8px] text-emerald-500"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="p-4 bg-zinc-50 dark:bg-zinc-800/50">
+            <div class="flex gap-2">
+                <button class="w-10 h-10 rounded-2xl bg-white dark:bg-zinc-900 text-zinc-400 flex items-center justify-center tap-active border border-zinc-100 dark:border-zinc-700">
+                    <i class="fas fa-paperclip text-xs"></i>
+                </button>
+                <div class="flex-1 relative">
+                    <input type="text" placeholder="Send tactical data..." class="w-full bg-white dark:bg-zinc-900 py-3 px-5 rounded-[20px] text-xs font-bold border border-zinc-100 dark:border-zinc-700 outline-none focus:border-emerald-500 transition-colors">
+                </div>
+                <button class="w-10 h-10 rounded-2xl bg-zinc-900 dark:bg-emerald-500 text-white flex items-center justify-center tap-active">
+                    <i class="fas fa-paper-plane text-xs"></i>
+                </button>
+            </div>
+            <!-- Quick Action Shortcuts -->
+            <div class="flex gap-2 mt-3 overflow-x-auto scrollbar-hide">
+                <button class="shrink-0 px-3 py-1.5 bg-red-100 dark:bg-red-950/30 text-red-600 rounded-full text-[8px] font-black uppercase italic border border-red-200 dark:border-red-900/30">Quick SOS</button>
+                <button class="shrink-0 px-3 py-1.5 bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300 rounded-full text-[8px] font-black uppercase italic">Send Location</button>
+                <button class="shrink-0 px-3 py-1.5 bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300 rounded-full text-[8px] font-black uppercase italic">Safe Status</button>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- VIEW: EMERGENCY PROTOCOL -->
 <section id="view-emergency" class="view py-4">
     <div class="flex items-center justify-between mb-8">
