@@ -774,56 +774,184 @@
 
                     <!-- Community preview already present below -->
                 </section>
-                <section id="view-explore" class="view py-4">
-                    <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-xl font-black italic">SAFETY MAP</h2>
-                    <span class="text-[10px] font-black bg-emerald-100 text-emerald-600 px-2 py-1 rounded-lg uppercase">Live Updates</span>
+<!-- Safety Map Section -->
+<!-- Safety Map Section -->
+<!-- Safety Map Section -->
+<section id="view-explore" class="view py-6 max-w-4xl mx-auto">
+    <!-- Section Header -->
+    <div class="flex items-end justify-between mb-6 px-2">
+        <div>
+            <div class="flex items-center gap-2 mb-1">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span class="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-600 dark:text-emerald-400">System Live • Dhaka Sector</span>
+            </div>
+            <h2 class="text-2xl font-black tracking-tight uppercase text-zinc-900 dark:text-white">Tactical Map</h2>
+        </div>
+        <div class="flex gap-2">
+            <button class="text-[10px] font-black bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 px-4 py-2 rounded-xl uppercase tracking-widest border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-700 transition-colors shadow-sm">
+                <i class="fa-solid fa-location-crosshairs mr-2"></i>Current
+            </button>
+            <button class="text-[10px] font-black bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 px-4 py-2 rounded-xl uppercase tracking-widest border border-transparent hover:bg-zinc-800 transition-colors shadow-sm">
+                Filter <i class="fa-solid fa-sliders ml-1"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Map Container -->
+    <div class="bg-zinc-100 dark:bg-zinc-950 w-full h-96 rounded-[32px] overflow-hidden relative border border-zinc-200 dark:border-zinc-800 mb-6 shadow-xl group">
+        <!-- Real Google Map Integration (Centered on Dhaka) -->
+        <div class="absolute inset-0 z-0">
+            <iframe 
+                class="w-full h-full grayscale opacity-80 dark:opacity-60 contrast-125"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29210.32356885368!2d90.4125!3d23.7925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        
+        <!-- Interactive Overlay Layer -->
+        <div class="absolute inset-0 z-10 pointer-events-none">
+            <!-- Tactical Scanning Line Effect -->
+            <div class="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-blue-500/5 to-transparent opacity-20 animate-[scan_4s_linear_infinite]"></div>
+            
+            <!-- Grid Overlay -->
+            <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle, #888 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+            <!-- Pulse Markers (Your Location) -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div class="w-24 h-24 bg-blue-500/10 rounded-full animate-ping absolute -inset-0"></div>
+                <div class="w-12 h-12 bg-blue-600 rounded-full border-4 border-white dark:border-zinc-900 shadow-2xl relative z-10 flex items-center justify-center pointer-events-auto cursor-pointer transition-transform hover:scale-110">
+                    <i class="fa-solid fa-location-arrow text-white text-sm -rotate-45"></i>
                 </div>
-                <div class="bg-zinc-100 dark:bg-zinc-900 w-full h-72 rounded-[32px] overflow-hidden relative border border-zinc-200 dark:border-zinc-800 mb-6 shadow-inner">
-                    <!-- Simulated Map -->
-                    <div class="absolute inset-0 opacity-40 bg-[url('https://www.google.com/maps/vt/pb=!1m4!1m3!1i14!2i12045!3i7525!2m3!1e0!2sm!3i395155948!3m8!2sen!3sus!5e1105!12m4!1e68!2m2!1sset!2sRoadmap!4e0!5m1!1e0!23i4111425')] bg-cover scale-110"></div>
-                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                        <div class="w-24 h-24 bg-primary/20 rounded-full animate-ping absolute -inset-0"></div>
-                        <div class="w-8 h-8 bg-primary rounded-full border-4 border-white shadow-2xl relative z-10 flex items-center justify-center text-[10px] text-white font-black">YOU</div>
+                <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-[8px] px-2 py-0.5 rounded font-black tracking-widest uppercase shadow-lg">Active</div>
+            </div>
+        </div>
+
+        <!-- UI Overlays: Safety Index Card -->
+        <div class="absolute bottom-4 left-4 right-4 z-20 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-2xl">
+            <div class="flex items-center justify-between mb-3">
+                <p class="text-[10px] font-black uppercase tracking-widest text-zinc-400">Current Environment Score</p>
+                <div class="flex items-center gap-1.5">
+                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                    <span class="text-[10px] font-black text-emerald-500 uppercase tracking-tighter">Secure Perimeter</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex items-baseline gap-1">
+                    <p class="text-3xl font-black tracking-tighter text-zinc-900 dark:text-white">92%</p>
+                    <span class="text-[10px] font-bold text-zinc-400 tracking-tight">INDEX</span>
+                </div>
+                <div class="flex-1 h-2 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
+                    <div class="h-full bg-emerald-500 rounded-full w-[92%] transition-all duration-1000 ease-out"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modern Area List (Vertical Column Design) -->
+    <div class="px-1">
+        <div class="flex items-center justify-between mb-4 px-2">
+            <h3 class="text-[10px] font-black uppercase tracking-[0.25em] text-zinc-400">Regional Status Reports</h3>
+            <span class="text-[9px] font-bold text-zinc-400 uppercase tracking-widest">2 Regions Online</span>
+        </div>
+        
+        <div class="flex flex-col gap-3">
+            <!-- Area 1: Secure (Column Item) -->
+            <div class="group relative bg-white dark:bg-zinc-900/50 rounded-3xl border border-zinc-100 dark:border-zinc-800 p-2 pl-4 flex items-center justify-between hover:bg-zinc-50 dark:hover:bg-zinc-800/80 transition-all duration-300 cursor-pointer overflow-hidden shadow-sm hover:shadow-lg">
+                <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                
+                <div class="flex items-center gap-4 flex-1">
+                    <div class="w-12 h-12 bg-emerald-50 dark:bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-600 transition-all group-hover:bg-emerald-500 group-hover:text-white">
+                        <i class="fa-solid fa-location-dot text-lg"></i>
                     </div>
-                    <!-- Heatmap Overlays -->
-                    <div class="absolute top-10 left-10 w-24 h-24 bg-emerald-500/30 rounded-full blur-2xl"></div>
-                    <div class="absolute bottom-16 right-20 w-20 h-20 bg-red-500/30 rounded-full blur-2xl"></div>
-                    
-                    <div class="absolute bottom-4 left-4 right-4 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md p-3 rounded-2xl border border-white/20">
-                        <p class="text-[10px] font-black uppercase text-zinc-400">Current Safety Index</p>
-                        <p class="text-sm font-black text-emerald-500">92% - Secure Environment</p>
+                    <div>
+                        <div class="flex items-center gap-3 mb-0.5">
+                            <p class="text-[15px] font-black text-zinc-900 dark:text-white tracking-tight">Gulshan North</p>
+                            <span class="text-[8px] border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded-full font-black uppercase tracking-tighter">Verified Secure</span>
+                        </div>
+                        <p class="text-[11px] text-zinc-400 font-medium">Clear of incidents • Scan interval: 30s</p>
                     </div>
                 </div>
 
-                <div class="space-y-3">
-                    <div class="p-4 bg-white dark:bg-zinc-900 rounded-3xl border border-zinc-100 dark:border-zinc-800 flex items-center justify-between tap-active">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center text-emerald-600">
-                                <i class="fas fa-shield-check"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm font-black">Gulshan North</p>
-                                <p class="text-[10px] text-emerald-500 font-bold uppercase tracking-widest">Safe Zone</p>
-                            </div>
+                <div class="flex items-center gap-8 pr-4">
+                    <div class="hidden sm:flex flex-col items-end">
+                        <span class="text-[9px] font-black text-zinc-400 uppercase tracking-widest mb-1">Integrity</span>
+                        <div class="w-24 h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-emerald-500 w-[98%] transition-all duration-700"></div>
                         </div>
-                        <span class="text-xs font-black text-zinc-400">98%</span>
                     </div>
-                    <div class="p-4 bg-white dark:bg-zinc-900 rounded-3xl border border-zinc-100 dark:border-zinc-800 flex items-center justify-between tap-active">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center text-orange-600">
-                                <i class="fas fa-triangle-exclamation"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm font-black">Banani 11</p>
-                                <p class="text-[10px] text-orange-500 font-bold uppercase tracking-widest">High Traffic</p>
-                            </div>
+                    <div class="text-right">
+                        <span class="text-xl font-black text-zinc-900 dark:text-white tabular-nums">98%</span>
+                        <p class="text-[9px] font-black text-emerald-500 uppercase">Optimal</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-zinc-200 dark:text-zinc-700 text-xs group-hover:text-zinc-400 group-hover:translate-x-1 transition-all"></i>
+                </div>
+            </div>
+
+            <!-- Area 2: Warning (Column Item) -->
+            <div class="group relative bg-white dark:bg-zinc-900/50 rounded-3xl border border-zinc-100 dark:border-zinc-800 p-2 pl-4 flex items-center justify-between hover:bg-zinc-50 dark:hover:bg-zinc-800/80 transition-all duration-300 cursor-pointer overflow-hidden shadow-sm hover:shadow-lg">
+                <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-orange-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                
+                <div class="flex items-center gap-4 flex-1">
+                    <div class="w-12 h-12 bg-orange-50 dark:bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-600 transition-all group-hover:bg-orange-500 group-hover:text-white">
+                        <i class="fa-solid fa-triangle-exclamation text-lg"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-0.5">
+                            <p class="text-[15px] font-black text-zinc-900 dark:text-white tracking-tight">Banani 11</p>
+                            <span class="text-[8px] border border-orange-500/30 text-orange-600 dark:text-orange-400 px-2 py-0.5 rounded-full font-black uppercase tracking-tighter">Active Monitoring</span>
                         </div>
-                        <span class="text-xs font-black text-zinc-400">72%</span>
+                        <p class="text-[11px] text-zinc-400 font-medium">Congestion spikes detected • Manual override avail.</p>
                     </div>
                 </div>
-            </section>
 
+                <div class="flex items-center gap-8 pr-4">
+                    <div class="hidden sm:flex flex-col items-end">
+                        <span class="text-[9px] font-black text-zinc-400 uppercase tracking-widest mb-1">Integrity</span>
+                        <div class="w-24 h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-orange-500 w-[72%] transition-all duration-700"></div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xl font-black text-zinc-900 dark:text-white tabular-nums">72%</span>
+                        <p class="text-[9px] font-black text-orange-500 uppercase">Warning</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-zinc-200 dark:text-zinc-700 text-xs group-hover:text-zinc-400 group-hover:translate-x-1 transition-all"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+@keyframes scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(400%); }
+}
+</style>
+<style>
+@keyframes scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(400%); }
+}
+</style>
+<style>
+@keyframes scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(400%); }
+}
+</style>
+<style>
+@keyframes scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(400%); }
+}
+</style>
 <!-- VIEW: CIRCLES -->
 <section id="view-circle" class="view py-4">
     <div class="flex items-center justify-between mb-8">
