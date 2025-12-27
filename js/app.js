@@ -1,50 +1,54 @@
+// Collect all your sections into a list
+const sections = document.querySelectorAll('section');
+let currentIndex = 0;
 
-        // Start by defining the initial state
-        let navStack = [{ id: 'homeView', title: 'SelfProtect' }];
+/**
+ * 1. INITIAL SETUP
+ * Hide everything except the first section when the site opens.
+ */
+function initApp() {
+    sections.forEach((s, index) => {
+        s.style.display = index === 0 ? 'block' : 'none';
+    });
+    // Set the starting point in the phone's history
+    history.replaceState({ index: 0 }, "");
+}
 
-        // 1. Listen for the phone's physical back button
-        window.onpopstate = function(event) {
-            // If the user presses back, we pop our internal stack and show the previous view
-            if (navStack.length > 1) {
-                const lastView = navStack.pop();
-                document.getElementById(lastView.id).classList.remove('active');
-                
-                const currentView = navStack[navStack.length - 1];
-                document.getElementById(currentView.id).classList.add('active');
-                updateUI();
-            }
-        };
+/**
+ * 2. TRIGGER A PAGE CHANGE
+ * Call this function whenever you want to move to the next section 
+ * (e.g., after a form is filled or a card is clicked).
+ */
+function goToNextSection(targetIndex) {
+    if (targetIndex >= sections.length || targetIndex < 0) return;
 
-        function navigateTo(viewId, title) {
-            // Hide current
-            const currentView = navStack[navStack.length - 1];
-            document.getElementById(currentView.id).classList.remove('active');
+    // Hide current, show next
+    sections[currentIndex].style.display = 'none';
+    sections[targetIndex].style.display = 'block';
+    
+    currentIndex = targetIndex;
 
-            // Add to internal stack
-            navStack.push({ id: viewId, title: title });
+    // Register this move in the phone's built-in history
+    history.pushState({ index: targetIndex }, "");
+}
 
-            // 2. Add to browser/phone history
-            // This is what makes the phone's back button work!
-            window.history.pushState({ viewId: viewId }, title);
+/**
+ * 3. THE MAGIC: BUILT-IN BACK BUTTON LISTENER
+ * This triggers when the user swipes back or presses the hardware back button.
+ */
+window.onpopstate = function(event) {
+    if (event.state !== null && typeof event.state.index !== 'undefined') {
+        // Hide the "current" section
+        sections[currentIndex].style.display = 'none';
+        
+        // Show the "previous" section stored in the phone's history
+        const previousIndex = event.state.index;
+        sections[previousIndex].style.display = 'block';
+        
+        // Update our tracker
+        currentIndex = previousIndex;
+    }
+};
 
-            // Show new
-            document.getElementById(viewId).classList.add('active');
-            updateUI();
-        }
-
-        function updateUI() {
-            const currentView = navStack[navStack.length - 1];
-            const backBtn = document.getElementById('customBackBtn');
-            const titleEl = document.getElementById('pageTitle');
-
-            titleEl.innerText = currentView.title;
-
-            // Update UI button state
-            if (navStack.length > 1) {
-                backBtn.disabled = false;
-                backBtn.classList.remove('opacity-30', 'cursor-not-allowed');
-            } else {
-                backBtn.disabled = true;
-                backBtn.classList.add('opacity-30', 'cursor-not-allowed');
-            }
-        }
+// Start the app
+initApp();
