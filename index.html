@@ -1438,428 +1438,36 @@
 
 
 
-<section id="view-feed" class="view py-6 max-w-2xl mx-auto px-4">
-    <!-- Header -->
+<!-- VIEW: NEWSFEED -->
+<section id="view-feed" class="view py-4">
     <div class="flex items-center justify-between mb-8">
         <div>
-            <h2 class="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white mb-1">Safety Feed</h2>
-            <p class="text-xs font-semibold text-zinc-500 uppercase tracking-wider">Localized Intelligence & Reports</p>
-        </div>
-        <div class="relative">
-            <button onclick="toggleFilterMenu()" class="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-full text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="2" y1="14" x2="6" y2="14"></line><line x1="10" y1="8" x2="14" y2="8"></line><line x1="18" y1="16" x2="22" y2="16"></line></svg>
-            </button>
-            <!-- Dropdown Menu -->
-            <div id="filterMenu" class="hidden absolute right-0 mt-2 w-48 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl shadow-xl z-50 py-2">
-                <button onclick="filterFeed('all')" class="w-full text-left px-4 py-2 text-sm font-semibold hover:bg-zinc-100 dark:hover:bg-zinc-800">Show All</button>
-                <button onclick="filterFeed('high')" class="w-full text-left px-4 py-2 text-sm font-semibold text-red-600 hover:bg-zinc-100 dark:hover:bg-zinc-800">High Alert Only</button>
-                <button onclick="filterFeed('weather')" class="w-full text-left px-4 py-2 text-sm font-semibold hover:bg-zinc-100 dark:hover:bg-zinc-800">Weather Only</button>
-                <button onclick="filterFeed('traffic')" class="w-full text-left px-4 py-2 text-sm font-semibold hover:bg-zinc-100 dark:hover:bg-zinc-800">Traffic Only</button>
-                <button onclick="filterFeed('fire')" class="w-full text-left px-4 py-2 text-sm font-semibold hover:bg-zinc-100 dark:hover:bg-zinc-800 text-orange-600">Fire Alerts Only</button>
-            </div>
+            <h2 class="text-2xl font-black italic uppercase leading-none mb-1">Safety Feed</h2>
+            <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Localized Intelligence & Reports</p>
         </div>
     </div>
 
-    <!-- Create Post Component -->
-    <div class="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm p-4 mb-8">
-        <div class="flex gap-3 items-center mb-4">
-            <div class="w-10 h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-zinc-500">
-                <i class="fas fa-user"></i>
-            </div>
-            <button onclick="openPostModal()" class="flex-1 text-left bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors rounded-full px-5 py-2.5 text-zinc-500 dark:text-zinc-400 text-sm">
-                What's the safety status in your area?
-            </button>
-        </div>
-        <div class="flex border-t border-zinc-100 dark:border-zinc-800 pt-3">
-            <button onclick="openPostModal('fire')" class="flex-1 flex items-center justify-center gap-2 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-xl transition-colors text-xs font-bold text-orange-600">
-                <i class="fas fa-fire"></i> Fire Alert
-            </button>
-            <button onclick="openPostModal('traffic')" class="flex-1 flex items-center justify-center gap-2 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-xl transition-colors text-xs font-bold text-zinc-500">
-                <i class="fas fa-car"></i> Traffic
-            </button>
-            <button onclick="openPostModal('high')" class="flex-1 flex items-center justify-center gap-2 py-2 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-xl transition-colors text-xs font-bold text-red-600">
-                <i class="fas fa-exclamation-triangle"></i> Emergency
-            </button>
-        </div>
-    </div>
-
-    <!-- Feed Container -->
-    <div id="feedContent" class="space-y-6">
-        
-        <!-- 1. HIGH ALERT: Infrastructure -->
-        <article class="feed-item bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all" data-category="high">
-            <div class="p-4 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center text-red-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <div>
-                        <h4 class="text-sm font-bold text-zinc-900 dark:text-zinc-100">Municipal Safety Division</h4>
-                        <p class="text-[11px] text-zinc-500 font-medium">18m • <i class="fas fa-globe-americas"></i></p>
-                    </div>
+    <div class="space-y-6">
+        <div class="bg-white dark:bg-zinc-900 rounded-[32px] overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-sm tap-active">
+            <div class="news-image h-40 w-full relative">
+                <div class="absolute inset-0 flex items-center justify-center text-zinc-700">
+                    <i class="fas fa-map-marked-alt text-4xl opacity-20"></i>
                 </div>
-                <span class="bg-red-50 dark:bg-red-950 text-red-600 dark:text-red-400 text-[10px] font-bold uppercase px-2.5 py-1 rounded-md tracking-wider border border-red-100 dark:border-red-900/50">High Alert</span>
-            </div>
-            <div class="px-4 pb-3">
-                <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-50 leading-snug mb-2">Power Grid Failure in Sector 4</h3>
-                <p class="text-[14px] text-zinc-600 dark:text-zinc-400 leading-normal mb-4">Major transformer explosion confirmed. Street lights down in northern residential block. Avoid non-essential travel.</p>
-            </div>
-            <div class="h-48 bg-zinc-100 dark:bg-zinc-800 relative flex items-center justify-center">
-                <i class="fas fa-bolt text-4xl text-zinc-300 dark:text-zinc-700"></i>
-                <div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded font-medium">0.8km Away</div>
-            </div>
-            <div class="px-2 py-1 flex items-center justify-around border-t border-zinc-100 dark:border-zinc-800">
-                <button onclick="handleLike(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-all text-sm font-semibold">
-                    <i class="far fa-thumbs-up"></i><span>Like</span>
-                </button>
-                <button onclick="handleComment(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-colors text-sm font-semibold">
-                    <i class="far fa-comment"></i><span>Comment</span>
-                </button>
-                <button onclick="handleShare(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-colors text-sm font-semibold">
-                    <i class="fas fa-share-alt"></i><span>Share</span>
-                </button>
-            </div>
-        </article>
-
-        <!-- 2. FIRE ALERT: Emergency Response -->
-        <article class="feed-item bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all" data-category="fire">
-            <div class="p-4 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center text-orange-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l3 3-3 3"/><path d="M12 12h4"/><circle cx="12" cy="12" r="10"/></svg>
-                    </div>
-                    <div>
-                        <h4 class="text-sm font-bold text-zinc-900 dark:text-zinc-100">Fire Department Dispatch</h4>
-                        <p class="text-[11px] text-zinc-500 font-medium">32m • <i class="fas fa-globe-americas"></i></p>
-                    </div>
+                <div class="absolute top-4 left-4">
+                    <span class="bg-red-600 text-white text-[9px] font-black uppercase px-3 py-1 rounded-full italic tracking-widest">High Alert</span>
                 </div>
-                <span class="bg-orange-50 dark:bg-orange-950 text-orange-600 dark:text-orange-400 text-[10px] font-bold uppercase px-2.5 py-1 rounded-md tracking-wider border border-orange-100 dark:border-orange-900/50">Active Fire</span>
             </div>
-            <div class="px-4 pb-3">
-                <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-50 leading-snug mb-2">Structure Fire on Elm Street</h3>
-                <p class="text-[14px] text-zinc-600 dark:text-zinc-400 leading-normal mb-4">Emergency crews are on site at the 400 block of Elm Street. Road closures in effect between 4th and 6th Avenue. Clear the way for emergency vehicles.</p>
-            </div>
-            <div class="px-2 py-1 flex items-center justify-around border-t border-zinc-100 dark:border-zinc-800">
-                <button onclick="handleLike(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-all text-sm font-semibold">
-                    <i class="far fa-thumbs-up"></i><span>Like</span>
-                </button>
-                <button onclick="handleComment(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-colors text-sm font-semibold">
-                    <i class="far fa-comment"></i><span>Comment</span>
-                </button>
-                <button onclick="handleShare(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-colors text-sm font-semibold">
-                    <i class="fas fa-share-alt"></i><span>Share</span>
-                </button>
-            </div>
-        </article>
-
-        <!-- 3. TRAFFIC ALERT: Road Safety -->
-        <article class="feed-item bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all" data-category="traffic">
-            <div class="p-4 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-zinc-100 dark:bg-zinc-800 rounded-full flex items-center justify-center text-zinc-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="22" height="13" rx="2" ry="2"></rect><path d="M7 21h10"></path><path d="M12 16v5"></path></svg>
-                    </div>
-                    <div>
-                        <h4 class="text-sm font-bold text-zinc-900 dark:text-zinc-100">Traffic Control Center</h4>
-                        <p class="text-[11px] text-zinc-500 font-medium">45m • <i class="fas fa-globe-americas"></i></p>
-                    </div>
+            <div class="p-6">
+                <div class="flex items-center gap-2 mb-3">
+                    <i class="fas fa-clock text-zinc-400 text-[10px]"></i>
+                    <span class="text-[10px] font-bold text-zinc-400 uppercase">18 Minutes Ago • 0.8km Away</span>
                 </div>
-                <span class="bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-[10px] font-bold uppercase px-2.5 py-1 rounded-md tracking-wider border border-zinc-200 dark:border-zinc-700">Traffic</span>
-            </div>
-            <div class="px-4 pb-3">
-                <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-50 leading-snug mb-2">Major Delay on Highway 101</h3>
-                <p class="text-[14px] text-zinc-600 dark:text-zinc-400 leading-normal mb-4">Multi-vehicle accident reported northbound near the bridge. Expected delay is over 30 minutes. Use the bypass route via County Road B.</p>
-            </div>
-            <div class="px-2 py-1 flex items-center justify-around border-t border-zinc-100 dark:border-zinc-800">
-                <button onclick="handleLike(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-all text-sm font-semibold">
-                    <i class="far fa-thumbs-up"></i><span>Like</span>
-                </button>
-                <button onclick="handleComment(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-colors text-sm font-semibold">
-                    <i class="far fa-comment"></i><span>Comment</span>
-                </button>
-                <button onclick="handleShare(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-colors text-sm font-semibold">
-                    <i class="fas fa-share-alt"></i><span>Share</span>
-                </button>
-            </div>
-        </article>
-
-        <!-- 4. WEATHER ALERT: Environmental -->
-        <article class="feed-item bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all" data-category="weather">
-            <div class="p-4 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19c.7 0 1.3-.2 1.8-.7s.7-1.1.7-1.8c0-1.3-1-2.4-2.2-2.5C17.4 11.4 15.3 9 12.8 9c-2 0-3.6 1.3-4.1 3.1-1.3.1-2.4 1.2-2.4 2.5 0 1.4 1.1 2.4 2.5 2.4h8.7z"/><path d="M9 20v2"/><path d="M12 20v2"/><path d="M15 20v2"/></svg>
-                    </div>
-                    <div>
-                        <h4 class="text-sm font-bold text-zinc-900 dark:text-zinc-100">National Weather Service</h4>
-                        <p class="text-[11px] text-zinc-500 font-medium">1h • <i class="fas fa-globe-americas"></i></p>
-                    </div>
-                </div>
-                <span class="bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-[10px] font-bold uppercase px-2.5 py-1 rounded-md tracking-wider border border-blue-100 dark:border-blue-900/50">Weather</span>
-            </div>
-            <div class="px-4 pb-3">
-                <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-50 leading-snug mb-2">Severe Thunderstorm Warning</h3>
-                <p class="text-[14px] text-zinc-600 dark:text-zinc-400 leading-normal mb-4">Expect heavy rainfall and flash floods in low-lying areas. Move vehicles to higher ground and stay indoors.</p>
-            </div>
-            <div class="px-2 py-1 flex items-center justify-around border-t border-zinc-100 dark:border-zinc-800">
-                <button onclick="handleLike(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-all text-sm font-semibold">
-                    <i class="far fa-thumbs-up"></i><span>Like</span>
-                </button>
-                <button onclick="handleComment(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-colors text-sm font-semibold">
-                    <i class="far fa-comment"></i><span>Comment</span>
-                </button>
-                <button onclick="handleShare(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-colors text-sm font-semibold">
-                    <i class="fas fa-share-alt"></i><span>Share</span>
-                </button>
-            </div>
-        </article>
-
-        <!-- 5. COMMUNITY ALERT: Neighborhood Safety -->
-        <article class="feed-item bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all" data-category="high">
-            <div class="p-4 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center text-purple-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                    </div>
-                    <div>
-                        <h4 class="text-sm font-bold text-zinc-900 dark:text-zinc-100">Neighborhood Watch</h4>
-                        <p class="text-[11px] text-zinc-500 font-medium">2h • <i class="fas fa-globe-americas"></i></p>
-                    </div>
-                </div>
-                <span class="bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 text-[10px] font-bold uppercase px-2.5 py-1 rounded-md tracking-wider border border-purple-100 dark:border-purple-900/50">Notice</span>
-            </div>
-            <div class="px-4 pb-3">
-                <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-50 leading-snug mb-2">Unusual Activity Spotted near Park</h3>
-                <p class="text-[14px] text-zinc-600 dark:text-zinc-400 leading-normal mb-4">Residents have reported several unfamiliar vehicles loitering near the south park entrance after dusk. Keep porch lights on and report suspicious activity to non-emergency lines.</p>
-            </div>
-            <div class="px-2 py-1 flex items-center justify-around border-t border-zinc-100 dark:border-zinc-800">
-                <button onclick="handleLike(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-all text-sm font-semibold">
-                    <i class="far fa-thumbs-up"></i><span>Like</span>
-                </button>
-                <button onclick="handleComment(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-colors text-sm font-semibold">
-                    <i class="far fa-comment"></i><span>Comment</span>
-                </button>
-                <button onclick="handleShare(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-colors text-sm font-semibold">
-                    <i class="fas fa-share-alt"></i><span>Share</span>
-                </button>
-            </div>
-        </article>
-
-    </div>
-
-    <!-- Post Modal -->
-    <div id="postModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] hidden items-center justify-center px-4">
-        <div class="bg-white dark:bg-zinc-900 w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 dark:border-zinc-800">
-            <div class="p-4 border-b border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
-                <h3 class="font-bold text-lg text-zinc-900 dark:text-white">Create Safety Post</h3>
-                <button onclick="closePostModal()" class="w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="p-4">
-                <div class="flex gap-3 items-center mb-4">
-                    <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <div>
-                        <p class="text-sm font-bold text-zinc-900 dark:text-white">Citizen Responder</p>
-                        <select id="postCategory" class="text-[10px] bg-zinc-100 dark:bg-zinc-800 text-zinc-500 border-none rounded px-1.5 py-0.5 mt-0.5 focus:ring-0">
-                            <option value="high">High Alert</option>
-                            <option value="traffic">Traffic</option>
-                            <option value="fire">Fire Alert</option>
-                            <option value="weather">Weather</option>
-                            <option value="notice">Community Notice</option>
-                        </select>
-                    </div>
-                </div>
-                <textarea id="postContent" placeholder="Describe the situation..." class="w-full bg-transparent border-none focus:ring-0 text-zinc-800 dark:text-zinc-200 resize-none h-32 text-lg" maxlength="280"></textarea>
-            </div>
-            <div class="p-4 bg-zinc-50 dark:bg-zinc-800/50 border-t border-zinc-100 dark:border-zinc-800">
-                <button onclick="submitNewPost()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl transition-all shadow-md active:scale-[0.98]">
-                    Post Alert
-                </button>
+                <h3 class="text-lg font-black italic uppercase leading-tight mb-2">Power Grid Failure in Sector 4</h3>
+                <p class="text-sm text-zinc-500 font-medium mb-4 leading-relaxed">Local authorities report a major transformer explosion. Street lights are down in the northern residential block. Avoid travel to this area.</p>
             </div>
         </div>
     </div>
 </section>
-
-<script>
-    // 1. Toggle Filter Menu
-    function toggleFilterMenu() {
-        const menu = document.getElementById('filterMenu');
-        menu.classList.toggle('hidden');
-    }
-
-    // 2. Filter Functionality
-    function filterFeed(category) {
-        const items = document.querySelectorAll('.feed-item');
-        items.forEach(item => {
-            if (category === 'all' || item.dataset.category === category) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-        toggleFilterMenu(); // Close menu after selection
-    }
-
-    // 3. Like Functionality (State Toggle)
-    function handleLike(btn) {
-        const icon = btn.querySelector('i');
-        const text = btn.querySelector('span');
-        
-        btn.classList.toggle('text-blue-600');
-        if (btn.classList.contains('text-blue-600')) {
-            icon.classList.replace('far', 'fas');
-            text.textContent = 'Liked';
-            btn.classList.add('scale-110');
-            setTimeout(() => btn.classList.remove('scale-110'), 200);
-        } else {
-            icon.classList.replace('fas', 'far');
-            text.textContent = 'Like';
-        }
-    }
-
-    // 4. Comment Functionality (Toggle Input)
-    function handleComment(btn) {
-        const card = btn.closest('article');
-        let commentSection = card.querySelector('.comment-section');
-        
-        if (!commentSection) {
-            commentSection = document.createElement('div');
-            commentSection.className = 'comment-section px-4 py-3 border-t border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-black/20';
-            commentSection.innerHTML = `
-                <div class="flex gap-2">
-                    <input type="text" placeholder="Write a comment..." class="flex-1 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-full px-4 py-1.5 text-xs focus:outline-none">
-                    <button onclick="submitComment(this)" class="p-2 text-zinc-400 hover:text-blue-500 transition-colors"><i class="fas fa-paper-plane"></i></button>
-                </div>
-            `;
-            card.appendChild(commentSection);
-        } else {
-            commentSection.classList.toggle('hidden');
-        }
-        
-        if (!commentSection.classList.contains('hidden')) {
-            commentSection.querySelector('input').focus();
-        }
-    }
-
-    // 5. Submit Comment
-    function submitComment(btn) {
-        const input = btn.closest('.comment-section').querySelector('input');
-        if (input.value.trim() === '') return;
-        
-        const feedback = document.createElement('p');
-        feedback.className = 'text-[10px] text-green-500 font-bold mt-2 animate-pulse';
-        feedback.textContent = 'Report submitted for verification...';
-        btn.closest('.comment-section').appendChild(feedback);
-        
-        input.value = '';
-        setTimeout(() => feedback.remove(), 2000);
-    }
-
-    // 6. Share Functionality
-    function handleShare(btn) {
-        const title = btn.closest('article').querySelector('h3').textContent;
-        const originalContent = btn.innerHTML;
-        btn.innerHTML = '<i class="fas fa-check"></i> <span>Copied Link</span>';
-        btn.classList.add('text-green-600');
-        
-        console.log("Shared safety report:", title);
-
-        setTimeout(() => {
-            btn.innerHTML = originalContent;
-            btn.classList.remove('text-green-600');
-        }, 2000);
-    }
-
-    // --- NEW: POST MODAL LOGIC ---
-
-    function openPostModal(prefCategory = 'high') {
-        const modal = document.getElementById('postModal');
-        const select = document.getElementById('postCategory');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        select.value = prefCategory;
-        document.getElementById('postContent').focus();
-    }
-
-    function closePostModal() {
-        const modal = document.getElementById('postModal');
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-        document.getElementById('postContent').value = '';
-    }
-
-    function submitNewPost() {
-        const content = document.getElementById('postContent').value.trim();
-        const category = document.getElementById('postCategory').value;
-        const container = document.getElementById('feedContent');
-
-        if (!content) return;
-
-        // Create a basic category display config
-        const configs = {
-            high: { label: 'High Alert', color: 'red', icon: 'shield' },
-            fire: { label: 'Active Fire', color: 'orange', icon: 'fire' },
-            traffic: { label: 'Traffic', color: 'zinc', icon: 'car' },
-            weather: { label: 'Weather', color: 'blue', icon: 'cloud-rain' },
-            notice: { label: 'Notice', color: 'purple', icon: 'info-circle' }
-        };
-
-        const config = configs[category] || configs.high;
-
-        const newPost = document.createElement('article');
-        newPost.className = 'feed-item bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all animate-in fade-in slide-in-from-top-4 duration-500';
-        newPost.dataset.category = category;
-        newPost.innerHTML = `
-            <div class="p-4 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-${config.color}-100 dark:bg-${config.color}-900/30 rounded-full flex items-center justify-center text-${config.color}-600">
-                        <i class="fas fa-${config.icon}"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-sm font-bold text-zinc-900 dark:text-zinc-100">Citizen Responder</h4>
-                        <p class="text-[11px] text-zinc-500 font-medium">Just now • <i class="fas fa-globe-americas"></i></p>
-                    </div>
-                </div>
-                <span class="bg-${config.color}-50 dark:bg-${config.color}-950 text-${config.color}-600 dark:text-${config.color}-400 text-[10px] font-bold uppercase px-2.5 py-1 rounded-md tracking-wider border border-${config.color}-100 dark:border-${config.color}-900/50">${config.label}</span>
-            </div>
-            <div class="px-4 pb-3">
-                <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-50 leading-snug mb-2">User Reported Update</h3>
-                <p class="text-[14px] text-zinc-600 dark:text-zinc-400 leading-normal mb-4">${content}</p>
-            </div>
-            <div class="px-2 py-1 flex items-center justify-around border-t border-zinc-100 dark:border-zinc-800">
-                <button onclick="handleLike(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-all text-sm font-semibold">
-                    <i class="far fa-thumbs-up"></i><span>Like</span>
-                </button>
-                <button onclick="handleComment(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-colors text-sm font-semibold">
-                    <i class="far fa-comment"></i><span>Comment</span>
-                </button>
-                <button onclick="handleShare(this)" class="flex-1 flex items-center justify-center gap-2 py-2 text-zinc-500 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-lg transition-colors text-sm font-semibold">
-                    <i class="fas fa-share-alt"></i><span>Share</span>
-                </button>
-            </div>
-        `;
-
-        container.prepend(newPost);
-        closePostModal();
-    }
-
-    // Close menu when clicking outside
-    window.addEventListener('click', (e) => {
-        const menu = document.getElementById('filterMenu');
-        const filterBtn = menu ? menu.previousElementSibling : null;
-        if (menu && filterBtn && !menu.contains(e.target) && !filterBtn.contains(e.target)) {
-            menu.classList.add('hidden');
-        }
-        
-        const modal = document.getElementById('postModal');
-        if (e.target === modal) {
-            closePostModal();
-        }
-    });
-</script>
 <!-- VIEW: TRACKING -->
 <section id="view-tracking" class="view py-4">
     <div class="flex items-end justify-between mb-8">
@@ -2069,152 +1677,137 @@
 
 
 <!-- VIEW: SETTINGS -->
-<section id="view-settings" class="view py-4">
+ <section id="view-settings" class="view py-6 max-w-2xl mx-auto px-4">
+    <!-- Header with Breadcrumb-style label -->
     <div class="mb-8">
-        <h2 class="text-2xl font-black  uppercase leading-none mb-1">Settings & Privacy</h2>
-        <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">Choose your preferences</p>
+        <p class="text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-[0.3em] mb-2">Account Management</p>
+        <h2 class="text-4xl font-black text-zinc-900 dark:text-white leading-none tracking-tight">Settings & Privacy</h2>
     </div>
 
-    <!-- Dynamic Status Dashboard (New) -->
-    <div class="grid grid-cols-2 gap-4 mb-8">
-        <div class="bg-white dark:bg-zinc-900 p-5 rounded-[32px] border border-zinc-100 dark:border-zinc-800">
-            <p class="text-[9px] font-black text-zinc-400 uppercase mb-2">You're using recommended settings</p>
-            <div class="flex items-end gap-2">
-                <span class="text-2xl font-black text-emerald-500 ">98%</span>
-                <i class="fas fa-chart-line text-[10px] text-zinc-300 mb-2"></i>
+    <!-- Premium Status Dashboard -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+        <div class="relative overflow-hidden bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 dark:from-emerald-500/20 dark:to-transparent p-6 rounded-[32px] border border-emerald-100 dark:border-emerald-900/30 group transition-all hover:shadow-lg">
+            <div class="absolute -right-4 -top-4 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
+            <p class="text-[10px] font-black text-emerald-600 dark:text-emerald-400 uppercase mb-3 flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
+                Security Score
+            </p>
+            <div class="flex items-end justify-between">
+                <span class="text-4xl font-black text-zinc-900 dark:text-white tracking-tighter">98%</span>
+                <div class="text-right">
+                    <p class="text-[9px] font-bold text-zinc-400 uppercase">Optimal</p>
+                    <i class="fas fa-shield-check text-emerald-500"></i>
+                </div>
             </div>
         </div>
-        <div class="bg-white dark:bg-zinc-900 p-5 rounded-[32px] border border-zinc-100 dark:border-zinc-800">
-            <p class="text-[9px] font-black text-zinc-400 uppercase mb-2">Conntected With</p>
-            <div class="flex items-end gap-2">
-                <span class="text-2xl font-black text-zinc-900 dark:text-white ">04</span>
-                <span class="text-[8px] font-bold text-zinc-400 mb-2 uppercase">Users</span>
+
+        <div class="relative overflow-hidden bg-white dark:bg-zinc-900 p-6 rounded-[32px] border border-zinc-100 dark:border-zinc-800 transition-all hover:shadow-lg">
+            <p class="text-[10px] font-black text-zinc-400 uppercase mb-3">Active Connections</p>
+            <div class="flex items-end justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="text-4xl font-black text-zinc-900 dark:text-white tracking-tighter">04</span>
+                    <span class="text-[10px] font-bold text-zinc-400 uppercase mb-1.5">Users</span>
+                </div>
+                <div class="flex -space-x-2">
+                    <div class="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-900 bg-blue-500 flex items-center justify-center text-[10px] text-white font-bold">JD</div>
+                    <div class="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-900 bg-purple-500 flex items-center justify-center text-[10px] text-white font-bold">AL</div>
+                    <div class="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-900 bg-emerald-500 flex items-center justify-center text-[10px] text-white font-bold">+2</div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="max-w-md mx-auto">
-        <!-- Header Section -->
-        <div class="flex items-center justify-between px-4 mb-3">
-            <p class="text-[10px] font-black text-zinc-400 uppercase tracking-[0.2em]">Live Permissions</p>
-            <span class="text-[9px] font-bold text-emerald-500 uppercase italic">All Verified</span>
+    <!-- Permissions List -->
+    <div class="space-y-6">
+        <div class="flex items-center justify-between px-2">
+            <h3 class="text-xs font-black text-zinc-400 uppercase tracking-widest">Live Permissions</h3>
+            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[9px] font-black uppercase rounded-full">All Verified</span>
         </div>
 
-        <!-- Settings Container -->
-        <div class="bg-white dark:bg-zinc-900 rounded-[32px] border border-zinc-100 dark:border-zinc-800 p-2 space-y-1">
+        <div class="bg-white dark:bg-zinc-900 rounded-[40px] border border-zinc-100 dark:border-zinc-800 p-3 space-y-1 shadow-sm">
             
-            <!-- 1. Location Tracking (ENABLED) -->
-            <div class="flex items-center justify-between p-4 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 rounded-2xl transition-colors">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-emerald-500/10 dark:bg-emerald-500/5 rounded-xl flex items-center justify-center text-emerald-500">
-                        <i class="fas fa-satellite-dish text-sm"></i>
+            <!-- Toggle Item Template -->
+            <div class="flex items-center justify-between p-5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 rounded-[30px] transition-all group">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-50 dark:bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-600 transition-transform group-hover:scale-110">
+                        <i class="fas fa-satellite-dish"></i>
                     </div>
                     <div>
-                        <span class="text-sm font-black text-zinc-900 dark:text-white block">Location Tracking</span>
-                        <span class="text-[9px] text-zinc-400 font-bold uppercase">1s Update Interval</span>
+                        <span class="text-sm font-black text-zinc-900 dark:text-white block mb-0.5">Location Tracking</span>
+                        <span class="text-[10px] text-zinc-400 font-bold uppercase tracking-tight">Real-time • 1s interval</span>
                     </div>
                 </div>
                 <label class="relative inline-flex items-center cursor-pointer">
                     <input type="checkbox" class="sr-only peer" checked>
-                    <div class="w-11 h-6 bg-zinc-200 dark:bg-zinc-700 rounded-full peer peer-checked:bg-emerald-500 transition-colors after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-5"></div>
+                    <div class="w-12 h-6 bg-zinc-200 dark:bg-zinc-700 rounded-full peer peer-checked:bg-blue-600 transition-all after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-6"></div>
                 </label>
             </div>
 
-            <!-- 2. Allow Camera (DISABLED) -->
-            <div class="flex items-center justify-between p-4 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 rounded-2xl transition-colors">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-emerald-500/10 dark:bg-emerald-500/5 rounded-xl flex items-center justify-center text-emerald-500">
-                        <i class="fas fa-camera text-sm"></i>
+            <div class="flex items-center justify-between p-5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 rounded-[30px] transition-all group">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-zinc-100 dark:bg-zinc-800 rounded-2xl flex items-center justify-center text-zinc-500 transition-transform group-hover:scale-110">
+                        <i class="fas fa-camera"></i>
                     </div>
                     <div>
-                        <span class="text-sm font-black text-zinc-900 dark:text-white block">Allow Camera</span>
-                        <span class="text-[9px] text-zinc-400 font-bold uppercase">5s Update Interval</span>
+                        <span class="text-sm font-black text-zinc-900 dark:text-white block mb-0.5">Camera Access</span>
+                        <span class="text-[10px] text-zinc-400 font-bold uppercase tracking-tight">For emergency stream</span>
                     </div>
                 </div>
                 <label class="relative inline-flex items-center cursor-pointer">
                     <input type="checkbox" class="sr-only peer">
-                    <div class="w-11 h-6 bg-zinc-200 dark:bg-zinc-700 rounded-full peer peer-checked:bg-emerald-500 transition-colors after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-5"></div>
+                    <div class="w-12 h-6 bg-zinc-200 dark:bg-zinc-700 rounded-full peer peer-checked:bg-blue-600 transition-all after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-6"></div>
                 </label>
             </div>
 
-            <!-- 3. Allow Microphone (ENABLED) -->
-            <div class="flex items-center justify-between p-4 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 rounded-2xl transition-colors">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-emerald-500/10 dark:bg-emerald-500/5 rounded-xl flex items-center justify-center text-emerald-500">
-                        <i class="fas fa-microphone text-sm"></i>
+            <div class="flex items-center justify-between p-5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 rounded-[30px] transition-all group">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-50 dark:bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-600 transition-transform group-hover:scale-110">
+                        <i class="fas fa-microphone"></i>
                     </div>
                     <div>
-                        <span class="text-sm font-black text-zinc-900 dark:text-white block">Allow Microphone</span>
-                        <span class="text-[9px] text-zinc-400 font-bold uppercase">2s Update Interval</span>
+                        <span class="text-sm font-black text-zinc-900 dark:text-white block mb-0.5">Microphone</span>
+                        <span class="text-[10px] text-zinc-400 font-bold uppercase tracking-tight">Audio triggers enabled</span>
                     </div>
                 </div>
                 <label class="relative inline-flex items-center cursor-pointer">
                     <input type="checkbox" class="sr-only peer" checked>
-                    <div class="w-11 h-6 bg-zinc-200 dark:bg-zinc-700 rounded-full peer peer-checked:bg-emerald-500 transition-colors after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-5"></div>
+                    <div class="w-12 h-6 bg-zinc-200 dark:bg-zinc-700 rounded-full peer peer-checked:bg-blue-600 transition-all after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-6"></div>
                 </label>
             </div>
 
-            <!-- 4. Allow Friends (DISABLED) -->
-            <div class="flex items-center justify-between p-4 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 rounded-2xl transition-colors">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-emerald-500/10 dark:bg-emerald-500/5 rounded-xl flex items-center justify-center text-emerald-500">
-                        <i class="fas fa-location-arrow text-sm"></i>
+            <!-- New: Biometric -->
+            <div class="flex items-center justify-between p-5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 rounded-[30px] transition-all group">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-zinc-100 dark:bg-zinc-800 rounded-2xl flex items-center justify-center text-zinc-500 transition-transform group-hover:scale-110">
+                        <i class="fas fa-fingerprint"></i>
                     </div>
                     <div>
-                        <span class="text-sm font-black text-zinc-900 dark:text-white block">Circle Tracking</span>
-                        <span class="text-[9px] text-zinc-400 font-bold uppercase">Friends can see you</span>
+                        <span class="text-sm font-black text-zinc-900 dark:text-white block mb-0.5">Biometric Lock</span>
+                        <span class="text-[10px] text-zinc-400 font-bold uppercase tracking-tight">Require FaceID/TouchID</span>
                     </div>
                 </div>
                 <label class="relative inline-flex items-center cursor-pointer">
                     <input type="checkbox" class="sr-only peer">
-                    <div class="w-11 h-6 bg-zinc-200 dark:bg-zinc-700 rounded-full peer peer-checked:bg-emerald-500 transition-colors after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-5"></div>
+                    <div class="w-12 h-6 bg-zinc-200 dark:bg-zinc-700 rounded-full peer peer-checked:bg-blue-600 transition-all after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-6"></div>
                 </label>
             </div>
-
-            <!-- 5. Allow Messenger (ENABLED) -->
-            <div class="flex items-center justify-between p-4 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 rounded-2xl transition-colors">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-emerald-500/10 dark:bg-emerald-500/5 rounded-xl flex items-center justify-center text-emerald-500">
-                        <i class="fas fa-message text-sm"></i>
-                    </div>
-                    <div>
-                        <span class="text-sm font-black text-zinc-900 dark:text-white block">Allow Messenger</span>
-                        <span class="text-[9px] text-zinc-400 font-bold uppercase">Incoming texts allowed</span>
-                    </div>
-                </div>
-                <label class="relative inline-flex items-center cursor-pointer">
-                    <input type="checkbox" class="sr-only peer" checked>
-                    <div class="w-11 h-6 bg-zinc-200 dark:bg-zinc-700 rounded-full peer peer-checked:bg-emerald-500 transition-colors after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-5"></div>
-                </label>
-            </div>
-
-            <!-- 6. Biometric Lock (DISABLED) -->
-            <div class="flex items-center justify-between p-4 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 rounded-2xl transition-colors">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-zinc-50 dark:bg-zinc-800 rounded-xl flex items-center justify-center text-zinc-500">
-                        <i class="fas fa-fingerprint text-sm"></i>
-                    </div>
-                    <div>
-                        <span class="text-sm font-black text-zinc-900 dark:text-white block">Biometric Lock</span>
-                        <span class="text-[9px] text-zinc-400 font-bold uppercase">FaceID / TouchID</span>
-                    </div>
-                </div>
-                <label class="relative inline-flex items-center cursor-pointer">
-                    <input type="checkbox" class="sr-only peer">
-                    <div class="w-11 h-6 bg-zinc-200 dark:bg-zinc-700 rounded-full peer peer-checked:bg-emerald-500 transition-colors after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-5"></div>
-                </label>
-            </div>
-
         </div>
-    </div>
 
-        <!-- Danger Zone (Advanced Action) -->
-        <div class="bg-zinc-900 dark:bg-zinc-950 p-6 rounded-[40px] border border-zinc-800">
-            <h4 class="text-white text-xs font-black uppercase italic mb-2"> <i class="fas fa-exclamation-triangle"></i> Danger Zone</h4>
-            <p class="text-[10px] text-zinc-500 font-bold leading-relaxed mb-6">Activating override will disable all tracking and erase session cache immediately. This action cannot be undone.</p>
-            <button class="w-full py-4 bg-red-600/10 text-red-500 border border-red-600/20 rounded-2xl text-[9px] font-black uppercase tracking-[0.2em] tap-active hover:bg-red-600 hover:text-white transition-all">
-               Erase All Data & Disable Tracking
-            </button>
+        <!-- Enhanced Danger Zone -->
+        <div class="bg-zinc-950 p-8 rounded-[48px] border border-zinc-800 relative overflow-hidden group">
+            <div class="absolute inset-0 bg-gradient-to-br from-red-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="relative z-10">
+                <div class="flex items-center gap-2 mb-4 text-red-500">
+                    <i class="fas fa-triangle-exclamation text-xs"></i>
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.4em]">Danger Zone</h4>
+                </div>
+                <p class="text-[11px] text-zinc-400 font-bold leading-relaxed mb-8 max-w-sm">
+                    Activating the global override will immediately disconnect all active streams, erase session encryption keys, and wipe local cache.
+                </p>
+                <button class="w-full py-5 bg-red-600 hover:bg-red-700 text-white rounded-[24px] text-[10px] font-black uppercase tracking-[0.2em] shadow-xl shadow-red-600/20 active:scale-[0.97] transition-all">
+                   Terminate All Data & Sessions
+                </button>
+            </div>
         </div>
     </div>
 </section>
