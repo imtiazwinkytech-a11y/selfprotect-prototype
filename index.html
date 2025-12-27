@@ -1860,30 +1860,313 @@
         </nav>
 
 
-        <!-- SOS MODAL -->
-        <div id="sosOverlay" class="fixed inset-0 z-[100] hidden flex items-center justify-center px-8">
-            <div class="absolute inset-0 bg-black/80 backdrop-blur-xl" onclick="closeSOSModal()"></div>
-            <div class="relative w-full text-center text-white">
-                <h2 class="text-3xl font-black italic uppercase tracking-tighter mb-4">HOLD TO ALERT</h2>
-                <p class="text-sm text-white/60 mb-12">Press and hold for 3 seconds to trigger SOS</p>
-                
-                <div class="relative w-48 h-48 mx-auto flex items-center justify-center">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="45" stroke="rgba(255,255,255,0.1)" stroke-width="5" fill="none" />
-                        <circle id="sosProgressRing" cx="50" cy="50" r="45" stroke="#FF3B30" stroke-width="5" fill="none" stroke-dasharray="283" stroke-dashoffset="283" class="progress-ring" />
-                    </svg>
-                    <button id="sosActionBtn" 
-                        onmousedown="startSOSHold()" onmouseup="cancelSOSHold()" 
-                        ontouchstart="startSOSHold()" ontouchend="cancelSOSHold()"
-                        class="w-36 h-36 bg-primary rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 active:scale-90">
-                        <i class="fas fa-bullhorn text-4xl"></i>
-                    </button>
-                </div>
-                
-                <p onclick="Exit" class="mt-12 text-[10px] font-black uppercase tracking-[0.2em] opacity-40">Release to cancel</p>
-            </div>
+    <!-- SOS MODAL COMPONENT -->
+<!-- SOS MODAL COMPONENT -->
+<!-- SOS MODAL COMPONENT -->
+<div id="sosOverlay" class="fixed inset-0 z-[100] hidden flex items-center justify-center px-6 transition-opacity duration-300 opacity-0">
+    <!-- Darkened Backdrop with higher opacity for text legibility -->
+    <div class="absolute inset-0 bg-black/95 backdrop-blur-xl" onclick="closeSOSModal()"></div>
+    
+    <div class="relative w-full max-w-sm text-center text-white">
+        <!-- Close Button -->
+        <button onclick="closeSOSModal()" class="absolute -top-20 right-0 p-2 text-white/80 hover:text-white transition-colors focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <!-- Status Header -->
+        <div id="sosHeader" class="transition-all duration-500">
+            <h2 class="text-2xl font-light tracking-[0.2em] uppercase mb-1 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Emergency</h2>
+            <p class="text-white/80 text-[10px] font-medium uppercase tracking-[0.15em] mb-16 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">Hold for 3 seconds to confirm</p>
         </div>
 
+        <!-- Central Action Area -->
+        <div class="relative w-56 h-56 mx-auto flex items-center justify-center">
+            <!-- Subtle Radial Glow -->
+            <div id="sosGlow" class="absolute inset-0 bg-[#FF3B30]/20 rounded-full blur-3xl transition-opacity duration-500 opacity-0"></div>
+
+            <!-- Circular Progress -->
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" stroke="rgba(255,255,255,0.15)" stroke-width="2" fill="none" />
+                <circle id="sosProgressRing" 
+                        cx="50" cy="50" r="48" 
+                        stroke="#FF3B30" 
+                        stroke-width="2" 
+                        fill="none" 
+                        stroke-linecap="round"
+                        stroke-dasharray="301.6" 
+                        stroke-dashoffset="301.6" 
+                        style="transition: stroke-dashoffset 100ms linear; transform: rotate(-90deg); transform-origin: 50% 50%;" />
+            </svg>
+
+            <!-- The Button -->
+            <button id="sosActionBtn" 
+                onmousedown="startSOSHold(event)" onmouseup="cancelSOSHold()" 
+                ontouchstart="startSOSHold(event)" ontouchend="cancelSOSHold()"
+                class="relative z-10 w-40 h-40 border border-white/30 rounded-full flex flex-col items-center justify-center transition-all duration-300 hover:bg-white/10 active:scale-95 overflow-hidden bg-black/40 backdrop-blur-md">
+                
+                <div id="btnIcon" class="mb-2 text-[#FF3B30] transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.4"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.4"/><path d="M19.1 4.9C23 8.8 23 15.2 19.1 19.1"/></svg>
+                </div>
+                <span id="btnText" class="text-[9px] font-bold uppercase tracking-[0.2em] text-white drop-shadow-md">Hold SOS</span>
+            </button>
+        </div>
+
+        <!-- Bottom UI -->
+        <div id="sosFooter" class="mt-20 space-y-6 transition-all duration-500">
+            <div class="flex justify-center gap-3">
+                <div id="step1" class="w-1.5 h-1.5 rounded-full bg-white/30 transition-all duration-300"></div>
+                <div id="step2" class="w-1.5 h-1.5 rounded-full bg-white/30 transition-all duration-300"></div>
+                <div id="step3" class="w-1.5 h-1.5 rounded-full bg-white/30 transition-all duration-300"></div>
+            </div>
+            <p id="instructionText" class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60 transition-all duration-300 drop-shadow-[0_1px_3px_rgba(0,0,0,1)]">
+                Release to cancel
+            </p>
+        </div>
+
+        <!-- Success State -->
+        <div id="successMessage" class="hidden fixed inset-0 flex flex-col items-center justify-center bg-black z-[110] transition-opacity duration-500 opacity-0">
+            <div class="text-[#FF3B30] mb-8">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3 class="text-xl font-light uppercase tracking-[0.2em] mb-2">Signal Sent</h3>
+            <p class="text-white/70 text-[10px] uppercase tracking-widest mb-12">Emergency services are being notified</p>
+            <button onclick="resetSOS()" class="text-[10px] font-bold uppercase tracking-[0.3em] py-3 px-10 border border-white/30 rounded-full hover:bg-white/20 transition-colors bg-white/10">Dismiss</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let progressInterval;
+    let progress = 0;
+    const DURATION = 3000;
+    const ring = document.getElementById('sosProgressRing');
+    const circumference = 2 * Math.PI * 48;
+
+    function openSOSModal() {
+        const overlay = document.getElementById('sosOverlay');
+        overlay.classList.remove('hidden');
+        setTimeout(() => overlay.classList.add('opacity-100'), 10);
+    }
+
+    function closeSOSModal() {
+        const overlay = document.getElementById('sosOverlay');
+        overlay.classList.remove('opacity-100');
+        setTimeout(() => {
+            overlay.classList.add('hidden');
+            resetSOSUI();
+        }, 300);
+        cancelSOSHold();
+    }
+
+    function startSOSHold(e) {
+        if(e) e.preventDefault();
+        progress = 0;
+        document.getElementById('sosGlow').classList.remove('opacity-0');
+        document.getElementById('instructionText').classList.replace('text-white/60', 'text-[#FF3B30]');
+        document.getElementById('btnIcon').classList.replace('text-[#FF3B30]', 'text-white');
+        document.getElementById('sosActionBtn').classList.add('bg-[#FF3B30]', 'border-transparent');
+        
+        if (window.navigator.vibrate) window.navigator.vibrate(40);
+
+        progressInterval = setInterval(() => {
+            progress += (50 / DURATION) * 100;
+            const offset = circumference - (progress / 100 * circumference);
+            ring.style.strokeDashoffset = offset;
+            
+            // Update dots
+            document.getElementById('step1').style.backgroundColor = progress > 33 ? '#FF3B30' : '';
+            document.getElementById('step2').style.backgroundColor = progress > 66 ? '#FF3B30' : '';
+            document.getElementById('step3').style.backgroundColor = progress >= 100 ? '#FF3B30' : '';
+
+            if (progress >= 100) triggerSOS();
+        }, 50);
+    }
+
+    function cancelSOSHold() {
+        clearInterval(progressInterval);
+        progress = 0;
+        ring.style.strokeDashoffset = circumference;
+        document.getElementById('sosGlow').classList.add('opacity-0');
+        document.getElementById('instructionText').classList.replace('text-[#FF3B30]', 'text-white/60');
+        document.getElementById('btnIcon').classList.replace('text-white', 'text-[#FF3B30]');
+        document.getElementById('sosActionBtn').classList.remove('bg-[#FF3B30]', 'border-transparent');
+        ['step1', 'step2', 'step3'].forEach(id => document.getElementById(id).style.backgroundColor = '');
+    }
+
+    function triggerSOS() {
+        clearInterval(progressInterval);
+        const msg = document.getElementById('successMessage');
+        msg.classList.remove('hidden');
+        setTimeout(() => msg.classList.add('opacity-100'), 10);
+        if (window.navigator.vibrate) window.navigator.vibrate([100, 50, 100]);
+    }
+
+    function resetSOSUI() {
+        const msg = document.getElementById('successMessage');
+        msg.classList.add('opacity-0');
+        setTimeout(() => msg.classList.add('hidden'), 500);
+        cancelSOSHold();
+    }
+
+    function resetSOS() {
+        closeSOSModal();
+    }
+</script>
+
+<script>
+    let progressInterval;
+    let progress = 0;
+    const DURATION = 3000;
+    const ring = document.getElementById('sosProgressRing');
+    const circumference = 2 * Math.PI * 48;
+
+    function openSOSModal() {
+        const overlay = document.getElementById('sosOverlay');
+        overlay.classList.remove('hidden');
+        setTimeout(() => overlay.classList.add('opacity-100'), 10);
+    }
+
+    function closeSOSModal() {
+        const overlay = document.getElementById('sosOverlay');
+        overlay.classList.remove('opacity-100');
+        setTimeout(() => {
+            overlay.classList.add('hidden');
+            resetSOSUI();
+        }, 300);
+        cancelSOSHold();
+    }
+
+    function startSOSHold(e) {
+        if(e) e.preventDefault();
+        progress = 0;
+        document.getElementById('sosGlow').classList.remove('opacity-0');
+        document.getElementById('instructionText').classList.replace('text-white/40', 'text-[#FF3B30]');
+        document.getElementById('btnIcon').classList.replace('text-[#FF3B30]', 'text-white');
+        document.getElementById('sosActionBtn').classList.add('bg-[#FF3B30]', 'border-transparent');
+        
+        if (window.navigator.vibrate) window.navigator.vibrate(40);
+
+        progressInterval = setInterval(() => {
+            progress += (50 / DURATION) * 100;
+            const offset = circumference - (progress / 100 * circumference);
+            ring.style.strokeDashoffset = offset;
+            
+            // Update dots
+            document.getElementById('step1').style.backgroundColor = progress > 33 ? '#FF3B30' : '';
+            document.getElementById('step2').style.backgroundColor = progress > 66 ? '#FF3B30' : '';
+            document.getElementById('step3').style.backgroundColor = progress >= 100 ? '#FF3B30' : '';
+
+            if (progress >= 100) triggerSOS();
+        }, 50);
+    }
+
+    function cancelSOSHold() {
+        clearInterval(progressInterval);
+        progress = 0;
+        ring.style.strokeDashoffset = circumference;
+        document.getElementById('sosGlow').classList.add('opacity-0');
+        document.getElementById('instructionText').classList.replace('text-[#FF3B30]', 'text-white/40');
+        document.getElementById('btnIcon').classList.replace('text-white', 'text-[#FF3B30]');
+        document.getElementById('sosActionBtn').classList.remove('bg-[#FF3B30]', 'border-transparent');
+        ['step1', 'step2', 'step3'].forEach(id => document.getElementById(id).style.backgroundColor = '');
+    }
+
+    function triggerSOS() {
+        clearInterval(progressInterval);
+        const msg = document.getElementById('successMessage');
+        msg.classList.remove('hidden');
+        setTimeout(() => msg.classList.add('opacity-100'), 10);
+        if (window.navigator.vibrate) window.navigator.vibrate([100, 50, 100]);
+    }
+
+    function resetSOSUI() {
+        const msg = document.getElementById('successMessage');
+        msg.classList.add('opacity-0');
+        setTimeout(() => msg.classList.add('hidden'), 500);
+        cancelSOSHold();
+    }
+
+    function resetSOS() {
+        closeSOSModal();
+    }
+</script>
+<script>
+    let progressInterval;
+    let progress = 0;
+    const DURATION = 3000;
+    const ring = document.getElementById('sosProgressRing');
+    const circumference = 2 * Math.PI * 48;
+
+    function openSOSModal() {
+        const overlay = document.getElementById('sosOverlay');
+        overlay.classList.remove('hidden');
+        setTimeout(() => overlay.classList.add('opacity-100'), 10);
+    }
+
+    function closeSOSModal() {
+        const overlay = document.getElementById('sosOverlay');
+        overlay.classList.remove('opacity-100');
+        setTimeout(() => {
+            overlay.classList.add('hidden');
+            resetSOSUI();
+        }, 300);
+        cancelSOSHold();
+    }
+
+    function startSOSHold(e) {
+        if(e) e.preventDefault();
+        progress = 0;
+        document.getElementById('sosGlow').classList.remove('opacity-0');
+        document.getElementById('instructionText').classList.replace('text-white/20', 'text-[#FF3B30]');
+        document.getElementById('btnIcon').classList.replace('text-[#FF3B30]', 'text-white');
+        document.getElementById('sosActionBtn').classList.add('bg-[#FF3B30]', 'border-transparent');
+        
+        if (window.navigator.vibrate) window.navigator.vibrate(40);
+
+        progressInterval = setInterval(() => {
+            progress += (50 / DURATION) * 100;
+            const offset = circumference - (progress / 100 * circumference);
+            ring.style.strokeDashoffset = offset;
+            
+            // Update dots
+            document.getElementById('step1').style.backgroundColor = progress > 33 ? '#FF3B30' : '';
+            document.getElementById('step2').style.backgroundColor = progress > 66 ? '#FF3B30' : '';
+            document.getElementById('step3').style.backgroundColor = progress >= 100 ? '#FF3B30' : '';
+
+            if (progress >= 100) triggerSOS();
+        }, 50);
+    }
+
+    function cancelSOSHold() {
+        clearInterval(progressInterval);
+        progress = 0;
+        ring.style.strokeDashoffset = circumference;
+        document.getElementById('sosGlow').classList.add('opacity-0');
+        document.getElementById('instructionText').classList.replace('text-[#FF3B30]', 'text-white/20');
+        document.getElementById('btnIcon').classList.replace('text-white', 'text-[#FF3B30]');
+        document.getElementById('sosActionBtn').classList.remove('bg-[#FF3B30]', 'border-transparent');
+        ['step1', 'step2', 'step3'].forEach(id => document.getElementById(id).style.backgroundColor = '');
+    }
+
+    function triggerSOS() {
+        clearInterval(progressInterval);
+        const msg = document.getElementById('successMessage');
+        msg.classList.remove('hidden');
+        setTimeout(() => msg.classList.add('opacity-100'), 10);
+        if (window.navigator.vibrate) window.navigator.vibrate([100, 50, 100]);
+    }
+
+    function resetSOSUI() {
+        const msg = document.getElementById('successMessage');
+        msg.classList.add('opacity-0');
+        setTimeout(() => msg.classList.add('hidden'), 500);
+        cancelSOSHold();
+    }
+
+    function resetSOS() {
+        closeSOSModal();
+    }
+</script>
         <!-- Notification Panel
         <div id="notifPanel" class="fixed top-20 right-5 left-5 bg-white dark:bg-zinc-900 rounded-3xl shadow-2xl border border-zinc-100 dark:border-zinc-800 p-5 hidden z-50">
             <div class="flex justify-between items-center mb-4">
