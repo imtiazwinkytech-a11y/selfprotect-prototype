@@ -30,11 +30,22 @@
     </script>
 </head>
 <body class="bg-bgGray dark:bg-black text-zinc-900 dark:text-white antialiased overflow-hidden">
+ 
 
-    <div class="flex flex-col h-screen max-w-md mx-auto bg-white dark:bg-zinc-950 shadow-2xl relative overflow-hidden border-x border-zinc-100 dark:border-zinc-900">
-        <div class="branding">
-         <span>Self-Protect</span>
-           </div> <br> 
+    <div  class="flex left flex-col h-screen max-w-md mx-auto bg-white dark:bg-zinc-950 shadow-2xl relative overflow-hidden border-x border-zinc-100 dark:border-zinc-900">
+<div class="branding absolute left-14 top-1 flex items-center ml-6 mt-2 mb-2">
+  <img
+    src="https://selfprotectapp.com/resources/common/self-p.png"
+    alt="Self Protect Logo"
+    class="w-8 h-8 mr-2 object-contain"
+  />
+  <span class="text-sm font-semibold whitespace-nowrap">
+    Self Protect
+  </span>
+</div>
+
+  
+  <br> 
         <!-- Header -->
         <header class="bg-white dark:bg-zinc-950 px-5 pt-4 pb-3 flex items-center justify-between sticky top-0 z-40">
             <div class="flex items-center gap-3">
@@ -299,9 +310,9 @@
                 </div>
             </div>
 
-            <button class="w-full p-4 mt-8 text-zinc-300 font-bold uppercase text-[9px] tracking-[0.3em] hover:text-primary transition-colors">
+            <!-- <button class="w-full p-4 mt-8 text-zinc-300 font-bold uppercase text-[9px] tracking-[0.3em] hover:text-primary transition-colors">
                 Logout
-            </button>
+            </button> -->
             
             <p class="mt-6 text-[8px] font-medium text-zinc-300 uppercase tracking-widest opacity-40">Version 4.2.1 • Build 12212025-1202</p>
 
@@ -1695,9 +1706,9 @@
                 <i class="fas fa-house text-xl"></i>
                 <span class="text-[9px] font-extrabold uppercase tracking-widest">Home</span>
             </button>
-            <button onclick="switchView('feed')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
+            <button  style="padding: 5%;"  onclick="switchView('feed')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
                 <i class="fas fa-rss text-xl"></i>
-                <span class="text-[9px] font-extrabold uppercase tracking-widest">News Feed</span>
+                <span class="text-[9px] font-extrabold uppercase tracking-widest">Feed</span>
             </button>
             
             <!-- Central SOS Button -->
@@ -1709,13 +1720,13 @@
 
             <button onclick="switchView('community')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
                 <i class="fa fa-handshake text-xl"></i>
-                <span class="text-[9px] font-extrabold uppercase tracking-widest">Community</span>
+                <span class="text-[9px] font-extrabold uppercase tracking-widest">Communities</span>
             </button>
             <button onclick="switchView('profile')" class="nav-btn flex flex-col items-center gap-1 text-zinc-400 tap-active">
                  <div class="w-12 h-12 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center overflow-hidden">
                     <img width="10" height="10" src="img/icon/profile/nahid.jpg" alt="Avatar" class="w-full h-full object-cover"  style="cursor:pointer">
                 </div>
-                <span class="text-[9px] font-extrabold uppercase tracking-widest">Profile</span>
+                <span class="text-[9px] font-extrabold uppercase tracking-widest">Account</span>
             </button>
         </nav>
 

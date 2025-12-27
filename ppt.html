@@ -1,0 +1,5672 @@
+ 
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 1 - Cover</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Reset and Body Setup */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main Slide Container */
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #EBE7DE; /* Light beige/gray from template */
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Image Styling */
+        .main-image {
+            width: 850px;
+            height: 380px;
+            object-fit: contain;
+            margin-top: 30px;
+            z-index: 201;
+        }
+
+        /* Horizontal Separator Line */
+        .separator-line {
+            width: 1056px;
+            height: 2px;
+            background-color: #9B2D1F; /* Theme Accent 2 - Dark Red */
+            margin-top: 15px;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        /* Title Styling */
+        .title-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 80px;
+            font-weight: bold;
+            color: #c00000;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            z-index: 200;
+        }
+
+        /* Subtitle Styling */
+        .subtitle-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 28px;
+            color: #333333;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            width: 90%;
+            margin-bottom: 10px;
+        }
+
+        /* Tagline Points */
+        .tagline-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .tagline-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 22px;
+            color: #555555;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Footer Info (Presenter) */
+        .presenter-info {
+            margin-top: auto;
+            margin-bottom: 45px; /* Space for footer bar + padding */
+            text-align: center;
+            color: #9B2D1F;
+        }
+
+        .presenter-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+        }
+        
+        .company-name {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Footer Bar */
+        .footer-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 100;
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Main Image (Reusing template asset) -->
+<img alt="Self Protect App Interface" class="main-image" src="https://page.gensparksite.com/template_extract/6cfc8a9a-ae0d-4e90-9c86-c1b2f926d822/slide_0/slide_image_1.png"/>
+<!-- Separator Line -->
+<div class="separator-line"></div>
+<!-- Main Title -->
+<h1 class="title-text">SelfProtect</h1>
+<!-- Subtitle -->
+<p class="subtitle-text">Integrated Public Safety &amp; Emergency Response Ecosystem</p>
+<!-- Taglines -->
+<div class="tagline-container">
+<p class="tagline-text">• Saving lives through technology, connectivity &amp; community</p>
+<p class="tagline-text">• Built for urban &amp; rural, online &amp; offline realities</p>
+</div>
+<!-- Presenter Info -->
+<div class="presenter-info">
+<p class="company-name">Presented by: Winky Tech Limited</p>
+<p class="presenter-name">Founder: Md Saddam Hossien</p>
+</div>
+<!-- Footer Decoration -->
+<footer class="footer-bar"></footer>
+</div>
+</body>
+</html>
+
+<html lang="en" data-theme="light" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Slide 2 - The Problem</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+        /* Base Styles from Template */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            /* Gradient replaced with solid color for export compatibility */
+            background-color: #F2DCD9; 
+            border-bottom: 3px solid #D34817;
+            z-index: 10;
+        }
+        
+        /* Using SVG for the fade effect instead of CSS gradient */
+        .header-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: rgba(255,255,255,0.4);
+            z-index: 11;
+        }
+
+        .slide-title {
+            position: absolute;
+            left: 115px;
+            top: 40px;
+            width: 1056px;
+            height: 100px;
+            font-size: 58px;
+            font-weight: bold;
+            color: #000000;
+            z-index: 20;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            position: absolute;
+            left: 50px;
+            top: 160px;
+            width: 1180px;
+            height: 480px;
+            z-index: 30;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .text-column {
+            width: 700px;
+            padding-top: 20px;
+        }
+
+        .image-column {
+            width: 440px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* List Styling */
+        .problem-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-item {
+            display: flex;
+            margin-bottom: 25px;
+            align-items: flex-start;
+        }
+
+        .bullet {
+            flex-shrink: 0;
+            margin-right: 20px;
+            font-size: 32px;
+            color: #D34817; /* Theme accent color */
+            line-height: 1.2;
+        }
+
+        .list-text {
+            font-size: 28px;
+            color: #333333;
+            line-height: 1.3;
+        }
+        
+        .list-text-bold {
+            font-weight: bold;
+            color: #000000;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 300;
+        }
+        
+        .footer-line-top {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #D34817;
+            z-index: 300;
+        }
+
+        /* Image Styling */
+        .illustration-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border: 4px solid #F2DCD9;
+        }
+        
+        .alert-badge {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background-color: #D34817;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 40;
+        }
+
+    </style>
+</head>
+<body style="">
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg"></div>
+<div class="header-overlay"></div>
+<div class="slide-title">
+<p>🚨 The Problem</p>
+</div>
+<!-- Content Area -->
+<div class="content-wrapper">
+<!-- Left Column: Text -->
+<div class="text-column">
+<p style="font-size: 32px; font-weight: bold; margin-bottom: 30px; color: #9B2D1F; line-height: 1.2;">
+                    Safety emergencies are unpredictable—and response is often delayed
+                </p>
+<ul class="problem-list">
+<li class="list-item">
+<div class="bullet">●</div>
+<div class="list-text">
+<span class="list-text-bold">Crimes &amp; Accidents Rising:</span> Medical emergencies and road accidents are increasing daily.
+                        </div>
+</li>
+<li class="list-item">
+<div class="bullet">●</div>
+<div class="list-text">
+<span class="list-text-bold">Connectivity Gaps:</span> Rural &amp; semi-rural areas suffer from weak or no mobile network coverage.
+                        </div>
+</li>
+<li class="list-item">
+<div class="bullet">●</div>
+<div class="list-text">
+<span class="list-text-bold">Tech Failure:</span> Existing safety apps fail completely without internet connectivity.
+                        </div>
+</li>
+<li class="list-item">
+<div class="bullet">●</div>
+<div class="list-text">
+<span class="list-text-bold">No Central Intelligence:</span> Emergency services lack real-time, centralized coordination data.
+                        </div>
+</li>
+<li class="list-item">
+<div class="bullet">●</div>
+<div class="list-text">
+<span class="list-text-bold">High Risk Groups:</span> Vulnerable groups (women, children, elderly) remain most exposed.
+                        </div>
+</li>
+</ul>
+</div>
+<!-- Right Column: Visual -->
+<div class="image-column">
+
+<!-- Using a conceptual image representing emergency/safety issues -->
+<img alt="Emergency Situation Representation" class="illustration-img" src="https://page.gensparksite.com/get_upload_url/89707640ab695955ea7565b1c67841a5e512e7463692dfcfaea76b2a1bc1fc60/default/06d2414f-60bf-49d7-9198-12a62adb6df0" data-height-listener-added="true">
+<!-- Additional smaller visual for context -->
+<div style="margin-top: 30px; background-color: #FEE2E2; padding: 20px; border-radius: 10px; border-left: 5px solid #EF4444; width: 100%;">
+<p style="color: #991B1B; font-weight: bold; font-size: 20px; margin: 0;">
+                        "Seconds matter when lives are at risk, yet help is minutes or hours away."
+                    </p>
+</div>
+</div>
+</div>
+<!-- Footer Decoration -->
+<div class="footer-line-top"></div>
+<div class="footer-stripe"></div>
+</div>
+
+</body></html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 3 - Market Gap</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles matching Template */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 132px;
+            background-color: #E6B0AA; /* Fallback solid color matching template content_2 */
+            border-bottom: 2px solid #D34817;
+            z-index: 10;
+        }
+
+        /* Decorative header cut corner effect simulation via border */
+        .header-cut {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 20px solid white;
+            border-right: 100px solid transparent;
+            z-index: 12;
+        }
+        
+        /* Header text container */
+        .header-text-container {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 132px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+
+        .header-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: #000000;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Content Layout */
+        .content-area {
+            position: absolute;
+            top: 155px;
+            left: 65px;
+            width: 1150px;
+            height: 515px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        /* Left Column - Gap Items */
+        .gap-list-container {
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .gap-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            background-color: #FDF2F2; /* Very light red bg */
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 6px solid #EA2F32;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .x-mark {
+            color: #EA2F32;
+            font-size: 36px;
+            margin-right: 20px;
+            min-width: 40px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .gap-text {
+            font-size: 28px;
+            color: #333333;
+            font-weight: 600;
+        }
+
+        /* Right Column - Conclusion/Result */
+        .conclusion-container {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Visual connection arrow */
+        .arrow-connector {
+            font-size: 60px;
+            color: #D34817;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .conclusion-box {
+            background-color: #9B2D1F;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: relative;
+            border: 3px solid #D34817;
+        }
+        
+        .conclusion-title {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .conclusion-text {
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            background-color: #A6341B; /* Darker red/brown */
+            border-top: 3px solid #D95F3B; 
+            border-bottom: 3px solid #D95F3B;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg">
+<div class="header-cut"></div>
+</div>
+<div class="header-text-container">
+<p class="header-text">Market Gap</p>
+</div>
+<!-- Main Content Area -->
+<div class="content-area">
+<!-- Left: Gap List -->
+<div class="gap-list-container">
+<div class="gap-item">
+<div class="x-mark">
+<i class="fa-solid fa-xmark"></i>
+</div>
+<p class="gap-text">Fragmented solutions &amp; disjointed services</p>
+</div>
+<div class="gap-item">
+<div class="x-mark">
+<i class="fa-solid fa-xmark"></i>
+</div>
+<p class="gap-text">App-only systems failing offline</p>
+</div>
+<div class="gap-item">
+<div class="x-mark">
+<i class="fa-solid fa-xmark"></i>
+</div>
+<p class="gap-text">Urban-centric designs ignoring rural realities</p>
+</div>
+<div class="gap-item">
+<div class="x-mark">
+<i class="fa-solid fa-xmark"></i>
+</div>
+<p class="gap-text">Lack of community integration</p>
+</div>
+<div class="gap-item">
+<div class="x-mark">
+<i class="fa-solid fa-xmark"></i>
+</div>
+<p class="gap-text">No rural connectivity fallback mechanisms</p>
+</div>
+</div>
+<!-- Right: Conclusion -->
+<div class="conclusion-container">
+<div class="arrow-connector">
+<i class="fa-solid fa-arrow-right"></i>
+</div>
+<div class="conclusion-box">
+<p class="conclusion-title">CRITICAL REALITY</p>
+<p class="conclusion-text">
+                        No unified,<br/>inclusive safety<br/>infrastructure<br/>exists
+                    </p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 4 - Our Solution</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles from Template */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: #F2DCD9; 
+            border-bottom: 3px solid #D34817;
+            z-index: 10;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: rgba(255,255,255,0.4);
+            z-index: 11;
+        }
+
+        .slide-title {
+            position: absolute;
+            left: 115px;
+            top: 40px;
+            width: 1056px;
+            height: 100px;
+            font-size: 52px; /* Slightly smaller to fit longer title */
+            font-weight: bold;
+            color: #000000;
+            z-index: 20;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            position: absolute;
+            left: 60px;
+            top: 160px;
+            width: 1160px;
+            height: 480px;
+            z-index: 30;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .text-column {
+            width: 700px;
+            padding-top: 10px;
+        }
+
+        .image-column {
+            width: 420px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* List Styling */
+        .solution-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-item {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: flex-start;
+            background-color: #FAFAFA;
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #D34817;
+        }
+
+        .icon-box {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background-color: #F2DCD9;
+            color: #D34817;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            font-size: 24px;
+        }
+
+        .list-content {
+            flex: 1;
+        }
+
+        .list-title {
+            font-size: 26px;
+            font-weight: bold;
+            color: #000000;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+
+        .list-desc {
+            font-size: 20px;
+            color: #555555;
+            line-height: 1.3;
+        }
+
+        /* Checklist Styling */
+        .checklist-container {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            background-color: #ECFDF5;
+            border: 1px solid #10B981;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .check-icon {
+            color: #10B981;
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        .check-text {
+            color: #064E3B;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 300;
+        }
+        
+        .footer-line-top {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #D34817;
+            z-index: 300;
+        }
+
+        /* Image Styling */
+        .illustration-img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border: 4px solid #F2DCD9;
+        }
+        
+        .eco-badge {
+            position: absolute;
+            top: 20px;
+            right: -10px;
+            background-color: #D34817;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 40;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg"></div>
+<div class="header-overlay"></div>
+<div class="slide-title">
+<p>Our Solution – SelfProtect Ecosystem</p>
+</div>
+<!-- Content Area -->
+<div class="content-wrapper">
+<!-- Left Column: Text -->
+<div class="text-column">
+<p style="font-size: 28px; margin-bottom: 20px; color: #333; line-height: 1.2;">
+                A 3-layer integrated safety platform ensuring protection everywhere:
+            </p>
+<ul class="solution-list">
+<li class="list-item">
+<div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
+<div class="list-content">
+<div class="list-title">1. Mobile &amp; Web Applications</div>
+<div class="list-desc">User-friendly interface for citizens and command center for authorities.</div>
+</div>
+</li>
+<li class="list-item">
+<div class="icon-box"><i class="fas fa-microchip"></i></div>
+<div class="list-content">
+<div class="list-title">2. Personal Safety Devices</div>
+<div class="list-desc">Wearables, GPS trackers, and discrete SOS buttons for instant alerts.</div>
+</div>
+</li>
+<li class="list-item">
+<div class="icon-box"><i class="fas fa-broadcast-tower"></i></div>
+<div class="list-content">
+<div class="list-title">3. Rural Connectivity Enhancement</div>
+<div class="list-desc">Signal boosters and microcells to ensure coverage in remote areas.</div>
+</div>
+</li>
+</ul>
+<div class="checklist-container">
+<div class="check-item">
+<span class="check-icon">✓</span>
+<span class="check-text">Works in low/no network</span>
+</div>
+<div class="check-item">
+<span class="check-icon">✓</span>
+<span class="check-text">One-touch &amp; Silent SOS</span>
+</div>
+<div class="check-item">
+<span class="check-icon">✓</span>
+<span class="check-text">Community Coordination</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual -->
+<div class="image-column">
+<div class="eco-badge">3-Layer Security</div>
+<img alt="SelfProtect Integrated Ecosystem Visualization" class="illustration-img" src="https://page.gensparksite.com/slides_images/1dfc46abe92f39a0e812a6ea6662248a.webp"/>
+<div style="margin-top: 20px; text-align: center; color: #666; font-size: 16px; font-style: italic;">
+<p>Seamlessly connecting digital apps, hardware, and infrastructure.</p>
+</div>
+</div>
+</div>
+<!-- Footer Decoration -->
+<div class="footer-line-top"></div>
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 5 - How It Works (Emergency Flow)</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: #F2DCD9; 
+            border-bottom: 3px solid #D34817;
+            z-index: 10;
+        }
+
+        .slide-title {
+            position: absolute;
+            left: 115px;
+            top: 40px;
+            width: 1056px;
+            height: 100px;
+            font-size: 52px;
+            font-weight: 700;
+            color: #000000;
+            z-index: 20;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Flow Chart Container */
+        .flow-wrapper {
+            position: absolute;
+            left: 0;
+            top: 180px;
+            width: 1280px;
+            height: 480px;
+            z-index: 30;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 40px;
+        }
+
+        /* Step Card Styling */
+        .step-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .icon-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #D34817; /* Theme Accent */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            border: 4px solid #ffffff;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Number Badge */
+        .step-number {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 32px;
+            height: 32px;
+            background-color: #9B2D1F; /* Darker Red */
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            border: 2px solid white;
+        }
+
+        .step-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #9B2D1F;
+            text-align: center;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .step-desc {
+            font-size: 16px;
+            color: #444444;
+            text-align: center;
+            line-height: 1.4;
+            padding: 0 10px;
+        }
+
+        .step-sub-list {
+            margin-top: 5px;
+            text-align: left;
+            font-size: 14px;
+            color: #555;
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            padding-left: 20px;
+        }
+        
+        .step-sub-list li {
+            position: relative;
+            padding-left: 12px;
+            margin-bottom: 2px;
+        }
+        
+        .step-sub-list li::before {
+            content: "•";
+            color: #D34817;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Connector Line */
+        .connector-line {
+            position: absolute;
+            top: 50px; /* Center of the 100px circle */
+            left: 140px; /* Start after first item */
+            right: 140px; /* End before last item */
+            height: 4px;
+            background-color: #E5E7EB;
+            z-index: 1;
+        }
+        
+        /* Active progress part of the connector line */
+        .connector-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #F2DCD9; /* Light theme color */
+            border-bottom: 2px dashed #D34817;
+            background: none; /* Reset bg to show dashed border only */
+        }
+        
+        /* Arrows between steps */
+        .flow-arrow {
+            position: absolute;
+            top: 40px;
+            right: -30px;
+            color: #D34817;
+            font-size: 24px;
+            z-index: 5;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 300;
+        }
+        
+        .footer-line-top {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #D34817;
+            z-index: 300;
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg"></div>
+<div class="slide-title">
+<p>🔄 How It Works (Emergency Flow)</p>
+</div>
+<!-- Flow Content -->
+<div class="flow-wrapper">
+<!-- Connector Background Line -->
+<div class="connector-line">
+<div class="connector-progress"></div>
+</div>
+<!-- Step 1 -->
+<div class="step-container">
+<div class="icon-circle">
+<i class="fa-solid fa-fingerprint"></i>
+<div class="step-number">1</div>
+</div>
+<div class="step-title">Trigger SOS</div>
+<p class="step-desc">User presses one-touch button or hardware device triggers SOS.</p>
+<!-- Arrow to next -->
+<i class="fa-solid fa-chevron-right flow-arrow"></i>
+</div>
+<!-- Spacer -->
+<div style="width: 40px;"></div>
+<!-- Step 2 -->
+<div class="step-container">
+<div class="icon-circle">
+<i class="fa-solid fa-tower-cell"></i>
+<div class="step-number">2</div>
+</div>
+<div class="step-title">Network Selection</div>
+<p class="step-desc">System auto-selects best available channel (GSM, LTE, or fallback).</p>
+<i class="fa-solid fa-chevron-right flow-arrow"></i>
+</div>
+<!-- Spacer -->
+<div style="width: 40px;"></div>
+<!-- Step 3 -->
+<div class="step-container">
+<div class="icon-circle">
+<i class="fa-solid fa-robot"></i>
+<div class="step-number">3</div>
+</div>
+<div class="step-title">Classification</div>
+<p class="step-desc">AI classifies incident type and severity for appropriate response.</p>
+<i class="fa-solid fa-chevron-right flow-arrow"></i>
+</div>
+<!-- Spacer -->
+<div style="width: 40px;"></div>
+<!-- Step 4 -->
+<div class="step-container">
+<div class="icon-circle">
+<i class="fa-solid fa-bell"></i>
+<div class="step-number">4</div>
+</div>
+<div class="step-title">Multi-Alerts</div>
+<div class="step-desc">
+<p style="margin:0; font-weight: 500;">Alerts sent to:</p>
+<ul class="step-sub-list">
+<li>Trusted Contacts</li>
+<li>Community</li>
+<li>Police / EMS</li>
+</ul>
+</div>
+<i class="fa-solid fa-chevron-right flow-arrow"></i>
+</div>
+<!-- Spacer -->
+<div style="width: 40px;"></div>
+<!-- Step 5 -->
+<div class="step-container">
+<div class="icon-circle">
+<i class="fa-solid fa-location-dot"></i>
+<div class="step-number">5</div>
+</div>
+<div class="step-title">Resolution</div>
+<p class="step-desc">Live tracking &amp; coordination until the user is safe.</p>
+</div>
+</div>
+<!-- Footer Decoration -->
+<div class="footer-line-top"></div>
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 6 - Product Features</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles from Template */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: #F2DCD9; 
+            border-bottom: 3px solid #D34817;
+            z-index: 10;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: rgba(255,255,255,0.4);
+            z-index: 11;
+        }
+
+        .slide-title {
+            position: absolute;
+            left: 115px;
+            top: 40px;
+            width: 1056px;
+            height: 100px;
+            font-size: 58px;
+            font-weight: bold;
+            color: #000000;
+            z-index: 20;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            position: absolute;
+            left: 50px;
+            top: 160px;
+            width: 1180px;
+            height: 480px;
+            z-index: 30;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        /* Two Equal Columns for Features */
+        .feature-column {
+            flex: 1;
+            background-color: #FAFAFA;
+            border-radius: 15px;
+            padding: 25px;
+            border: 2px solid #E5E7EB;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .feature-column.citizen {
+            border-top: 6px solid #D34817; /* Theme accent */
+        }
+        
+        .feature-column.authority {
+            border-top: 6px solid #9B2D1F; /* Theme dark accent */
+        }
+
+        .column-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #EEE;
+        }
+
+        .header-icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-size: 28px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .citizen .header-icon-circle {
+            background-color: #D34817;
+        }
+
+        .authority .header-icon-circle {
+            background-color: #9B2D1F;
+        }
+
+        .column-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* List Styling */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-item {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            background-color: #FEE2E2;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: #D34817;
+            font-size: 18px;
+        }
+        
+        .authority .feature-icon {
+            background-color: #FEE2E2;
+            color: #9B2D1F;
+        }
+
+        .list-text {
+            font-size: 24px;
+            color: #4B5563;
+            line-height: 1.3;
+            padding-top: 2px;
+        }
+        
+        .list-text-bold {
+            font-weight: bold;
+            color: #1F2937;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 300;
+        }
+        
+        .footer-line-top {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #D34817;
+            z-index: 300;
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg"></div>
+<div class="header-overlay"></div>
+<div class="slide-title">
+<p>📱 Product Features</p>
+</div>
+<!-- Content Area -->
+<div class="content-wrapper">
+<!-- Left Column: For Citizens -->
+<div class="feature-column citizen">
+<div class="column-header">
+<div class="header-icon-circle">
+<i class="fas fa-user-shield"></i>
+</div>
+<p class="column-title">For Citizens</p>
+</div>
+<ul class="feature-list">
+<li class="list-item">
+<div class="feature-icon"><i class="fas fa-fingerprint"></i></div>
+<div class="list-text">
+<span class="list-text-bold">One-Touch / Hardware SOS</span>
+                            Instant activation via app or physical button.
+                        </div>
+</li>
+<li class="list-item">
+<div class="feature-icon"><i class="fas fa-bell-slash"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Silent Emergency Mode</span>
+                            Discreet alerts when making noise is dangerous.
+                        </div>
+</li>
+<li class="list-item">
+<div class="feature-icon"><i class="fas fa-location-dot"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Real-Time GPS Tracking</span>
+                            Live location sharing with responders.
+                        </div>
+</li>
+<li class="list-item">
+<div class="feature-icon"><i class="fas fa-users"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Family &amp; Trusted Network</span>
+                            Auto-notify loved ones during incidents.
+                        </div>
+</li>
+</ul>
+</div>
+<!-- Right Column: For Authorities -->
+<div class="feature-column authority">
+<div class="column-header">
+<div class="header-icon-circle">
+<i class="fas fa-building-shield"></i>
+</div>
+<p class="column-title">For Authorities</p>
+</div>
+<ul class="feature-list">
+<li class="list-item">
+<div class="feature-icon"><i class="fas fa-desktop"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Live Incident Dashboard</span>
+                            Centralized command center view of all active alerts.
+                        </div>
+</li>
+<li class="list-item">
+<div class="feature-icon"><i class="fas fa-map-location-dot"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Heatmaps &amp; Analytics</span>
+                            Identify high-risk zones and optimize patrols.
+                        </div>
+</li>
+<li class="list-item">
+<div class="feature-icon"><i class="fas fa-walkie-talkie"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Resource Coordination</span>
+                            Dispatch nearest police, fire, or medical units.
+                        </div>
+</li>
+<li class="list-item">
+<div class="feature-icon"><i class="fas fa-stopwatch"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Faster Response &amp; Reporting</span>
+                            Reduce arrival times with precise data.
+                        </div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Footer Decoration -->
+<div class="footer-line-top"></div>
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 7 - Hardware Innovation</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles matching Template */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 132px;
+            background-color: #E6B0AA; /* Fallback solid color matching template content_2 */
+            border-bottom: 2px solid #D34817;
+            z-index: 10;
+        }
+
+        /* Decorative header cut corner effect simulation via border */
+        .header-cut {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 20px solid white;
+            border-right: 100px solid transparent;
+            z-index: 12;
+        }
+        
+        /* Header text container */
+        .header-text-container {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 132px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+
+        .header-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: #000000;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Content Layout */
+        .content-area {
+            position: absolute;
+            top: 155px;
+            left: 65px;
+            width: 1150px;
+            height: 515px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        /* Left Column - Innovation Items */
+        .innovation-list-container {
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .innovation-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            background-color: #FDF2F2; /* Very light red bg */
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 6px solid #EA2F32;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .icon-box {
+            color: #EA2F32;
+            font-size: 32px;
+            margin-right: 20px;
+            min-width: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .innovation-text {
+            font-size: 26px;
+            color: #333333;
+            font-weight: 600;
+        }
+
+        /* Right Column - Target Audience/Conclusion */
+        .conclusion-container {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Visual connection arrow */
+        .arrow-connector {
+            font-size: 60px;
+            color: #D34817;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .conclusion-box {
+            background-color: #9B2D1F;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: relative;
+            border: 3px solid #D34817;
+            width: 100%;
+        }
+        
+        .conclusion-title {
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .conclusion-text {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+        
+        .vulnerable-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            font-size: 30px;
+            color: #FDF2F2;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            background-color: #A6341B; /* Darker red/brown */
+            border-top: 3px solid #D95F3B; 
+            border-bottom: 3px solid #D95F3B;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg">
+<div class="header-cut"></div>
+</div>
+<div class="header-text-container">
+<p class="header-text">Hardware Innovation</p>
+</div>
+<!-- Main Content Area -->
+<div class="content-area">
+<!-- Left: Innovation List -->
+<div class="innovation-list-container">
+<div class="innovation-item">
+<div class="icon-box">
+<i class="fa-solid fa-circle-dot"></i>
+</div>
+<p class="innovation-text">Low-cost SOS buttons for instant alerts</p>
+</div>
+<div class="innovation-item">
+<div class="icon-box">
+<i class="fa-solid fa-stopwatch"></i>
+</div>
+<p class="innovation-text">Smart wearables (bracelet, pendant) for accessibility</p>
+</div>
+<div class="innovation-item">
+<div class="icon-box">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+<p class="innovation-text">Real-time GPS trackers for precise location</p>
+</div>
+<div class="innovation-item">
+<div class="icon-box">
+<i class="fa-solid fa-battery-full"></i>
+</div>
+<p class="innovation-text">Long battery life with minimal interaction required</p>
+</div>
+</div>
+<!-- Right: Target Audience Conclusion -->
+<div class="conclusion-container">
+<div class="arrow-connector">
+<i class="fa-solid fa-arrow-right"></i>
+</div>
+<div class="conclusion-box">
+<p class="conclusion-title">DESIGNED FOR</p>
+<p class="conclusion-text">
+                    Vulnerable Groups:<br/>
+                    Children, Women,<br/>
+                    Elderly &amp; Disabled
+                </p>
+<div class="vulnerable-icons">
+<i class="fa-solid fa-child-reaching"></i>
+<i class="fa-solid fa-person-dress"></i>
+<i class="fa-solid fa-person-cane"></i>
+<i class="fa-brands fa-accessible-icon"></i>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 8 - Rural Connectivity Advantage</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles matching Template */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 132px;
+            background-color: #E6B0AA; /* Fallback solid color matching template content_2 */
+            border-bottom: 2px solid #D34817;
+            z-index: 10;
+        }
+
+        /* Decorative header cut corner effect simulation via border */
+        .header-cut {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 20px solid white;
+            border-right: 100px solid transparent;
+            z-index: 12;
+        }
+        
+        /* Header text container */
+        .header-text-container {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 132px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+
+        .header-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 56px; /* Slightly adjusted for longer title */
+            font-weight: 700;
+            color: #000000;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Content Layout */
+        .content-area {
+            position: absolute;
+            top: 155px;
+            left: 65px;
+            width: 1150px;
+            height: 515px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        /* Left Column - List Items */
+        .list-container {
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            background-color: #FDF2F2; /* Very light red bg */
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 6px solid #EA2F32;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .item-icon {
+            color: #EA2F32;
+            font-size: 32px;
+            margin-right: 20px;
+            min-width: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item-text {
+            font-size: 28px;
+            color: #333333;
+            font-weight: 600;
+        }
+
+        /* Right Column - Conclusion/Result */
+        .conclusion-container {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Visual connection arrow */
+        .arrow-connector {
+            font-size: 60px;
+            color: #D34817;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .conclusion-box {
+            background-color: #9B2D1F;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: relative;
+            border: 3px solid #D34817;
+            width: 100%;
+        }
+        
+        .conclusion-title {
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .conclusion-text {
+            font-size: 38px;
+            font-weight: bold;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            background-color: #A6341B; /* Darker red/brown */
+            border-top: 3px solid #D95F3B; 
+            border-bottom: 3px solid #D95F3B;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg">
+<div class="header-cut"></div>
+</div>
+<div class="header-text-container">
+<p class="header-text">Rural Connectivity Advantage</p>
+</div>
+<!-- Main Content Area -->
+<div class="content-area">
+<!-- Left: Feature List -->
+<div class="list-container">
+<div class="feature-item">
+<div class="item-icon">
+<i class="fa-solid fa-tower-cell"></i>
+</div>
+<p class="item-text">GSM/LTE signal boosters</p>
+</div>
+<div class="feature-item">
+<div class="item-icon">
+<i class="fa-solid fa-solar-panel"></i>
+</div>
+<p class="item-text">Solar-powered microcells</p>
+</div>
+<div class="feature-item">
+<div class="item-icon">
+<i class="fa-solid fa-wifi"></i>
+</div>
+<p class="item-text">Community safety hotspots</p>
+</div>
+<div class="feature-item">
+<div class="item-icon">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
+<p class="item-text">Emergency-only fallback channels</p>
+</div>
+</div>
+<!-- Right: Conclusion -->
+<div class="conclusion-container">
+<div class="arrow-connector">
+<i class="fa-solid fa-arrow-right"></i>
+</div>
+<div class="conclusion-box">
+<p class="conclusion-title">STRATEGIC VALUE</p>
+<p class="conclusion-text">
+                    Key<br/>Competitive<br/>Moat
+                </p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 9 - Target Market</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles from Template */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: #F2DCD9; 
+            border-bottom: 3px solid #D34817;
+            z-index: 10;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: rgba(255,255,255,0.4);
+            z-index: 11;
+        }
+
+        .slide-title {
+            position: absolute;
+            left: 115px;
+            top: 40px;
+            width: 1056px;
+            height: 100px;
+            font-size: 58px;
+            font-weight: bold;
+            color: #000000;
+            z-index: 20;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            position: absolute;
+            left: 50px;
+            top: 160px;
+            width: 1180px;
+            height: 480px;
+            z-index: 30;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .text-column {
+            width: 700px;
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .image-column {
+            width: 440px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Category Styling */
+        .category-block {
+            margin-bottom: 10px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #9B2D1F;
+            margin-bottom: 8px;
+            border-bottom: 2px solid #F2DCD9;
+            padding-bottom: 4px;
+        }
+
+        .category-icon {
+            color: #D34817;
+            margin-right: 15px;
+            font-size: 24px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .target-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            padding-left: 45px; /* Align with text start after icon */
+        }
+
+        .list-item {
+            display: flex;
+            margin-bottom: 4px;
+            align-items: flex-start;
+        }
+
+        .bullet {
+            flex-shrink: 0;
+            margin-right: 10px;
+            font-size: 20px;
+            color: #D34817;
+            line-height: 1.5;
+        }
+
+        .list-text {
+            font-size: 22px;
+            color: #333333;
+            line-height: 1.4;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 300;
+        }
+        
+        .footer-line-top {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #D34817;
+            z-index: 300;
+        }
+
+        /* Image Styling */
+        .illustration-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border: 4px solid #F2DCD9;
+        }
+        
+        .stat-badge {
+            position: absolute;
+            bottom: 120px;
+            left: -30px;
+            background-color: #D34817;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 40;
+            text-align: center;
+        }
+
+        .partners-box {
+            margin-top: 20px; 
+            background-color: #FDF2F2; 
+            padding: 15px; 
+            border-radius: 10px; 
+            border-left: 5px solid #D34817; 
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg"></div>
+<div class="header-overlay"></div>
+<div class="slide-title">
+<p>🎯 Target Market</p>
+</div>
+<!-- Content Area -->
+<div class="content-wrapper">
+<!-- Left Column: Text -->
+<div class="text-column">
+<!-- Category 1: Primary Users -->
+<div class="category-block">
+<div class="category-header">
+<i class="fas fa-users category-icon"></i>
+                    Primary Users
+                </div>
+<ul class="target-list">
+<li class="list-item">
+<div class="bullet">●</div>
+<div class="list-text">Urban &amp; rural citizens seeking reliable safety</div>
+</li>
+<li class="list-item">
+<div class="bullet">●</div>
+<div class="list-text">Vulnerable groups: Women, children, and the elderly</div>
+</li>
+<li class="list-item">
+<div class="bullet">●</div>
+<div class="list-text">Transport workers, travelers, and commuters</div>
+</li>
+</ul>
+</div>
+<!-- Category 2: Institutional Clients -->
+<div class="category-block">
+<div class="category-header">
+<i class="fas fa-building-shield category-icon"></i>
+                    Institutional Clients
+                </div>
+<ul class="target-list">
+<li class="list-item">
+<div class="bullet">●</div>
+<div class="list-text">Police &amp; Law Enforcement Agencies</div>
+</li>
+<li class="list-item">
+<div class="bullet">●</div>
+<div class="list-text">Local Government &amp; Municipalities</div>
+</li>
+<li class="list-item">
+<div class="bullet">●</div>
+<div class="list-text">Disaster Management &amp; Emergency Services</div>
+</li>
+</ul>
+</div>
+<!-- Category 3: Partners -->
+<div class="category-block">
+<div class="category-header">
+<i class="fas fa-handshake category-icon"></i>
+                    Strategic Partners
+                </div>
+<ul class="target-list">
+<li class="list-item">
+<div class="bullet">●</div>
+<div class="list-text">Telecom Operators (for rural connectivity)</div>
+</li>
+<li class="list-item">
+<div class="bullet">●</div>
+<div class="list-text">NGOs &amp; CSR Programs focused on social welfare</div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Right Column: Visual -->
+<div class="image-column">
+<div class="stat-badge">
+                170M+<br/><span style="font-size: 14px; font-weight: normal;">Potential Users</span>
+</div>
+<!-- Image representing diverse community/users -->
+<img alt="Diverse group of people in community setting" class="illustration-img" src="https://page.gensparksite.com/slides_images/8976368d45d290467ebcd60a9250032d.webp"/>
+<!-- Context Box -->
+<div class="partners-box">
+<p style="color: #9B2D1F; font-weight: bold; font-size: 18px; margin: 0; line-height: 1.2;">
+                    Serving both B2C mass market and B2G institutional needs.
+                </p>
+</div>
+</div>
+</div>
+<!-- Footer Decoration -->
+<div class="footer-line-top"></div>
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 10 - Market Opportunity</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Setup */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling (Consistent with Master) */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: #F2DCD9; 
+            border-bottom: 3px solid #D34817;
+            z-index: 10;
+        }
+
+        .slide-title {
+            position: absolute;
+            left: 115px;
+            top: 40px;
+            width: 1056px;
+            height: 100px;
+            font-size: 58px;
+            font-weight: 800; /* Extra Bold */
+            color: #000000;
+            z-index: 20;
+            display: flex;
+            align-items: flex-start;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        /* Main Content Layout */
+        .content-wrapper {
+            position: absolute;
+            left: 60px;
+            top: 160px;
+            width: 1160px;
+            height: 490px;
+            z-index: 30;
+            display: flex;
+            gap: 40px;
+        }
+
+        /* Left Column: Demographics Grid */
+        .demographics-col {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .stat-card {
+            background-color: #FFF5F5;
+            border-left: 6px solid #D34817;
+            padding: 20px 30px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .stat-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: #FEE2E2;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 25px;
+            flex-shrink: 0;
+        }
+
+        .stat-icon {
+            font-size: 36px;
+            color: #D34817;
+        }
+
+        .stat-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: #9B2D1F;
+            line-height: 1;
+            margin-bottom: 5px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .stat-label {
+            font-size: 20px;
+            color: #555555;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* Right Column: Opportunity Highlight */
+        .opportunity-col {
+            flex: 2;
+            background-color: #9B2D1F; /* Dark Red Theme */
+            border-radius: 16px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            color: white;
+            box-shadow: 0 10px 20px rgba(155, 45, 31, 0.3);
+            overflow: hidden;
+        }
+
+        /* Decorative circles for right col */
+        .circle-deco {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+        }
+        .c1 { top: -50px; right: -50px; width: 200px; height: 200px; }
+        .c2 { bottom: -30px; left: -30px; width: 150px; height: 150px; }
+
+        .opp-title {
+            font-size: 24px;
+            font-weight: 600;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .opp-number {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .opp-desc {
+            font-size: 20px;
+            line-height: 1.5;
+            font-weight: 400;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .gov-tag {
+            margin-top: 30px;
+            background-color: rgba(255,255,255,0.2);
+            padding: 10px 15px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 300;
+        }
+        
+        .footer-line-top {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #D34817;
+            z-index: 300;
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg"></div>
+<div class="slide-title">
+<p>📈 Market Opportunity</p>
+</div>
+<!-- Content -->
+<div class="content-wrapper">
+<!-- Left Column: Key Stats -->
+<div class="demographics-col">
+<!-- Stat 1 -->
+<div class="stat-card">
+<div class="stat-icon-wrapper">
+<i class="fas fa-users stat-icon"></i>
+</div>
+<div class="stat-content">
+<span class="stat-number">170M+</span>
+<span class="stat-label">Total Population in Bangladesh</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="stat-card">
+<div class="stat-icon-wrapper">
+<i class="fas fa-mobile-alt stat-icon" style="font-size: 40px;"></i>
+</div>
+<div class="stat-content">
+<span class="stat-number">70M+</span>
+<span class="stat-label">Smartphone Users</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="stat-card">
+<div class="stat-icon-wrapper">
+<i class="fas fa-tractor stat-icon"></i>
+</div>
+<div class="stat-content">
+<span class="stat-number">60%+</span>
+<span class="stat-label">Rural Population Addressable</span>
+</div>
+</div>
+</div>
+<!-- Right Column: The Big Opportunity -->
+<div class="opportunity-col">
+<div class="circle-deco c1"></div>
+<div class="circle-deco c2"></div>
+<div style="position: relative; z-index: 2;">
+<span class="opp-title">MARKET POTENTIAL</span>
+<div class="opp-number">
+                        Multi-Billion <br/>
+<span style="color: #FFD1D1;">BDT Opportunity</span>
+</div>
+<p class="opp-desc">
+                        A massive social-tech gap exists in the safety infrastructure. With rapid digital adoption, the market is primed for a unified solution.
+                    </p>
+<div class="gov-tag">
+<i class="fas fa-check-circle" style="margin-right: 10px;"></i>
+                        Aligned with "Smart Bangladesh" Vision
+                    </div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-line-top"></div>
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 11 - Business Model</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&amp;family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Setup */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: #F2DCD9; 
+            border-bottom: 3px solid #D34817;
+            z-index: 10;
+        }
+
+        .slide-title {
+            position: absolute;
+            left: 115px;
+            top: 40px;
+            width: 1056px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            z-index: 20;
+        }
+
+        .main-title {
+            font-size: 58px;
+            font-weight: 800;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .sub-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            color: #9B2D1F;
+            font-weight: 500;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .sub-title::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #9B2D1F;
+            margin-right: 15px;
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            position: absolute;
+            left: 80px;
+            top: 170px;
+            width: 1120px;
+            height: 480px;
+            z-index: 30;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 25px;
+            padding-bottom: 30px;
+        }
+
+        /* Card Styling */
+        .revenue-card {
+            background-color: #FFF5F5;
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border: 1px solid #F2DCD9;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .revenue-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background-color: #D34817;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .number-badge {
+            font-family: 'Roboto', sans-serif;
+            font-size: 42px;
+            font-weight: 900;
+            color: rgba(211, 72, 23, 0.15); /* Very faint accent color */
+            line-height: 1;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            color: #9B2D1F;
+            font-size: 28px;
+            z-index: 2;
+        }
+
+        .card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .card-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .card-tag {
+            font-size: 14px;
+            color: #666;
+            background-color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            align-self: flex-start;
+            border: 1px solid #eee;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* Specific Icon Colors for visual variety within palette */
+        .c1 .icon-circle { color: #D34817; border: 2px solid #F2DCD9; }
+        .c2 .icon-circle { color: #c00000; border: 2px solid #F2DCD9; }
+        .c3 .icon-circle { color: #9B2D1F; border: 2px solid #F2DCD9; }
+        
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 300;
+        }
+        
+        .footer-line-top {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #D34817;
+            z-index: 300;
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg"></div>
+<div class="slide-title">
+<h1 class="main-title">Business Model</h1>
+<div class="sub-title">Multi-Channel Revenue Streams</div>
+</div>
+<!-- Content Grid -->
+<div class="content-wrapper">
+<!-- Item 1: Freemium App -->
+<div class="revenue-card c1">
+<div class="number-badge">01</div>
+<div class="card-header">
+<div class="icon-circle">
+<i class="fas fa-mobile-screen-button"></i>
+</div>
+</div>
+<div class="card-content">
+<p class="card-title">Freemium Consumer App</p>
+<span class="card-tag">B2C Mass Market</span>
+</div>
+</div>
+<!-- Item 2: Premium Subscriptions -->
+<div class="revenue-card c2">
+<div class="number-badge">02</div>
+<div class="card-header">
+<div class="icon-circle">
+<i class="fas fa-crown"></i>
+</div>
+</div>
+<div class="card-content">
+<p class="card-title">Premium Subscriptions</p>
+<span class="card-tag">Recurring Revenue</span>
+</div>
+</div>
+<!-- Item 3: Govt Licensing -->
+<div class="revenue-card c3">
+<div class="number-badge">03</div>
+<div class="card-header">
+<div class="icon-circle">
+<i class="fas fa-building-columns"></i>
+</div>
+</div>
+<div class="card-content">
+<p class="card-title">Government &amp; Institutional Licensing</p>
+<span class="card-tag">B2G Contracts</span>
+</div>
+</div>
+<!-- Item 4: Device Sales -->
+<div class="revenue-card c1">
+<div class="number-badge">04</div>
+<div class="card-header">
+<div class="icon-circle">
+<i class="fas fa-boxes-stacked"></i>
+</div>
+</div>
+<div class="card-content">
+<p class="card-title">Device Sales &amp; Leasing</p>
+<span class="card-tag">Hardware</span>
+</div>
+</div>
+<!-- Item 5: Telecom CSR -->
+<div class="revenue-card c2">
+<div class="number-badge">05</div>
+<div class="card-header">
+<div class="icon-circle">
+<i class="fas fa-handshake"></i>
+</div>
+</div>
+<div class="card-content">
+<p class="card-title">Telecom CSR Partnerships</p>
+<span class="card-tag">Strategic Alliances</span>
+</div>
+</div>
+<!-- Item 6: NGO Funding -->
+<div class="revenue-card c3">
+<div class="number-badge">06</div>
+<div class="card-header">
+<div class="icon-circle">
+<i class="fas fa-hands-holding-child"></i>
+</div>
+</div>
+<div class="card-content">
+<p class="card-title">NGO &amp; Donor-funded Deployments</p>
+<span class="card-tag">Social Impact</span>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-line-top"></div>
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 12 - Revenue Streams</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles from Template */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: #F2DCD9; 
+            border-bottom: 3px solid #D34817;
+            z-index: 10;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: rgba(255,255,255,0.4);
+            z-index: 11;
+        }
+
+        .slide-title {
+            position: absolute;
+            left: 115px;
+            top: 40px;
+            width: 1056px;
+            height: 100px;
+            font-size: 58px;
+            font-weight: bold;
+            color: #000000;
+            z-index: 20;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            position: absolute;
+            left: 50px;
+            top: 160px;
+            width: 1180px;
+            height: 480px;
+            z-index: 30;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .text-column {
+            width: 700px;
+            padding-top: 10px;
+        }
+
+        .image-column {
+            width: 440px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* List Styling */
+        .revenue-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-item {
+            display: flex;
+            margin-bottom: 22px;
+            align-items: flex-start;
+        }
+
+        .bullet {
+            flex-shrink: 0;
+            margin-right: 20px;
+            font-size: 28px;
+            color: #D34817; /* Theme accent color */
+            line-height: 1.2;
+            padding-top: 2px;
+        }
+
+        .list-text {
+            font-size: 26px;
+            color: #333333;
+            line-height: 1.3;
+        }
+        
+        .list-text-bold {
+            font-weight: bold;
+            color: #000000;
+            font-size: 27px;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 300;
+        }
+        
+        .footer-line-top {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #D34817;
+            z-index: 300;
+        }
+
+        /* Image Styling */
+        .illustration-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border: 4px solid #F2DCD9;
+        }
+        
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: -15px;
+            background-color: #D34817;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 22px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 40;
+            text-transform: uppercase;
+        }
+
+        .callout-box {
+            margin-top: 25px; 
+            background-color: #FFF5F5; 
+            padding: 20px; 
+            border-radius: 10px; 
+            border-left: 6px solid #D34817; 
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg"></div>
+<div class="header-overlay"></div>
+<div class="slide-title">
+<p>💳 Revenue Streams</p>
+</div>
+<!-- Content Area -->
+<div class="content-wrapper">
+<!-- Left Column: Text -->
+<div class="text-column">
+<p style="font-size: 28px; font-weight: bold; margin-bottom: 25px; color: #9B2D1F; line-height: 1.2;">
+                Diversified income sources ensuring sustainability &amp; scalability
+            </p>
+<ul class="revenue-list">
+<li class="list-item">
+<div class="bullet"><i class="fas fa-sync-alt"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Subscription Fees:</span> Monthly/Yearly premium plans for citizens &amp; families (৳99–299/mo).
+                    </div>
+</li>
+<li class="list-item">
+<div class="bullet"><i class="fas fa-building"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Dashboard Licensing:</span> Annual SaaS contracts for police districts, agencies &amp; corporate security.
+                    </div>
+</li>
+<li class="list-item">
+<div class="bullet"><i class="fas fa-box-open"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Device Sales:</span> Direct revenue from SOS buttons, wearables &amp; GPS trackers (B2C &amp; Bulk B2B).
+                    </div>
+</li>
+<li class="list-item">
+<div class="bullet"><i class="fas fa-hand-holding-heart"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Sponsored Programs:</span> Telecom CSR &amp; NGO partnerships funding rural safety deployments.
+                    </div>
+</li>
+<li class="list-item">
+<div class="bullet"><i class="fas fa-chart-line"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Data Monetization:</span> Aggregated, anonymized safety analytics for urban policy planning.
+                    </div>
+</li>
+</ul>
+</div>
+<!-- Right Column: Visual -->
+<div class="image-column">
+<div class="badge">Multi-Channel</div>
+<!-- Concept image representing financial growth / business model -->
+<img alt="Revenue Growth Concept" class="illustration-img" src="https://page.gensparksite.com/slides_images/93d9f4d8282c26ba4b4ef392e49b23b6.webp"/>
+<!-- Additional Context Box -->
+<div class="callout-box">
+<p style="color: #9B2D1F; font-weight: bold; font-size: 20px; margin: 0; line-height: 1.3;">
+                    "A balanced mix of B2C recurring revenue and high-value B2B/B2G contracts."
+                </p>
+</div>
+</div>
+</div>
+<!-- Footer Decoration -->
+<div class="footer-line-top"></div>
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 13 - Pricing</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles matching Template */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 132px;
+            background-color: #E6B0AA; /* Fallback solid color matching template content_2 */
+            border-bottom: 2px solid #D34817;
+            z-index: 10;
+        }
+
+        /* Decorative header cut corner effect simulation via border */
+        .header-cut {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 20px solid white;
+            border-right: 100px solid transparent;
+            z-index: 12;
+        }
+        
+        /* Header text container */
+        .header-text-container {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 132px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+
+        .header-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: #000000;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Content Layout */
+        .content-area {
+            position: absolute;
+            top: 155px;
+            left: 65px;
+            width: 1150px;
+            height: 515px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        /* Left Column - Pricing List */
+        .pricing-list-container {
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .pricing-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            background-color: #FDF2F2; /* Very light red bg */
+            padding: 20px 25px;
+            border-radius: 8px;
+            border-left: 6px solid #EA2F32;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+        
+        .pricing-item:hover {
+            transform: translateX(5px);
+        }
+
+        .icon-box {
+            color: #EA2F32;
+            font-size: 32px;
+            margin-right: 25px;
+            width: 50px;
+            height: 50px;
+            background: rgba(234, 47, 50, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .pricing-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-title {
+            font-size: 24px;
+            color: #333333;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .pricing-cost {
+            font-size: 28px;
+            color: #D34817;
+            font-weight: 400;
+        }
+
+        /* Right Column - Summary */
+        .summary-container {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Visual connection arrow */
+        .arrow-connector {
+            font-size: 60px;
+            color: #D34817;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .summary-box {
+            background-color: #9B2D1F;
+            color: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: relative;
+            border: 3px solid #D34817;
+            width: 100%;
+        }
+        
+        .summary-title {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .summary-text {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            background-color: #A6341B; /* Darker red/brown */
+            border-top: 3px solid #D95F3B; 
+            border-bottom: 3px solid #D95F3B;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg">
+<div class="header-cut"></div>
+</div>
+<div class="header-text-container">
+<p class="header-text">Indicative Pricing Model</p>
+</div>
+<!-- Main Content Area -->
+<div class="content-area">
+<!-- Left: Pricing Tiers -->
+<div class="pricing-list-container">
+<!-- Tier 1 -->
+<div class="pricing-item">
+<div class="icon-box">
+<i class="fa-solid fa-user"></i>
+</div>
+<div class="pricing-details">
+<p class="pricing-title">Citizen Premium</p>
+<p class="pricing-cost">৳99 – 199 <span style="font-size: 0.7em; color: #666;">/ month</span></p>
+</div>
+</div>
+<!-- Tier 2 -->
+<div class="pricing-item">
+<div class="icon-box">
+<i class="fa-solid fa-users"></i>
+</div>
+<div class="pricing-details">
+<p class="pricing-title">Family Plan</p>
+<p class="pricing-cost">৳299 <span style="font-size: 0.7em; color: #666;">/ month</span></p>
+</div>
+</div>
+<!-- Tier 3 -->
+<div class="pricing-item">
+<div class="icon-box">
+<i class="fa-solid fa-building-shield"></i>
+</div>
+<div class="pricing-details">
+<p class="pricing-title">Institutional Dashboard</p>
+<p class="pricing-cost" style="font-size: 24px;">Annual Contract Basis</p>
+</div>
+</div>
+<!-- Tier 4 -->
+<div class="pricing-item">
+<div class="icon-box">
+<i class="fa-solid fa-microchip"></i>
+</div>
+<div class="pricing-details">
+<p class="pricing-title">Safety Devices</p>
+<p class="pricing-cost">৳1,500 – 2,500 <span style="font-size: 0.7em; color: #666;">/ unit</span></p>
+</div>
+</div>
+</div>
+<!-- Right: Summary Strategy -->
+<div class="summary-container">
+<div class="arrow-connector">
+<i class="fa-solid fa-layer-group"></i>
+</div>
+<div class="summary-box">
+<p class="summary-title">STRATEGY</p>
+<p class="summary-text">
+                    Affordable for<br/>Citizens,<br/>Scalable for<br/>Institutions
+                </p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 14 - Traction &amp; Validation</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles from Template */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: #F2DCD9; 
+            border-bottom: 3px solid #D34817;
+            z-index: 10;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: rgba(255,255,255,0.4);
+            z-index: 11;
+        }
+
+        .slide-title {
+            position: absolute;
+            left: 115px;
+            top: 40px;
+            width: 1056px;
+            height: 100px;
+            font-size: 58px;
+            font-weight: bold;
+            color: #000000;
+            z-index: 20;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            position: absolute;
+            left: 50px;
+            top: 160px;
+            width: 1180px;
+            height: 480px;
+            z-index: 30;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .text-column {
+            width: 700px;
+            padding-top: 20px;
+        }
+
+        .image-column {
+            width: 440px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* List Styling */
+        .traction-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-item {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: flex-start;
+            background-color: rgba(242, 220, 217, 0.2); /* Very faint reddish bg for emphasis */
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #D34817;
+        }
+
+        .bullet {
+            flex-shrink: 0;
+            margin-right: 20px;
+            font-size: 28px;
+            color: #22c55e; /* Green for checkmarks to signify success/validation */
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .list-text {
+            font-size: 28px;
+            color: #333333;
+            line-height: 1.3;
+        }
+        
+        .list-text-bold {
+            font-weight: bold;
+            color: #000000;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 300;
+        }
+        
+        .footer-line-top {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #D34817;
+            z-index: 300;
+        }
+
+        /* Image Styling */
+        .illustration-img {
+            width: 100%;
+            height: 350px; /* Fixed height for image area */
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border: 4px solid #F2DCD9;
+        }
+        
+        .success-badge {
+            position: absolute;
+            top: 20px;
+            right: -15px;
+            background-color: #15803d; /* Dark green for success */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 40;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stat-box {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #FFF1F2; /* Very light red */
+            border: 2px dashed #D34817;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg"></div>
+<div class="header-overlay"></div>
+<div class="slide-title">
+<p>✅ Traction &amp; Validation</p>
+</div>
+<!-- Content Area -->
+<div class="content-wrapper">
+<!-- Left Column: Text -->
+<div class="text-column">
+<p style="font-size: 24px; margin-bottom: 25px; color: #666; font-style: italic;">
+                    Proving the concept through real-world deployment and strategic partnerships.
+                </p>
+<ul class="traction-list">
+<li class="list-item">
+<div class="bullet"><i class="fas fa-check"></i></div>
+<div class="list-text">
+<span class="list-text-bold">App Launched:</span> <br/>Fully functional application developed, tested, and demonstrated to key stakeholders.
+                        </div>
+</li>
+<li class="list-item">
+<div class="bullet"><i class="fas fa-check"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Government Engagement:</span> <br/>Pilot program initiated with Meherpur Police &amp; District Administration.
+                        </div>
+</li>
+<li class="list-item">
+<div class="bullet"><i class="fas fa-check"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Strong Endorsements:</span> <br/>Backed by local authorities and featured in national media coverage.
+                        </div>
+</li>
+<li class="list-item">
+<div class="bullet"><i class="fas fa-check"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Real-World Validation:</span> <br/>Confirmed reduction in response times during initial field tests.
+                        </div>
+</li>
+</ul>
+</div>
+<!-- Right Column: Visual -->
+<div class="image-column">
+<div class="success-badge">
+<i class="fas fa-certificate"></i> PILOT ACTIVE
+            </div>
+<!-- Conceptual image representing partnership/traction -->
+<img alt="Business Partnership and Traction" class="illustration-img" src="https://page.gensparksite.com/slides_images/f451d40616ae4e4a61ea990103f21706.webp"/>
+<!-- Additional Stat Box -->
+<div class="stat-box">
+<p style="font-size: 18px; color: #9B2D1F; margin: 0; font-weight: bold;">
+                    "Bridging the gap between citizens and help"
+                </p>
+</div>
+</div>
+</div>
+<!-- Footer Decoration -->
+<div class="footer-line-top"></div>
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 15 - Competitive Advantage</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: #F2DCD9; 
+            border-bottom: 3px solid #D34817;
+            z-index: 10;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: rgba(255,255,255,0.4);
+            z-index: 11;
+        }
+
+        .slide-title {
+            position: absolute;
+            left: 115px;
+            top: 40px;
+            width: 1056px;
+            height: 100px;
+            font-size: 58px;
+            font-weight: bold;
+            color: #000000;
+            z-index: 20;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            position: absolute;
+            left: 50px;
+            top: 150px;
+            width: 1180px;
+            height: 500px;
+            z-index: 30;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .text-column {
+            width: 720px;
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .image-column {
+            width: 420px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* List Styling with Cards */
+        .advantage-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .advantage-card {
+            display: flex;
+            align-items: center;
+            background-color: #FFF5F2; /* Very light red/pink tint */
+            border-left: 6px solid #D34817;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .icon-container {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            border: 2px solid #D34817;
+            color: #D34817;
+            font-size: 24px;
+        }
+
+        .text-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000000;
+            line-height: 1.2;
+        }
+
+        .sub-text {
+            font-size: 18px;
+            color: #666666;
+            margin-top: 4px;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 300;
+        }
+        
+        .footer-line-top {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #D34817;
+            z-index: 300;
+        }
+
+        /* Image Styling */
+        .trophy-img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+        }
+
+        .badge-circle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 120px;
+            height: 120px;
+            background-color: #D34817;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(211, 72, 23, 0.4);
+            transform: rotate(15deg);
+            z-index: 40;
+            border: 4px solid #fff;
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg"></div>
+<div class="header-overlay"></div>
+<div class="slide-title">
+<p>🏆 Competitive Advantage</p>
+</div>
+<!-- Content Area -->
+<div class="content-wrapper">
+<!-- Left Column: List -->
+<div class="text-column">
+<ul class="advantage-list">
+<!-- Item 1 -->
+<li class="advantage-card">
+<div class="icon-container">
+<i class="fas fa-trophy"></i>
+</div>
+<div class="text-content">
+<span class="main-text">Integrated Ecosystem</span>
+<span class="sub-text">Seamless synergy between App, Hardware &amp; Network</span>
+</div>
+</li>
+<!-- Item 2 -->
+<li class="advantage-card">
+<div class="icon-container">
+<i class="fas fa-trophy"></i>
+</div>
+<div class="text-content">
+<span class="main-text">Rural-First Design</span>
+<span class="sub-text">Engineered for low-connectivity &amp; offline environments</span>
+</div>
+</li>
+<!-- Item 3 -->
+<li class="advantage-card">
+<div class="icon-container">
+<i class="fas fa-trophy"></i>
+</div>
+<div class="text-content">
+<span class="main-text">Community-Based Response</span>
+<span class="sub-text">Empowers local volunteers alongside official channels</span>
+</div>
+</li>
+<!-- Item 4 -->
+<li class="advantage-card">
+<div class="icon-container">
+<i class="fas fa-trophy"></i>
+</div>
+<div class="text-content">
+<span class="main-text">Government-Aligned</span>
+<span class="sub-text">Built to integrate with national safety infrastructure</span>
+</div>
+</li>
+<!-- Item 5 -->
+<li class="advantage-card">
+<div class="icon-container">
+<i class="fas fa-trophy"></i>
+</div>
+<div class="text-content">
+<span class="main-text">High Social Impact + Monetization</span>
+<span class="sub-text">Sustainable business model solving a critical human need</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Right Column: Visual -->
+<div class="image-column">
+<div class="badge-circle">
+<span style="font-size: 24px;">#1</span>
+<span style="font-size: 14px;">Safety<br/>Choice</span>
+</div>
+<img alt="Golden Trophy Concept" class="trophy-img" src="https://www.genspark.ai/image_placeholder.png"/>
+<!-- Context Label -->
+<div style="margin-top: 20px; background-color: #333; color: white; padding: 10px 20px; border-radius: 20px; font-weight: bold; text-align: center;">
+                Unmatched Reliability
+            </div>
+</div>
+</div>
+<!-- Footer Decoration -->
+<div class="footer-line-top"></div>
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 16 - Go-To-Market Strategy</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles from Template */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: #F2DCD9; 
+            border-bottom: 3px solid #D34817;
+            z-index: 10;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: rgba(255,255,255,0.4);
+            z-index: 11;
+        }
+
+        .slide-title {
+            position: absolute;
+            left: 115px;
+            top: 40px;
+            width: 1056px;
+            height: 100px;
+            font-size: 58px;
+            font-weight: bold;
+            color: #000000;
+            z-index: 20;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            position: absolute;
+            left: 50px;
+            top: 160px;
+            width: 1180px;
+            height: 480px;
+            z-index: 30;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .text-column {
+            width: 700px;
+            padding-top: 10px;
+        }
+
+        .image-column {
+            width: 440px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            padding-top: 20px;
+        }
+
+        /* List Styling */
+        .strategy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-item {
+            display: flex;
+            margin-bottom: 22px;
+            align-items: flex-start;
+        }
+
+        .bullet {
+            flex-shrink: 0;
+            margin-right: 20px;
+            font-size: 28px;
+            color: #D34817; /* Theme accent color */
+            line-height: 1.2;
+            padding-top: 2px;
+        }
+
+        .list-text {
+            font-size: 26px;
+            color: #333333;
+            line-height: 1.3;
+        }
+        
+        .list-text-bold {
+            font-weight: bold;
+            color: #000000;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 300;
+        }
+        
+        .footer-line-top {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #D34817;
+            z-index: 300;
+        }
+
+        /* Image Styling */
+        .illustration-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border: 4px solid #F2DCD9;
+        }
+        
+        .alert-badge {
+            position: absolute;
+            top: 0px;
+            right: -10px;
+            background-color: #D34817;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 40;
+            text-transform: uppercase;
+        }
+
+        .quote-box {
+            margin-top: 25px;
+            background-color: #FEE2E2;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #EF4444;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg"></div>
+<div class="header-overlay"></div>
+<div class="slide-title">
+<p>🚀 Go-To-Market Strategy</p>
+</div>
+<!-- Content Area -->
+<div class="content-wrapper">
+<!-- Left Column: Text -->
+<div class="text-column">
+<p style="font-size: 30px; font-weight: bold; margin-bottom: 25px; color: #9B2D1F; line-height: 1.2;">
+                    Phased rollout enabling rapid scale and deep adoption
+                </p>
+<ul class="strategy-list">
+<li class="list-item">
+<div class="bullet"><i class="fas fa-map-marked-alt"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Pilot to Scale:</span> Launching in pilot districts to refine the model before executing a full nationwide rollout.
+                        </div>
+</li>
+<li class="list-item">
+<div class="bullet"><i class="fas fa-handshake"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Government &amp; PPP:</span> Deep integration with law enforcement and Public-Private Partnerships for legitimacy.
+                        </div>
+</li>
+<li class="list-item">
+<div class="bullet"><i class="fas fa-tower-cell"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Telecom Partnerships:</span> Leveraging Telco CSR programs for mass user acquisition and zero-rating data.
+                        </div>
+</li>
+<li class="list-item">
+<div class="bullet"><i class="fas fa-people-group"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Community Onboarding:</span> NGO-led grassroots campaigns to build trust in rural communities.
+                        </div>
+</li>
+<li class="list-item">
+<div class="bullet"><i class="fas fa-building"></i></div>
+<div class="list-text">
+<span class="list-text-bold">Institutional Adoption:</span> Direct implementation in schools, factories, and transport networks.
+                        </div>
+</li>
+</ul>
+</div>
+<!-- Right Column: Visual -->
+<div class="image-column">
+<div class="alert-badge">National Scale</div>
+<!-- Image representing strategy/map/connection -->
+<img alt="Strategic Map and Planning" class="illustration-img" src="https://page.gensparksite.com/slides_images/27c100c4b9c8f154fbe0b94c6ef163ca.webp"/>
+<!-- Quote/Callout -->
+<div class="quote-box">
+<p style="color: #991B1B; font-weight: bold; font-size: 20px; margin: 0; line-height: 1.4;">
+                        "Building trust locally to scale nationally: From 2 districts to 64 in 24 months."
+                    </p>
+</div>
+</div>
+</div>
+<!-- Footer Decoration -->
+<div class="footer-line-top"></div>
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 17 - Impact Metrics</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles matching Template */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 132px;
+            background-color: #E6B0AA; /* Fallback solid color matching template content_2 */
+            border-bottom: 2px solid #D34817;
+            z-index: 10;
+        }
+
+        /* Decorative header cut corner effect simulation via border */
+        .header-cut {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 20px solid white;
+            border-right: 100px solid transparent;
+            z-index: 12;
+        }
+        
+        /* Header text container */
+        .header-text-container {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 132px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+
+        .header-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: #000000;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Content Layout */
+        .content-area {
+            position: absolute;
+            top: 155px;
+            left: 65px;
+            width: 1150px;
+            height: 515px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        /* Left Column - Metrics List */
+        .metrics-list-container {
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .metric-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #FDF2F2; /* Very light red bg */
+            padding: 12px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #EA2F32;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .metric-icon {
+            color: #EA2F32;
+            font-size: 32px;
+            margin-right: 25px;
+            min-width: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .metric-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .metric-title {
+            font-size: 24px;
+            color: #333333;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .metric-desc {
+            font-size: 18px;
+            color: #666666;
+            margin: 0;
+        }
+
+        /* Right Column - Impact Summary */
+        .summary-container {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Visual connection icon */
+        .summary-icon {
+            font-size: 60px;
+            color: #D34817;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .summary-box {
+            background-color: #9B2D1F;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: relative;
+            border: 3px solid #D34817;
+            width: 100%;
+        }
+        
+        .summary-label {
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .summary-text {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            background-color: #A6341B; /* Darker red/brown */
+            border-top: 3px solid #D95F3B; 
+            border-bottom: 3px solid #D95F3B;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg">
+<div class="header-cut"></div>
+</div>
+<div class="header-text-container">
+<p class="header-text">Impact Metrics</p>
+</div>
+<!-- Main Content Area -->
+<div class="content-area">
+<!-- Left: Metrics List -->
+<div class="metrics-list-container">
+<!-- Metric 1 -->
+<div class="metric-item">
+<div class="metric-icon">
+<i class="fa-solid fa-stopwatch"></i>
+</div>
+<div class="metric-content">
+<p class="metric-title">Reduced Response Time</p>
+<p class="metric-desc">Drastically cutting delays in emergency assistance</p>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="metric-item">
+<div class="metric-icon">
+<i class="fa-solid fa-heart-pulse"></i>
+</div>
+<div class="metric-content">
+<p class="metric-title">Lives Assisted</p>
+<p class="metric-desc">Direct intervention saving citizens in critical need</p>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="metric-item">
+<div class="metric-icon">
+<i class="fa-solid fa-tower-broadcast"></i>
+</div>
+<div class="metric-content">
+<p class="metric-title">Rural Coverage Improved</p>
+<p class="metric-desc">Connecting previously off-grid &amp; remote areas</p>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="metric-item">
+<div class="metric-icon">
+<i class="fa-solid fa-child-reaching"></i>
+</div>
+<div class="metric-content">
+<p class="metric-title">Women &amp; Child Safety Index</p>
+<p class="metric-desc">Enhancing security for the most vulnerable groups</p>
+</div>
+</div>
+<!-- Metric 5 -->
+<div class="metric-item">
+<div class="metric-icon">
+<i class="fa-solid fa-users"></i>
+</div>
+<div class="metric-content">
+<p class="metric-title">Community Participation</p>
+<p class="metric-desc">Active engagement of local responders &amp; volunteers</p>
+</div>
+</div>
+</div>
+<!-- Right: Summary -->
+<div class="summary-container">
+<div class="summary-icon">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+<div class="summary-box">
+<p class="summary-label">Projected Outcome</p>
+<p class="summary-text">
+                        Building a<br/>Safer, Resilient<br/>National<br/>Infrastructure
+                    </p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+ 
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 18 - Financial Outlook</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: #F2DCD9; 
+            border-bottom: 3px solid #D34817;
+            z-index: 10;
+        }
+
+        .slide-title {
+            position: absolute;
+            left: 115px;
+            top: 40px;
+            width: 1056px;
+            height: 100px;
+            font-size: 52px;
+            font-weight: 700;
+            color: #000000;
+            z-index: 20;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Flow Chart Container */
+        .flow-wrapper {
+            position: absolute;
+            left: 0;
+            top: 200px; /* Slight adjustment for better vertical centering */
+            width: 1280px;
+            height: 480px;
+            z-index: 30;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 40px;
+        }
+
+        /* Step Card Styling */
+        .step-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 220px; /* Slightly wider for timeline text */
+            position: relative;
+            z-index: 2;
+        }
+
+        .icon-circle {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background-color: #D34817; /* Theme Accent */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 44px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            margin-bottom: 25px;
+            border: 5px solid #ffffff;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Number Badge - Used as Year indicator here implicitly, but sticking to design pattern */
+        .step-number {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 36px;
+            height: 36px;
+            background-color: #9B2D1F; /* Darker Red */
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            border: 2px solid white;
+        }
+
+        .step-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #9B2D1F;
+            text-align: center;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .step-desc {
+            font-size: 20px;
+            color: #444444;
+            text-align: center;
+            line-height: 1.4;
+            padding: 0 5px;
+        }
+
+        /* Connector Line */
+        .connector-line {
+            position: absolute;
+            top: 55px; /* Center of the 110px circle */
+            left: 180px; /* Start after first item visual center */
+            right: 180px; /* End before last item visual center */
+            height: 6px;
+            background-color: #E5E7EB;
+            z-index: 1;
+        }
+        
+        /* Active progress part of the connector line - styled to look like a timeline */
+        .connector-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #F2DCD9; /* Light theme color */
+            border-bottom: 3px dashed #D34817;
+            background: none; 
+        }
+        
+        /* Arrows between steps */
+        .flow-arrow {
+            position: absolute;
+            top: 45px;
+            right: -45px;
+            color: #D34817;
+            font-size: 28px;
+            z-index: 5;
+            opacity: 0.6;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 300;
+        }
+        
+        .footer-line-top {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #D34817;
+            z-index: 300;
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg"></div>
+<div class="slide-title">
+<p>📈 Financial Outlook (High Level)</p>
+</div>
+<!-- Timeline Flow Content -->
+<div class="flow-wrapper">
+<!-- Connector Background Line -->
+<div class="connector-line">
+<div class="connector-progress"></div>
+</div>
+<!-- Phase 1 -->
+<div class="step-container">
+<div class="icon-circle">
+<i class="fa-solid fa-seedling"></i>
+<div class="step-number">1</div>
+</div>
+<div class="step-title">Year 1–2</div>
+<p class="step-desc">Pilot &amp; subsidized growth</p>
+<!-- Arrow to next -->
+<i class="fa-solid fa-chevron-right flow-arrow"></i>
+</div>
+<!-- Spacer -->
+<div style="width: 80px;"></div>
+<!-- Phase 2 -->
+<div class="step-container">
+<div class="icon-circle">
+<i class="fa-solid fa-scale-balanced"></i>
+<div class="step-number">2</div>
+</div>
+<div class="step-title">Year 3</div>
+<p class="step-desc">Break-even Point</p>
+<i class="fa-solid fa-chevron-right flow-arrow"></i>
+</div>
+<!-- Spacer -->
+<div style="width: 80px;"></div>
+<!-- Phase 3 -->
+<div class="step-container">
+<div class="icon-circle">
+<i class="fa-solid fa-chart-line"></i>
+<div class="step-number">3</div>
+</div>
+<div class="step-title">Year 4–5</div>
+<p class="step-desc">Profitable national scale</p>
+<i class="fa-solid fa-chevron-right flow-arrow"></i>
+</div>
+<!-- Spacer -->
+<div style="width: 80px;"></div>
+<!-- Phase 4 -->
+<div class="step-container">
+<div class="icon-circle">
+<i class="fa-solid fa-earth-asia"></i>
+<div class="step-number">4</div>
+</div>
+<div class="step-title">Long-term</div>
+<p class="step-desc">Regional (South Asia) expansion</p>
+</div>
+</div>
+<!-- Footer Decoration -->
+<div class="footer-line-top"></div>
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 19 - Investment Ask</title>
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: #F2DCD9; 
+            border-bottom: 3px solid #D34817;
+            z-index: 10;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: rgba(255,255,255,0.4);
+            z-index: 11;
+        }
+
+        .slide-title {
+            position: absolute;
+            left: 115px;
+            top: 40px;
+            width: 1056px;
+            height: 100px;
+            font-size: 58px;
+            font-weight: bold;
+            color: #000000;
+            z-index: 20;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            position: absolute;
+            top: 150px;
+            left: 65px;
+            width: 1150px;
+            height: 520px;
+            z-index: 30;
+            display: flex;
+            gap: 40px;
+        }
+
+        /* Left Column: The Ask */
+        .ask-column {
+            flex: 0 0 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .ask-card {
+            background-color: #FFF5F5;
+            border-left: 8px solid #c00000;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .ask-label {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .ask-value {
+            font-size: 48px;
+            color: #c00000;
+            font-weight: bold;
+            line-height: 1.1;
+        }
+
+        .growth-box {
+            background-color: #333;
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .growth-icon {
+            font-size: 40px;
+            color: #D34817;
+        }
+
+        .growth-text p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        /* Right Column: Use of Funds */
+        .funds-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 16px;
+            padding: 10px 20px 0 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #F2DCD9;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .chart-container {
+            display: flex;
+            align-items: center;
+            height: 380px;
+            gap: 40px;
+        }
+
+        .canvas-wrapper {
+            width: 380px;
+            height: 380px;
+            position: relative;
+        }
+        
+        /* Legend Styling */
+        .legend-list {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 12px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .color-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .legend-text {
+            font-size: 20px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 300;
+        }
+        
+        .footer-line-top {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #D34817;
+            z-index: 300;
+        }
+
+        /* Center percentage in donut */
+        .center-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            pointer-events: none;
+        }
+        .center-label-top {
+            font-size: 16px;
+            color: #666;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .center-label-main {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="header-bg"></div>
+<div class="header-overlay"></div>
+<div class="slide-title">
+<p>Investment Ask</p>
+</div>
+<!-- Content Wrapper -->
+<div class="content-wrapper">
+<!-- Left: The Ask -->
+<div class="ask-column">
+<div class="ask-card">
+<p class="ask-label">We Are Seeking</p>
+<p class="ask-value">Seed / Strategic Investment</p>
+<p style="margin-top: 15px; font-size: 20px; color: #555;">
+                        To build the foundational infrastructure for Bangladesh's first integrated safety ecosystem.
+                    </p>
+</div>
+<div class="growth-box">
+<div class="growth-icon">
+<i class="fas fa-rocket"></i>
+</div>
+<div class="growth-text">
+<p style="font-weight: bold; font-size: 20px; margin-bottom: 5px;">Accelerated Growth</p>
+<p>Fueling national rollout and technology dominance in the safety sector.</p>
+</div>
+</div>
+</div>
+<!-- Right: Use of Funds -->
+<div class="funds-column">
+<div>
+<p class="section-title">Use of Funds Allocation</p>
+</div>
+<div class="chart-container">
+<div class="canvas-wrapper">
+<canvas id="fundsChart"></canvas>
+<div class="center-label">
+<p class="center-label-top">Allocation</p>
+<p class="center-label-main">Plan</p>
+</div>
+</div>
+<div class="legend-list">
+<div class="legend-item">
+<div class="color-dot" style="background-color: #c00000;"></div>
+<p class="legend-text">Product &amp; Hardware R&amp;D</p>
+</div>
+<div class="legend-item">
+<div class="color-dot" style="background-color: #D34817;"></div>
+<p class="legend-text">Rural Connectivity Deployment</p>
+</div>
+<div class="legend-item">
+<div class="color-dot" style="background-color: #EA2F32;"></div>
+<p class="legend-text">Pilot Expansion</p>
+</div>
+<div class="legend-item">
+<div class="color-dot" style="background-color: #F88F8F;"></div>
+<p class="legend-text">Sales &amp; Partnerships</p>
+</div>
+<div class="legend-item">
+<div class="color-dot" style="background-color: #333333;"></div>
+<p class="legend-text">Compliance &amp; Certifications</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-line-top"></div>
+<div class="footer-stripe"></div>
+</div>
+<script>
+        const ctx = document.getElementById('fundsChart').getContext('2d');
+        const fundsChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['R&D', 'Connectivity', 'Expansion', 'Sales', 'Compliance'],
+                datasets: [{
+                    data: [30, 25, 20, 15, 10], // Hypothetical allocation based on typical seed rounds
+                    backgroundColor: [
+                        '#c00000', // Dark Red
+                        '#D34817', // Theme Accent Orange
+                        '#EA2F32', // Bright Red
+                        '#F88F8F', // Light Red
+                        '#333333'  // Dark Grey
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '65%',
+                plugins: {
+                    legend: {
+                        display: false // Using custom legend
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return ' ' + context.label + ': ' + context.raw + '%';
+                            }
+                        },
+                        backgroundColor: 'rgba(51, 51, 51, 0.9)',
+                        padding: 12,
+                        titleFont: { size: 14 },
+                        bodyFont: { size: 14 }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+ 
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 20 - Vision</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        .header-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: #F2DCD9; 
+            border-bottom: 3px solid #D34817;
+            z-index: 10;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 140px;
+            background-color: rgba(255,255,255,0.4);
+            z-index: 11;
+        }
+
+        .slide-title {
+            position: absolute;
+            left: 115px;
+            top: 40px;
+            width: 1056px;
+            height: 100px;
+            font-size: 58px;
+            font-weight: 900;
+            color: #000000;
+            z-index: 20;
+            display: flex;
+            align-items: flex-start;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Main Content Layout */
+        .content-wrapper {
+            position: absolute;
+            top: 140px; /* Below header */
+            left: 0;
+            width: 100%;
+            height: 555px; /* Remaining height minus footer */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 80px;
+            z-index: 20;
+        }
+
+        /* Three Pillars Grid */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        .pillar-card {
+            background-color: #FFF5F2; /* Very light warm tint */
+            border-radius: 15px;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-top: 6px solid #D34817;
+            transition: transform 0.3s ease;
+            position: relative;
+            height: 280px;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(211, 72, 23, 0.15);
+        }
+
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 2px solid #D34817;
+            color: #D34817;
+            font-size: 36px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .pillar-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #333;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .pillar-desc {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Bottom Core Vision Statement */
+        .core-vision-container {
+            width: 100%;
+            background-color: #9B2D1F;
+            color: white;
+            border-radius: 60px;
+            padding: 25px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(155, 45, 31, 0.3);
+            border: 4px solid #F2DCD9;
+        }
+
+        .core-icon {
+            font-size: 40px;
+            margin-right: 25px;
+            color: #F2DCD9;
+        }
+
+        .core-text {
+            font-size: 32px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .core-text strong {
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        /* Background Decor */
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(211, 72, 23, 0.03);
+            z-index: 1;
+        }
+        .c1 { width: 600px; height: 600px; top: -100px; right: -100px; }
+        .c2 { width: 400px; height: 400px; bottom: 50px; left: -100px; }
+
+        /* Footer Stripe */
+        .footer-stripe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 300;
+        }
+        
+        .footer-line-top {
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #D34817;
+            z-index: 300;
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Elements -->
+<div class="bg-circle c1"></div>
+<div class="bg-circle c2"></div>
+<!-- Header -->
+<div class="header-bg"></div>
+<div class="header-overlay"></div>
+<div class="slide-title">
+<p>👁️ Vision</p>
+</div>
+<!-- Main Content -->
+<div class="content-wrapper">
+<!-- Three Strategic Pillars -->
+<div class="pillars-grid">
+<!-- Pillar 1 -->
+<div class="pillar-card">
+<div class="icon-wrapper">
+<i class="fas fa-tower-cell"></i>
+</div>
+<div class="pillar-text">
+<p class="pillar-title">Build National Infrastructure</p>
+<p class="pillar-desc">Establish Bangladesh’s primary integrated safety network connecting citizens to authorities.</p>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="pillar-card">
+<div class="icon-wrapper">
+<i class="fas fa-earth-asia"></i>
+</div>
+<div class="pillar-text">
+<p class="pillar-title">Expand to South Asia</p>
+<p class="pillar-desc">Scale the model to neighboring countries with similar demographic &amp; connectivity challenges.</p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="pillar-card">
+<div class="icon-wrapper">
+<i class="fas fa-brain"></i>
+</div>
+<div class="pillar-text">
+<p class="pillar-title">AI-Driven Predictive Safety</p>
+<p class="pillar-desc">Transition from reactive response to proactive incident prevention using big data.</p>
+</div>
+</div>
+</div>
+<!-- Core Emotional Vision -->
+<div class="core-vision-container">
+<i class="fas fa-hands-holding-child core-icon"></i>
+<p class="core-text">
+                    "A world where <strong>no one is helpless</strong> in emergencies."
+                </p>
+</div>
+</div>
+<!-- Footer -->
+<div class="footer-line-top"></div>
+<div class="footer-stripe"></div>
+</div>
+</body>
+</html>
+ 
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slide 21 - Closing</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #EBE7DE; /* Light beige from Cover slide */
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Decorative Background Elements */
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: radial-gradient(#9B2D1F 1px, transparent 1px); /* Not a CSS gradient fill, but a pattern dots */
+            background-size: 20px 20px;
+            z-index: 0;
+        }
+
+        /* Using an image overlay instead of CSS gradient for richness */
+        .bg-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.1;
+            z-index: 1;
+            mask-image: linear-gradient(to right, transparent, black);
+            -webkit-mask-image: linear-gradient(to right, transparent, black);
+        }
+
+        /* Content Wrapper */
+        .content-wrapper {
+            z-index: 10;
+            text-align: center;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.9);
+        }
+
+        /* Typography */
+        .brand-name {
+            font-size: 24px;
+            letter-spacing: 2px;
+            color: #555;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .main-statement {
+            font-size: 48px;
+            line-height: 1.2;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .highlight-text {
+            color: #c00000; /* Primary Red */
+            font-weight: 900;
+            display: block;
+            font-size: 64px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .separator {
+            width: 100px;
+            height: 6px;
+            background-color: #D34817;
+            margin: 30px 0;
+            border-radius: 3px;
+        }
+
+        .cta-text {
+            font-size: 32px;
+            color: #444;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        /* Footer Elements */
+        .footer-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: #9B2D1F;
+            z-index: 100;
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            display: flex;
+            gap: 30px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon-circle {
+            width: 40px;
+            height: 40px;
+            background-color: #F2DCD9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c00000;
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Pattern -->
+<div class="bg-pattern"></div>
+<!-- Subtle Abstract Background Image representing infrastructure/connection -->
+<img alt="Background Network" class="bg-image" src="https://page.gensparksite.com/slides_images/5651cc0baa5a8cfc6ee489b7674b9cd3.webp"/>
+<div class="content-wrapper">
+<!-- Brand Indication -->
+<p class="brand-name">SelfProtect Ecosystem</p>
+<!-- Main Message -->
+<div class="main-statement">
+<p>SelfProtect is not just an app —</p>
+<span class="highlight-text">It is a life-saving<br/>national infrastructure.</span>
+</div>
+<!-- Visual Separator -->
+<div class="separator"></div>
+<!-- Call to Action -->
+<p class="cta-text">
+                "Let’s build safety that works<br/>everywhere, for everyone."
+            </p>
+<!-- Contact / Thank You Placeholder -->
+<div class="contact-info">
+<div class="contact-item">
+<div class="icon-circle"><i class="fas fa-globe"></i></div>
+<p>www.selfprotect.com</p>
+</div>
+<div class="contact-item">
+<div class="icon-circle"><i class="fas fa-envelope"></i></div>
+<p>contact@winkytech.com</p>
+</div>
+</div>
+</div>
+<!-- Footer Strip -->
+<footer class="footer-bar"></footer>
+</div>
+</body>
+</html>
