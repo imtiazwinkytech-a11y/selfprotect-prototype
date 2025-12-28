@@ -108,3 +108,17 @@
                 --sidebar-width: 80%;
             }
         }
+
+         .active-nav-item { color: #3b82f6; } /* Example primary color */
+        .nav-btn { transition: all 0.2s ease; }
+        .tap-active:active { transform: scale(0.9); }
+        
+        /* Toast Animation */
+        #exit-toast {
+            transform: translateY(100px);
+            transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28), opacity 0.3s;
+        }
+        #exit-toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
